@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+:root {
+    --primary-font: 'Raleway',sans-serif;
+    --secondary-font: 'Work Sans';
+    --tertiary-font:'Poppins';
+    --bg-color: #E6F4F4;
+    --primary-color: #0B8B8B;
+    --secondary-color: #86CECE;
+    --text-card:#FFFFFF;
+    --text-main: #333333;
+}
+
+.footer { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-img {
+    flex: 0.2;
+}
+
+.footer-img > img {
+    height: 200px;
+}
+
+.footer-container {
+    padding: 1rem;
+    flex: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.footer-logoimg > img {
+    width: 100px;
+}
+
+.footer-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family:var(--primary-font);
+    color: var(--primary-color);
+    
+}
+
+.footer-body > h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    color: var(--primary-color);
+    padding: 0.75rem;
+}
+
+.footer-icons .social-icons {
+    padding: 0.5rem;
+    font-size: 27px;
+    color: var(--primary-color);
+}
+
+.footer-body > h5 {
+    font-size: 25px;
+    font-weight: 400;
+}
