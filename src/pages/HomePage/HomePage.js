@@ -1,9 +1,12 @@
 import React from 'react'
 
+import { Events, Footer } from '../../components'
+
 function HomePage() {
   return (
     <div>
-      <h1>Home</h1>
+      <Events />
+      <Footer />
     </div>
   )
 }
