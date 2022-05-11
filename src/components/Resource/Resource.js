@@ -7,30 +7,30 @@ function Resource() {
   return (
 
 
-    <div>
+    <div className="resources">
 
         <h3 style={{ textAlign: "center", padding: "20px", marginTop: "120px" }}>
          RESOURCES
         </h3>
  
-            <p className="text" style={{ textAlign: "center", paddingTop: "20px", marginTop: "30px" }}>The official announcements about upcoming events will be published here. Keep checking to know more...</p>
+            <p className="resources__text" style={{ textAlign: "center", paddingTop: "20px", marginTop: "30px" }}>The official announcements about upcoming events will be published here. Keep checking to know more...</p>
 
-            <div class="container">
-                <div class="card">
-                  <div class="card__header">
+            <div class="resources__container">
+                <div class="resources__card">
+                  <div class="resources__card__header">
                     <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600"/>
                   </div>
-                  <div class="card__body">
+                  <div class="resources__card__body">
                     
                     <h4>HELLO WORLD</h4>
                     <p>Introducing to CP & DSA</p>
                    
                   </div>
                 
-                  <div class="card__footer">
-                  <div class="logo">
-                    <img src={Logo} alt="logo__image" class="logo_img"/>
-                    <div class="logo__info">
+                  <div class="resources__card__footer">
+                  <div class="resources__logo">
+                    <img src={Logo} alt="logo__image" class="resources__logo_img"/>
+                    <div class="resources__logo__info">
                       <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}} /></h5>
                       
                     </div>
@@ -39,21 +39,21 @@ function Resource() {
 
                   
                 </div>
-                <div class="card">
-                <div class="card__header">
+                <div class="resources__card">
+                <div class="resources__card__header">
                   <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600"/>
                 </div>
-                <div class="card__body">
+                <div class="resources__card__body">
                   
                   <h4>CODESPRINT</h4>
                   <p>On your mark. Get Set. Code</p>
                  
                 </div>
               
-                <div class="card__footer">
-                <div class="logo">
-                  <img src={Logo} alt="logo__image" class="logo_img"/>
-                  <div class="logo__info">
+                <div class="resources__card__footer">
+                <div class="resources__logo">
+                  <img src={Logo} alt="logo__image" class="resources__logo_img"/>
+                  <div class="resources__logo__info">
                     <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}}/></h5>
                     
                   </div>
@@ -74,4 +74,3 @@ function Resource() {
 }
 
 export default Resource
-
