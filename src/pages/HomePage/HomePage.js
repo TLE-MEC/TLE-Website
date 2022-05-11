@@ -7,7 +7,7 @@ function HomePage() {
   return (
     <div>
       <Events />
-    <Resource/>
+      <Resource/>
       <Footer />
 
     </div>
