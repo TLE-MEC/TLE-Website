@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Events, Footer } from '../../components'
-import Resource from '../../components/Resource/Resource'
+import { Events, Footer, Resource } from '../../components'
 
 function HomePage() {
   return (
