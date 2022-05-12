@@ -13,10 +13,10 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/team" element={<TeamPage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/team" element={<TeamPage />} />
 
-            <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
