@@ -5,7 +5,7 @@ import Ellipse1 from '../../assets/svg/Ellipse 3.svg'
 import Subtract from '../../assets/svg/Subtract.svg'
 import Card from '../../components/Events/Card'
 import Event from '../../data/Event';
-function EventsPage() {
+function EventPage() {
   return (
     <div className='events-1'>
       <div className='events-title'>EVENTS</div>
@@ -23,4 +23,4 @@ function EventsPage() {
     </div>
   );
 }
-export default EventsPage;
+export default EventPage;
