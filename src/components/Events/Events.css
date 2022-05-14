@@ -189,6 +189,11 @@
   background: var(--secondary-color);
   border-radius: 20px;
 }
+.events-card-image{
+  width: 352px;
+    height: 197px;
+border-radius: 20px 20px 0 0;
+}
 
 .flip-card-1-back {
   background: var(--bg-color);
