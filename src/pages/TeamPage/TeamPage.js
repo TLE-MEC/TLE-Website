@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import semicircle1 from "../../assets/png/semicircle1.png";
 import semicircle2 from "../../assets/png/semicircle2.png";
 import pic1 from "../../assets/svg/pic1.svg";
@@ -9,28 +9,27 @@ import chairpersonimg from "../../assets/svg/chairpersonimg.svg";
 
 import "./TeamPage.css";
 function TeamPage() {
-  //const [visible, setvisible] = useState(false);
 
   return (
     <div id="TeamMaindiv" fluid>
-      <img src={semicircle1} id="semicircle1"></img>
+      <img src={semicircle1} id="semicircle1" alt=""/>
       <h1 id="Team-heading">OUR TEAM</h1>
 
       <div className="Team-imgdiv-Parentdiv" fluid>
         <div className="Team-imgdiv">
-          <img className="hexagon" src={blankhexagon} />
+          <img className="hexagon" src={blankhexagon} alt=""/>
           <span className="Team-chairpersonParent">
-            <img src={chairpersonimg} className="hexagon"></img>
+            <img src={chairpersonimg} className="hexagon" alt=""/>
             <span className="Teampage-overlay hexagon">Chairperson</span>
           </span>
         </div>
         <div className="Team-imgdiv">
-          <img className="hexagon" src={pic1} />
-          <img className="hexagon" src={pic2} />
-          <img className="hexagon" src={viewmore} />
+          <img className="hexagon" src={pic1} alt=""/>
+          <img className="hexagon" src={pic2} alt=""/>
+          <img className="hexagon" src={viewmore} alt=""/>
         </div>
       </div>
-      <img src={semicircle2} id="semicircle2"></img>
+      <img src={semicircle2} id="semicircle2" alt=""/>
     </div>
   );
 }
