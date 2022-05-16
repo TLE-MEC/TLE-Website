@@ -1,9 +1,16 @@
 import React from 'react'
 
+
+import { Events, Footer, Resource, Navbar } from '../../components'
+
 function HomePage() {
   return (
     <div>
-      <h1>Home</h1>
+      <Navbar  />
+      <Events />
+      <Resource/>
+      <Footer />
+
     </div>
   )
 }
