@@ -25,7 +25,7 @@
   justify-content: center;
   align-items:center ;
   flex-direction: column;
-  margin-top:70px;
+  margin-top:110px;
   margin-bottom: 70px;
 }
 
@@ -36,8 +36,8 @@
   align-items:center ;
   flex-direction: column;
   margin-top:70px;
+  overflow-x: hidden;
 }
-
 .events-title{
   display: flex;
   justify-content: center;
@@ -63,8 +63,10 @@
 .events-image-1 {
   position:absolute;
   height: 100%;
+  max-width:100%;
   left: 0%;
-  top: 40%;
+  top: 35%;
+ 
 }
 
 .events-image-4 {
@@ -72,7 +74,7 @@
   width: 25%;
   height: 25%;
   right:6%;
-  top: 115%;
+  top: 110%;
 }
 
 .events-image-2 {
@@ -92,7 +94,9 @@
 }
 
 .events-text{
+  overflow-wrap: break-word;
   display:flex;
+  justify-content: center;
   padding-top: 30px;
   font-family:var(--primary-font);
   font-weight: 400;
@@ -100,20 +104,28 @@
   line-height: 35px;
   letter-spacing: 0.055em;
   color: var(--text-main);
+  text-align: center;
 }
 
 .events-card{
   display: flex;
+  flex-wrap: wrap;
   gap: 50px;
   padding-top: 75px;
-  height: 357px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .events-card-1{
-  display: flexbox;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
   align-items: center;
   justify-content: center;
-  height: 714px;
+  padding-bottom: 50px;
 }
 
 .events-card-rect-1 {
@@ -142,7 +154,7 @@
 .flip-card-1 {
   background-color: transparent;
   width: 352px;
-  height: 197px;
+  height: 282px;
 }
 
 .flip-card-1-inner {
@@ -176,6 +188,11 @@
 .flip-card-1-front { 
   background: var(--secondary-color);
   border-radius: 20px;
+}
+.events-card-image{
+  width: 352px;
+    height: 197px;
+border-radius: 20px 20px 0 0;
 }
 
 .flip-card-1-back {

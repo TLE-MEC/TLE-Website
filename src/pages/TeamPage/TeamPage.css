@@ -1,0 +1,75 @@
+#TeamMaindiv {
+  height: 100vh;
+}
+
+#Team-heading {
+  justify-content: center;
+  margin-top: 5rem;
+  display: flex;
+  color: #0b8b8b;
+  font-size: 3rem;
+}
+
+#semicircle1 {
+  position: fixed;
+  left: -11rem;
+  /* size: 1rem; */
+  height: 20rem;
+  top: 1.5rem;
+  z-index: -2;
+}
+#semicircle2 {
+  position: fixed;
+  right: -6rem;
+  bottom: 1rem;
+  z-index: -2;
+}
+
+.Teampage-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  transition: 0.5s ease;
+  background: rgba(0, 128, 128, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  display: inline;
+  width: 11rem;
+  height: 13rem;
+  margin-left: 1.5rem;
+  object-fit: cover;
+}
+
+.Team-imgdiv-Parentdiv {
+  margin-top: 3rem;
+}
+.Team-chairpersonParent {
+  position: relative;
+}
+
+.Team-chairpersonParent:hover .Teampage-overlay {
+  opacity: 1;
+}
+
+.Team-imgdiv {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width:880px){
+    .hexagon{
+        margin-left: 1rem;
+    }
+}
