@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&family=Raleway:wght@400;700&family=Work+Sans:wght@400;600&display=swap');
+
+/* * {
+  margin: 0;
+  padding: 0;
+  background: #E6F4F4;
+} */
+
+.Aboutus {
+  background: #E6F4F4;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  background: #E6F4F4;
+  height: 100%;
+}
+
+h1 {
+  position: relative;
+  left: 6.5%;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  color: #0B8B8B;
+  margin-bottom: 30px;
+}
+
+h4 {
+  margin: 0;
+  position: relative;
+  left: 6.5%;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 30px;
+  height: 40%;
+  width: 40%;
+  color: #333333;
+}
+
+.cubo {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  left: -150px;
+  bottom: 40px;
+}
+
+.grid {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  top: -110px;
+  left: 250px;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  right: 0;
+}
+
+.main-box {
+  margin: auto;
+  padding: 0;
+  position: relative;
+  height: 7%;
+  margin-top: 3%;
+  font-family: 'Work Sans';
+  font-style: normal;
+  z-index: 1;
+}
+
+.box-1 {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background: #37B9B9;
+  padding: 10px;
+  border-top-right-radius: 16.8839px;
+  border-top-left-radius: 16.8839px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.box-2 {
+  display: flex;
+  width: 80%;
+  padding: 10px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #D0EBEB;
+  border-bottom-right-radius: 16.8839px;
+  border-bottom-left-radius: 16.8839px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.138);
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  color: #333333;
+}
+
+h6 {
+  background: #D0EBEB;
+  font-weight: 500;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .Aboutus {
+    display: flex;
+    flex-direction: column;
+    overflow-y: visible;
+    justify-content: space-between;
+  }
+
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circle {
+    height: 200px;
+    width: 150px;
+  }
+
+  .main-box {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .grid {
+    left: 100px;
+  }
+
+}

@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
+import Aboutus from '../../components/Aboutus/Aboutus'
+
 
 
 function HomePage() {
@@ -7,6 +9,7 @@ function HomePage() {
     <div>
       {/* <h1>Home</h1> */}
       <Navbar />
+      <Aboutus />
     </div >
   )
 }
