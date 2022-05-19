@@ -36,7 +36,7 @@ function Navbar() {
         <HashLink to="#home" className='nav_item' smooth>
           Home
         </HashLink>
-        <HashLink to="#about" className='nav_item' smooth>
+        <HashLink to="#Aboutus" className='nav_item' smooth>
           About
         </HashLink>
         <HashLink to="#events" className='nav_item' smooth>
