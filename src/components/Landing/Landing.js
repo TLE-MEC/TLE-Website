@@ -1,24 +1,43 @@
-import '../../components/Landing/Landing.css';
-import Cubo from '../../assets/svg/CUBO LAPTOP png 2.svg'
-import Circle from '../../assets/svg/Subtract.svg'
-import Ellipse from '../../assets/svg/Ellipse 1 (1).svg'
-import Semi from '../../assets/svg/Ellipse 2.svg'
+import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+import { FiPhone } from "react-icons/fi";
+import { HiOutlineUserGroup } from "react-icons/hi";
+
+import './Landing.css';
+
+import landing_cubo from '../../assets/svg/landing_cubo.svg'
+import landing_circle from '../../assets/svg/landing_circle.svg'
+import ellipse1 from '../../assets/svg/ellipse1.svg'
+import landing_ellipse from '../../assets/svg/landing_ellipse.svg'
 
 function Landing() {
   return (
-    < div className='landing'>
-    < img className='cubobig' src={Cubo} alt = "Cubo"/> 
-    < img className='smallcircle' src={Circle} alt = "Circle"/> 
-    < img className='ellipse1' src={Ellipse} alt = "Ellipse"/> 
-    < img className='bigsemi' src={Semi} alt = "Semi"/> 
-    < div className='content' >
-       Introducing you to <br/>the <span className = "colour" >Official </span>website<br/> of <span className = "colour"><b> TLE MEC.</b></span>
-    </div>
-    <div className='buttons'>
-    <div className='btn1'> <i class="fa fa-phone"></i>   Contact</div>
-    <div className='btn2'><i class="fa fa-group"></i>  Our Team</div>
-    '</div>
-      
+    <div className='landing'>
+      <img src={ellipse1} className="ellipse1" alt=""/>
+      <div className='landing__container'>
+        <div className='landing__left'>
+          <p className='welcome'>WELCOME</p>
+          <h2>
+            Introducing you to the <span className='primary'>Official</span> website of <br /> 
+            <span className='primary bold'>TLE MEC</span>.
+          </h2>
+          <div className='landing__btns'>
+            <HashLink to="#resources" className='landing_btn phone_btn' smooth>
+              <FiPhone />
+              Contact
+            </HashLink>
+            <HashLink to="#resources" className='landing_btn team_btn' smooth>
+              <HiOutlineUserGroup />
+              Our Team
+            </HashLink>
+          </div>
+        </div>
+        <div className='landing__right'>
+          <img src={landing_circle} className="landing_circle" alt=""/>
+          <img src={landing_cubo} alt="" />
+        </div>
+      </div>
+      <img src={landing_ellipse} className="landing_ellipse" alt=""/>
     </div>
   );
 }

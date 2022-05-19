@@ -1,3 +1,7 @@
-.app {
-  
+.primary {
+    color: var(--primary-color);
+}
+
+.bold {
+    font-weight: 700;
 }
