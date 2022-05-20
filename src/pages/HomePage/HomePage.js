@@ -1,14 +1,13 @@
 import React from 'react'
-import Aboutus from '../../components/Aboutus/Aboutus'
 
-import { Events, Footer, Resource, Navbar, Landing } from '../../components'
+import { Events, Footer, Resource, Navbar, Landing, About } from '../../components'
 
 function HomePage() {
   return (
     <div>
       <Navbar />
       <Landing  />
-      <Aboutus />
+      <About />
       <Events />
       <Resource/>
       <Footer />
