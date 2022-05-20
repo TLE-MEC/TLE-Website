@@ -1,3 +1,113 @@
 .about {
-    
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.about__container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about__top {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.about__top p {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: var(--text-main);
+}
+
+.section__header {
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 82px;
+    letter-spacing: -0.02em;
+    color: var(--primary-color);
+}
+
+.about__bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.about_bottom_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 431px;
+    background: #D0EBEB;
+    box-shadow: 0px 3.37679px 3.37679px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.abc_top {
+    width: 100%;
+    background: #37B9B9;
+    padding: 0.85rem 2rem;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.abc_top h3 {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+
+    color: #FFFFFF;
+}
+
+.abc_bottom {
+    width: 100%;
+    padding: 1.45rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.abc_bottom p {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+}
+
+.about_ellipse_circle {
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.about_cubo {
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 180px;
 }
