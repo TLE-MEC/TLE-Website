@@ -1,29 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 .navbar {
-    height: 58px;
+    height: 90px;
     background-color: #ffffff;
     box-shadow: 0px 15px 8px -15px rgb(183, 182, 182);
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-.logo {
-    width: 56px;
-    height: 46px;
-    margin: 6px;
+.nav__desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav_logo {
+    width: 60px;
+    flex-shrink: 0;
 }
 
 .meclogo {
-    width: 108px;
-    height: 54px;
-    margin: 4px;
+    width: 118px;
+    flex-shrink: 0;
 }
 
-.navbar-items {
+.navbar_items {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 3rem;
 }
 
 .nav_item {
@@ -32,7 +40,7 @@
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    padding: 10px 44px;
+    padding: 0.75rem 1.75rem;
 }
 
 .nav_item:hover {
@@ -41,57 +49,28 @@
     color: white;
 }
 
-.side-nav {
-    display: flex;
-    align-items: left;
-    position: absolute;
-    top: 58px;
-    left: 70%;
-    flex-direction: column;
-    background-color: white;
-    width: 30%;
-    height: calc(100vh - 58px);
-    float: right;
-    background-color: #cff0f0;
-}
-
 .hamburger {
-    border: 0;
-    height: 34px;
-    width: 34px;
-    padding: 0.5rem;
-    border-radius: 50%;
-    background-color: #0a7e7e;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    position: relative;
-    top: 30px;
-    right: 20px;
-    transform: translateY(-50%);
-    display: none;
+    font-size: 2.05rem;
+    color: #0B8B8B;
 }
 
-.hamburger:hover {
-    background-color: #0ca5a5;
+.nav__mob {
+    display: none;
+    width: 100%;
+}
+
+.nav__mob_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 @media screen and (max-width: 800px) {
-    .hamburger {
+    .nav__mob {
         display: block;
     }
 
-    .navbar-items,
-    .meclogo {
-        display: none;
-    }
-
-    .side-nav {
-        display: flex;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .side-nav {
+    .nav__desktop {
         display: none;
     }
 }

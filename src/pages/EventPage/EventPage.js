@@ -3,8 +3,8 @@ import Logo1 from '../../assets/svg/cubo announcement 2.svg';
 import Ellipse from '../../assets/svg/Ellipse 4.svg'
 import Ellipse1 from '../../assets/svg/Ellipse 3.svg'
 import Subtract from '../../assets/svg/landing_circle.svg'
-import Card from '../../components/Events/Card'
-import Event from '../../data/Event';
+import EventCard from '../../components/Events/EventCard'
+import eventData from '../../data/eventData';
 function EventPage() {
   return (
     <div className='events-1'>
@@ -15,10 +15,10 @@ function EventPage() {
       <img className="events-image-4" src={Subtract} alt="subtract" />
       <img className="events-image-2" src={Ellipse} alt="ellipse" />
       <div className='events-card-1'>
-        {Event.map((e)=>{
+        {eventData.map((e)=>{
           return (
-          <Card name={e.name} description={e.description} details={e.details}/>
-        );})}
+            <EventCard name={e.name} description={e.description} details={e.details}/>
+        )})}
       </div>  
     </div>
   );

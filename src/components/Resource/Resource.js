@@ -3,73 +3,63 @@ import './Resource.css';
 import Logo from '../../assets/svg/logo.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 function Resource() {
   return (
+  <div className="resources" id="resources">
+    <div className="resources_container">
+      <h1 className='section__header'>RESOURCES</h1>
 
-
-    <div className="resources">
-
-        <h3 style={{ textAlign: "center", padding: "20px", marginTop: "120px" }}>
-         RESOURCES
-        </h3>
- 
-            <p className="resources__text" style={{ textAlign: "center", paddingTop: "20px", marginTop: "30px" }}>The official announcements about upcoming events will be published here. Keep checking to know more...</p>
-
-            <div class="resources__container">
-                <div class="resources__card">
-                  <div class="resources__card__header">
-                    <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600"/>
-                  </div>
-                  <div class="resources__card__body">
-                    
-                    <h4>HELLO WORLD</h4>
-                    <p>Introducing to CP & DSA</p>
-                   
-                  </div>
-                
-                  <div class="resources__card__footer">
-                  <div class="resources__logo">
-                    <img src={Logo} alt="logo__image" class="resources__logo_img"/>
-                    <div class="resources__logo__info">
-                      <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}} /></h5>
-                      
-                    </div>
-                  </div>
-                </div>
-
-                  
-                </div>
-                <div class="resources__card">
-                <div class="resources__card__header">
-                  <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" class="card__image" width="600"/>
-                </div>
-                <div class="resources__card__body">
-                  
-                  <h4>CODESPRINT</h4>
-                  <p>On your mark. Get Set. Code</p>
-                 
-                </div>
-              
-                <div class="resources__card__footer">
-                <div class="resources__logo">
-                  <img src={Logo} alt="logo__image" class="resources__logo_img"/>
-                  <div class="resources__logo__info">
-                    <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}}/></h5>
-                    
-                  </div>
-                </div>
-              </div>
-
-                
-              </div>
-                
+      <p className="resources__text">The official announcements about upcoming events will be published here. Keep checking to know more...</p>
+      <div className="resources__container">
+          <div className="resources__card">
+            <div className="resources__card__header">
+              <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" className="card__image" width="600"/>
             </div>
+            <div className="resources__card__body">  
+              <h4>HELLO WORLD</h4>
+              <p>Introducing to CP & DSA</p>
+            </div>
+          
+            <div className="resources__card__footer">
+            <div className="resources__logo">
+              <img src={Logo} alt="logo__image" className="resources__logo_img"/>
+              <div className="resources__logo__info">
+                <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}} /></h5>
+                
+              </div>
+            </div>
+          </div>
+
+            
+          </div>
+          <div className="resources__card">
+          <div className="resources__card__header">
+            <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" className="card__image" width="600"/>
+          </div>
+          <div className="resources__card__body">
+            
+            <h4>CODESPRINT</h4>
+            <p>On your mark. Get Set. Code</p>
+            
+          </div>
+        
+          <div className="resources__card__footer">
+          <div className="resources__logo">
+            <img src={Logo} alt="logo__image" className="resources__logo_img"/>
+            <div className="resources__logo__info">
+              <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}}/></h5>
+              
+            </div>
+          </div>
         </div>
-    
 
-
-
-
+          
+        </div>
+              
+      </div>
+    </div>
+    </div>
   )
 }
 

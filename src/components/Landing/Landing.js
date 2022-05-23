@@ -12,7 +12,7 @@ import landing_ellipse from '../../assets/svg/landing_ellipse.svg'
 
 function Landing() {
   return (
-    <div className='landing'>
+    <div className='landing' id='home'>
       <img src={ellipse1} className="ellipse1" alt=""/>
       <div className='landing__container'>
         <div className='landing__left'>

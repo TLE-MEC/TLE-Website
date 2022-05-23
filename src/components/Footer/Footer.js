@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import './Footer.css'
   
 import { FaYoutube } from "react-icons/fa";
@@ -12,29 +12,27 @@ import college_logo from '../../assets/svg/college-logo.svg'
 function Footer() {
   return (
     <div className='footer'>
-       <div className='footer-img'>
-         <img src={footer_img} alt='' />
-       </div>
-       <div className='footer-container'>
-         <div className='footer-logoimg'>
+      <img src={footer_img} alt='' className='footer_img'/>
+       <div className='footer_container'>
+         <div className='footer_logoimg'>
            <img src={footer_logoimg} alt=''/>
          </div>
-         <div className='footer-body'>
+         <div className='footer_body'>
             <h4>Contact Us</h4>
-            <div className='footer-icons'>
-              <div className='social-icons'>
+            <div className='footer_icons'>
+              <a href='https://www.youtube.com/' target="_blank" rel="noreferrer" className='social_icons'>
                 <FaYoutube />
-              </div>
-              <div className='social-icons'>
+              </a>
+              <a href='https://www.instagram.com/tle.mec/' target="_blank" rel="noreferrer" className='social_icons'>
                 <FaInstagram />
-              </div>
-              <div className='social-icons'>
+              </a>
+              <a href='https://www.linkedin.com/' target="_blank" rel="noreferrer" className='social_icons'>
                 <FaLinkedin />
-              </div>   
+              </a>   
             </div>
-            <h5>FaQ</h5>
+            <Link to='/faq' className='footer_faq'>FaQ</Link>
          </div>
-         <div className='footer-colglogo'>
+         <div className='footer_colglogo'>
            <img src={college_logo} alt=''/>
          </div>
        </div>

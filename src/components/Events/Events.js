@@ -1,17 +1,25 @@
 import '../../components/Events/Events.css';
-import Logo from '../../assets/svg/cubo-announcement.svg'
-import Card from './Card'
-import Event from '../../data/Event';
+import logo from '../../assets/svg/cubo-announcement.svg'
+import EventCard from './EventCard'
+import eventData from '../../data/eventData';
+
 function Events() {
   return (
-    < div className='events'>
-      <div className='events-title'>EVENTS</div>
-      <div className="events-logo"><img className="events-image" src={Logo} alt="logo" /></div>
-      <div className="events-text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</div>
-      <div className='events-card'>
-        <Card name={Event[0].name} description={Event[0].description} details={Event[0].details}/>
-        <Card name={Event[1].name} description={Event[1].description} details={Event[1].details}/>
-        <Card name={Event[2].name} description={Event[2].description} details={Event[2].details}/>
+    <div className='events' id='events'>
+      <div className='events__container'>
+        <h1 className='section__header'>EVENTS</h1>
+        <img className="events-image" src={logo} alt="" />
+        <p className="events-text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</p>
+        
+        <div className='events-card'>
+          {eventData.slice(0, 3).map((eve, id) => (
+            <EventCard key={id} name={eve.name} description={eve.description} details={eve.details}/>
+          ))}
+        </div>
+
+        <div className='events_more'>
+          <button className='events_btn'>View More</button>
+        </div>
       </div>
     </div>
   );

@@ -1,52 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-:root {
-    --primary-font: 'Raleway',sans-serif;
-    --secondary-font: 'Work Sans';
-    --tertiary-font:'Poppins';
-    --bg-color: #E6F4F4;
-    --primary-color: #0B8B8B;
-    --secondary-color: #86CECE;
-    --text-card:#FFFFFF;
-    --text-main: #333333;
-}
-
 .footer { 
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-}
-
-.footer-img {
-    flex: 0.2;
-}
-
-.footer-img > img {
+    position: relative;
     height: 200px;
 }
 
-.footer-container {
+
+.footer_img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+}
+
+.footer_container {
     padding: 1rem;
-    flex: 0.8;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 90%;
+    margin-left: auto;
 }
 
 
-.footer-logoimg > img {
+.footer_logoimg > img {
     width: 100px;
 }
 
-.footer-body {
+.footer_body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,25 +37,33 @@
     
 }
 
-.footer-body > h4 {
+.footer_body > h4 {
     font-size: 30px;
     font-weight: 500;
 }
 
-.footer-icons {
+.footer_icons {
     display: flex;
     flex-direction: row;
     color: var(--primary-color);
     padding: 0.75rem;
 }
 
-.footer-icons .social-icons {
+.social_icons {
     padding: 0.5rem;
-    font-size: 27px;
+    font-size: 2rem;
     color: var(--primary-color);
+    transition: ease-in-out 200ms;
 }
 
-.footer-body > h5 {
+.social_icons:hover {
+    transform: scale(1.35);
+}
+
+.footer_faq {
     font-size: 25px;
     font-weight: 400;
+    font-family:var(--primary-font);
+    color: var(--primary-color);
+    text-decoration: none;
 }
