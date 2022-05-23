@@ -1,6 +1,6 @@
 import { useState, React } from 'react'
 import { HashLink } from 'react-router-hash-link';
-import { Drawer, IconButton } from '@mui/material';
+import { Drawer } from '@mui/material';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 import './Navbar.css';
@@ -13,12 +13,12 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   const [open, setOpen] = useState(false)
 
-  const toggleDrawer = (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
+  const handleDrawerOpen = () => {
+      setOpen(true);
+  };
 
-    setOpen(!open)
+  const handleDrawerClose = () => {
+      setOpen(false);
   };
   return (
     <div className='navbar'>
@@ -54,17 +54,63 @@ function Navbar() {
           <Link to='/'>
             <img src={logo} alt="" className='nav_logo' />
           </Link>
-          <IconButton onClick={toggleDrawer}>
+          <button className='nav_btn' onClick={handleDrawerOpen}>
             <HiOutlineMenuAlt3 className='hamburger'/>
-          </IconButton>
+          </button>
         </div>
       </div>
       <Drawer
         open={open}
-        onClose={toggleDrawer}
-        disableScrollLock
-      >
+        disableScrollLock={true}
+        onClose={(event, reason) => {
+          if (reason !== 'backdropClick') {
+              handleDrawerClose();
+          } else if (reason !== 'escapeKeyDown') {
+              handleDrawerClose();
+          }
+      }}
         
+        anchor="left"
+        PaperProps={{
+          sx: {
+            backgroundColor: "#FFFFFF",
+            boxShadow: "3px 0px 6px rgba(0, 0, 0, 0.25)"
+          }
+        }}
+        sx={{
+          background: 'rgba(255, 255, 255, 0.1)',
+          backdropFilter: 'blur(5px)'
+        }}
+      
+      >
+        <div className='nav__drawer'>
+
+          <div className='nav__drawer_header'>
+            <Link to='/'>
+              <img src={logo} alt="" className='nav_logo' />
+            </Link>
+            <div className='navbar_items_mob'>
+              <HashLink to="#home" className='nav_item' smooth>
+                Home
+              </HashLink>
+              <HashLink to="#about" className='nav_item' smooth>
+                About
+              </HashLink>
+              <HashLink to="#events" className='nav_item' smooth>
+                Events
+              </HashLink>
+              <HashLink to="#resources" className='nav_item' smooth>
+                Resources
+              </HashLink>
+              <HashLink to="#team" className='nav_item' smooth>
+                Team
+              </HashLink>
+            </div>
+          </div>
+          <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
+              <img src={meclogo} alt="" className='meclogo__mob' />
+            </a>
+        </div>
       </Drawer>
     </div>
 
