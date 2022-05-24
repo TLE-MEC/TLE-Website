@@ -14,9 +14,9 @@ function Footer() {
     <div className='footer'>
       <img src={footer_img} alt='' className='footer_img'/>
        <div className='footer_container'>
-         <div className='footer_logoimg'>
-           <img src={footer_logoimg} alt=''/>
-         </div>
+         <Link to='/'>
+          <img src={footer_logoimg} alt='' className='footer_logoimg'/>
+         </Link>
          <div className='footer_body'>
             <h4>Contact Us</h4>
             <div className='footer_icons'>
@@ -32,9 +32,10 @@ function Footer() {
             </div>
             <Link to='/faq' className='footer_faq'>FaQ</Link>
          </div>
-         <div className='footer_colglogo'>
-           <img src={college_logo} alt=''/>
-         </div>
+          <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
+            <img src={college_logo} alt='' className='footer_colglogo'/>
+          </a>
+          
        </div>
     </div>
   )

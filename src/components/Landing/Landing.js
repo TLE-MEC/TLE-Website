@@ -19,7 +19,7 @@ function Landing() {
           <p className='welcome'>WELCOME</p>
           <h2>
             Introducing you to the <span className='primary'>Official</span> website of <br className='d-none_mob'/> 
-            <span className='primary bold'>TLE MEC</span>.
+            <span className='primary bold'>TLE MEC.</span>
           </h2>
           <div className='landing__btns'>
             <HashLink to="#resources" className='landing_btn phone_btn' smooth>

@@ -16,6 +16,7 @@ function About() {
           <h1 className='section__header'>ABOUT US</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
           </p>
         </div>
         <div className='about__bottom'>
@@ -27,8 +28,8 @@ function About() {
               <p>Data Structures and Algorithms Competitive Programming </p>
             </div>
           </div>
-          <img src={about_cubo} alt="" className="about_cubo" />  
         </div>
+        <img src={about_cubo} alt="" className="about_cubo" />  
       </div>
     </div>
   );
