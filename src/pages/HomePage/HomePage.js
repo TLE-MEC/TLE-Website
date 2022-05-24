@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Events, Footer, Resource, Navbar, Landing, About } from '../../components'
+import { Events, Footer, Resource, Navbar, Landing, About, Team } from '../../components'
 
 function HomePage() {
   return (
@@ -10,6 +10,7 @@ function HomePage() {
       <About />
       <Events />
       <Resource/>
+      <Team />
       <Footer />
     </div>
   )

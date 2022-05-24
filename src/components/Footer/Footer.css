@@ -69,7 +69,7 @@
 }
 
 .footer_colglogo {
-    width: 150px;
+    width: 100px;
 }
 
 
@@ -87,7 +87,7 @@
         width: 80px;
     }    
     .footer_colglogo {
-        width: 130px;
+        width: 90px;
     }
 }
 
@@ -108,7 +108,7 @@
         width: 80px;
     }    
     .footer_colglogo {
-        width: 130px;
+        width: 100px;
     }
 }
 
@@ -141,16 +141,16 @@
         width: 60px;
     }    
     .footer_colglogo {
-        width: 100px;
+        width: 80px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .footer_logoimg {
-        width: 40px;
+        width: 50px;
     }    
     .footer_colglogo {
-        width: 80px;
+        width: 70px;
     }
 }
 

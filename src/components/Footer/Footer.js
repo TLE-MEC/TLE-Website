@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import footer_img from '../../assets/svg/footer.svg'
 import footer_logoimg from '../../assets/svg/logo.svg'
-import college_logo from '../../assets/svg/college-logo.svg'
+import mec_notext from '../../assets/svg/mec_notext.svg'
 
 function Footer() {
   return (
@@ -33,7 +33,7 @@ function Footer() {
             <Link to='/faq' className='footer_faq'>FaQ</Link>
          </div>
           <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
-            <img src={college_logo} alt='' className='footer_colglogo'/>
+            <img src={mec_notext} alt='' className='footer_colglogo'/>
           </a>
           
        </div>
