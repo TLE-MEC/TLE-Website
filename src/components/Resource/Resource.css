@@ -109,16 +109,21 @@ height: 43px;
 }
 
 .resources__logo__info{
-margin-top: 10px;
+  margin-top: 10px;
 }
+
 .resources__logo__info h5 {
-display: inline;
-font-weight: 500;
-color: #FFFFFF;
-margin-top: 10px;
-margin-left: 120px;
-padding: 10px;
-border-radius: 50px;
-background-color:var(--primary-color) ;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-left: 120px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color:var(--primary-color) ;
+  cursor: pointer;
+  gap: 0.5rem;
 }
 

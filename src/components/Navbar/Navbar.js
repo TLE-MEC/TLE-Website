@@ -93,19 +93,19 @@ function Navbar() {
               <img src={logo} alt="" className='nav_logo' />
             </Link>
             <div className='navbar_items_mob'>
-              <NavLink to="#home" className='nav_item' smooth>
+              <NavLink to="#home" className='nav_item_mob' smooth>
                 Home
               </NavLink>
-              <NavLink to="#about" className='nav_item' smooth>
+              <NavLink to="#about" className='nav_item_mob' smooth>
                 About
               </NavLink>
-              <NavLink to="#events" className='nav_item' smooth>
+              <NavLink to="#events" className='nav_item_mob' smooth>
                 Events
               </NavLink>
-              <NavLink to="#resources" className='nav_item' smooth>
+              <NavLink to="#resources" className='nav_item_mob' smooth>
                 Resources
               </NavLink>
-              <NavLink to="#team" className='nav_item' smooth>
+              <NavLink to="#team" className='nav_item_mob' smooth>
                 Team
               </NavLink>
             </div>

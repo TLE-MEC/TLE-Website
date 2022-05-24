@@ -1,8 +1,7 @@
 import React from "react";
 import './Resource.css';
 import Logo from '../../assets/svg/logo.svg';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { BsLink45Deg } from "react-icons/bs";
 
 function Resource() {
   return (
@@ -25,7 +24,7 @@ function Resource() {
             <div className="resources__logo">
               <img src={Logo} alt="logo__image" className="resources__logo_img"/>
               <div className="resources__logo__info">
-                <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}} /></h5>
+                <h5>Open Link <BsLink45Deg size={20}/></h5>
                 
               </div>
             </div>
@@ -48,7 +47,7 @@ function Resource() {
           <div className="resources__logo">
             <img src={Logo} alt="logo__image" className="resources__logo_img"/>
             <div className="resources__logo__info">
-              <h5>Open Link<FontAwesomeIcon icon={faLink} style={{paddingLeft:"5px"}}/></h5>
+              <h5>Open Link <BsLink45Deg size={20}/></h5>
               
             </div>
           </div>

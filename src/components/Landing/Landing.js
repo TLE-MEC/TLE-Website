@@ -18,7 +18,7 @@ function Landing() {
         <div className='landing__left'>
           <p className='welcome'>WELCOME</p>
           <h2>
-            Introducing you to the <span className='primary'>Official</span> website of <br /> 
+            Introducing you to the <span className='primary'>Official</span> website of <br className='d-none_mob'/> 
             <span className='primary bold'>TLE MEC</span>.
           </h2>
           <div className='landing__btns'>
@@ -34,7 +34,7 @@ function Landing() {
         </div>
         <div className='landing__right'>
           <img src={landing_circle} className="landing_circle" alt=""/>
-          <img src={landing_cubo} alt="" />
+          <img src={landing_cubo} alt="" className='landing_cubo'/>
         </div>
       </div>
       <img src={landing_ellipse} className="landing_ellipse" alt=""/>
