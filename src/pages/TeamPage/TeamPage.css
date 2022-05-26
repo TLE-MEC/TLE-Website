@@ -1,29 +1,20 @@
-#TeamMaindiv {
+.team {
   height: 100vh;
-}
-
-#Team-heading {
-  justify-content: center;
-  margin-top: 5rem;
   display: flex;
-  color: #0b8b8b;
-  font-size: 3rem;
+  background: #FFFFFF;
+  position: relative;
+  padding: 2rem;
 }
 
-#semicircle1 {
-  position: fixed;
-  left: -11rem;
-  /* size: 1rem; */
-  height: 20rem;
-  top: 1.5rem;
-  z-index: -2;
+.team__container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
-#semicircle2 {
-  position: fixed;
-  right: -6rem;
-  bottom: 1rem;
-  z-index: -2;
-}
+
 
 .Teampage-overlay {
   position: absolute;
@@ -31,7 +22,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-
   opacity: 0;
   transition: 0.5s ease;
   background: rgba(0, 128, 128, 0.8);
@@ -41,15 +31,17 @@
   align-items: center;
   color: white;
   font-size: 1.5rem;
+  filter:url(#round);
+  text-align: center;
 }
 
 .hexagon {
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  filter:url(#round);
   display: inline;
   width: 11rem;
   height: 13rem;
-  margin-left: 1.5rem;
   object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .Team-imgdiv-Parentdiv {
@@ -66,10 +58,70 @@
 .Team-imgdiv {
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
 }
 
-@media (max-width:880px){
-    .hexagon{
-        margin-left: 1rem;
-    }
+.viewmore {
+  cursor: pointer;
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .hexagon {
+    width: 10rem;
+    height: 11.5rem;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .hexagon {
+    width: 10rem;
+    height: 11.5rem;
+  }
+  .Team-imgdiv {
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .team {
+    height: 100%;
+  }
+
+  .hexagon {
+    width: 8rem;
+    height: 8rem;
+  }
+  .Team-imgdiv {
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .hexagon {
+    width: 6rem;
+    height: 7rem;
+  }
+
+  .Team-imgdiv {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
 }

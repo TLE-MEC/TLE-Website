@@ -1,4 +1,5 @@
 import React from "react";
+
 import semicircle1 from "../../assets/png/semicircle1.png";
 import semicircle2 from "../../assets/png/semicircle2.png";
 import pic1 from "../../assets/svg/pic1.svg";
@@ -8,6 +9,8 @@ import blankhexagon from "../../assets/png/blankhexagon.png";
 import chairpersonimg from "../../assets/svg/chairpersonimg.svg";
 
 import "./TeamPage.css";
+
+
 function TeamPage() {
 
   return (

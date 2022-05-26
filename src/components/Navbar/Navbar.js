@@ -1,5 +1,5 @@
 import { useState, React } from 'react'
-import { NavHashLink as NavLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { Drawer } from '@mui/material';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link } from 'react-router-dom';
@@ -29,21 +29,21 @@ function Navbar() {
         </Link>
 
         <div className='navbar_items'>
-          <NavLink to="#home" className='nav_item' smooth>
+          <HashLink to="#home" className='nav_item' smooth>
             Home
-          </NavLink>
-          <NavLink to="#about" className='nav_item' smooth>
+          </HashLink>
+          <HashLink to="#about" className='nav_item' smooth>
             About
-          </NavLink>
-          <NavLink to="#events" className='nav_item' smooth>
+          </HashLink>
+          <HashLink to="#events" className='nav_item' smooth>
             Events
-          </NavLink>
-          <NavLink to="#resources" className='nav_item' smooth>
+          </HashLink>
+          <HashLink to="#resources" className='nav_item' smooth>
             Resources
-          </NavLink>
-          <NavLink to="#team" className='nav_item' smooth>
+          </HashLink>
+          <HashLink to="#team" className='nav_item' smooth>
             Team
-          </NavLink>
+          </HashLink>
         </div>
         <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
           <img src={meclogo} alt="" className='meclogo' />
@@ -93,21 +93,21 @@ function Navbar() {
               <img src={logo} alt="" className='nav_logo' />
             </Link>
             <div className='navbar_items_mob'>
-              <NavLink to="#home" className='nav_item_mob' smooth>
+              <HashLink to="#home" className='nav_item_mob' smooth>
                 Home
-              </NavLink>
-              <NavLink to="#about" className='nav_item_mob' smooth>
+              </HashLink>
+              <HashLink to="#about" className='nav_item_mob' smooth>
                 About
-              </NavLink>
-              <NavLink to="#events" className='nav_item_mob' smooth>
+              </HashLink>
+              <HashLink to="#events" className='nav_item_mob' smooth>
                 Events
-              </NavLink>
-              <NavLink to="#resources" className='nav_item_mob' smooth>
+              </HashLink>
+              <HashLink to="#resources" className='nav_item_mob' smooth>
                 Resources
-              </NavLink>
-              <NavLink to="#team" className='nav_item_mob' smooth>
+              </HashLink>
+              <HashLink to="#team" className='nav_item_mob' smooth>
                 Team
-              </NavLink>
+              </HashLink>
             </div>
           </div>
           <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
