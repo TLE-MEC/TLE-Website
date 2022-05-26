@@ -4,6 +4,7 @@
   background: #FFFFFF;
   position: relative;
   padding: 2rem;
+  overflow: hidden;
 }
 
 .team__container {
@@ -15,6 +16,18 @@
   gap: 2rem;
 }
 
+.semicircle1 {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.semicircle2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(50%);
+}
 
 .Teampage-overlay {
   position: absolute;
@@ -84,11 +97,22 @@
   .Team-imgdiv {
     gap: 1rem;
   }
+  .Teampage-overlay {
+    font-size: 1.25rem;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .team {
     height: 100%;
+    padding: 1rem;
+  }
+
+
+  .viewmore {
+    cursor: pointer;
+    z-index: 999;
   }
 
   .hexagon {
@@ -97,6 +121,18 @@
   }
   .Team-imgdiv {
     gap: 0.75rem;
+  }
+  .Teampage-overlay {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .semicircle1 {
+    width: 150px;
+  }
+  
+  .semicircle2 {
+    width: 100px;
   }
 }
 
@@ -109,6 +145,13 @@
 
   .Team-imgdiv {
     gap: 0.5rem;
+  }
+  .Teampage-overlay {
+    font-size: 0.95rem;
+  }
+    
+  .semicircle2 {
+    display: none;
   }
 }
 

@@ -15,7 +15,7 @@ function Team() {
   return (
     <div className='team' id='team'>
       <div className='team__container'>
-        {/* <img src={semicircle1} id="semicircle1" alt=""/> */}
+        <img src={semicircle1} className="semicircle1" alt=""/>
         <h1 className='section__header'>OUR TEAM</h1>
         <div className="Team-imgdiv-Parentdiv" fluid>
           <div className="Team-imgdiv">
@@ -39,7 +39,7 @@ function Team() {
             </Link>
           </div>
         </div>
-        {/* <img src={semicircle2} id="semicircle2" alt=""/> */}
+        <img src={semicircle2} className="semicircle2" alt=""/>
       </div>
     </div>
   )
