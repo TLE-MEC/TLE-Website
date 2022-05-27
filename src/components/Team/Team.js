@@ -23,17 +23,17 @@ function Team() {
             <img className="hexagon" src={blankhexagon} alt=""/>
             <span className="Team-chairpersonParent">
               <img src={chairpersonimg} className="hexagon" alt=""/>
-              <span className="Teampage-overlay hexagon">Chairperson</span>
+              {/* <span className="Teampage-overlay hexagon">Chairperson</span> */}
             </span>
           </div>
           <div className="Team-imgdiv">
             <span className="Team-chairpersonParent">
               <img className="hexagon" src={pic1} alt=""/>
-              <span className="Teampage-overlay hexagon">Vice Chairperson</span>
+              {/* <span className="Teampage-overlay hexagon">Vice Chairperson</span> */}
             </span>
             <span className="Team-chairpersonParent">
             <img className="hexagon" src={pic2} alt=""/>
-              <span className="Teampage-overlay hexagon">CP Head</span>
+              {/* <span className="Teampage-overlay hexagon">CP Head</span> */}
             </span>
             <Link to='/team'>
               <img className="hexagon viewmore" src={viewmore} alt=""/>

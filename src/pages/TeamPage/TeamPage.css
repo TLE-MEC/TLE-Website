@@ -5,7 +5,6 @@
   background: #FFFFFF;
   position: relative;
   padding: 2rem;
-  overflow: hidden;
 }
 
 .teamPage__container {
@@ -37,4 +36,26 @@
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.team_core_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.team_core_container_1, .team_core_container_2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.singleCore {
+  height: 300px;
+  width: 300px;
+}
+
+.singleCore img {
+  width: 120px;
+  border-radius: 50%;
 }
