@@ -9,14 +9,8 @@ import Nikita_menon from './Nikita_Menon.jpg'
 import SharatJacob from './SharatJacob.jpeg'
 import Shimil from './Shimil.jpeg'
 import Sony_P from './Sony_P.jpeg'
-import TomVempala from './TomVempala.webp'
+import TomVempala from './TomVempala.jpg'
 import Vishruth_Subramanian from './Vishruth_Subramanian.jpg'
-
-
-
-
-
-
 
 
 export {
