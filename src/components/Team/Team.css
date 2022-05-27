@@ -1,3 +1,170 @@
 .team {
     height: 100vh;
-}
+    display: flex;
+    background: #FFFFFF;
+    position: relative;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  
+  .team__container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .semicircle1 {
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+  .semicircle2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%);
+  }
+  
+  .Teampage-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s ease;
+    background: rgba(0, 128, 128, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    filter:url(#round);
+    text-align: center;
+  }
+  
+  .hexagon {
+    filter:url(#round);
+    display: inline;
+    width: 11rem;
+    height: 13rem;
+    object-fit: cover;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  
+  .Team-imgdiv-Parentdiv {
+    margin-top: 3rem;
+  }
+  .Team-chairpersonParent {
+    position: relative;
+  }
+  
+  .Team-chairpersonParent:hover .Teampage-overlay {
+    opacity: 1;
+  }
+  
+  .Team-imgdiv {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .viewmore {
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  @media (min-width: 992px) and (max-width: 1380px) {
+    .hexagon {
+      width: 10rem;
+      height: 11.5rem;
+    }
+  }
+  
+  
+  @media screen and (max-width: 992px) {
+    .hexagon {
+      width: 10rem;
+      height: 11.5rem;
+    }
+    .Team-imgdiv {
+      gap: 1rem;
+    }
+    .Teampage-overlay {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .team {
+      height: 100%;
+      padding: 1rem;
+    }
+  
+  
+    .viewmore {
+      cursor: pointer;
+      z-index: 999;
+    }
+  
+    .hexagon {
+      width: 8rem;
+      height: 8rem;
+    }
+    .Team-imgdiv {
+      gap: 0.75rem;
+    }
+    .Teampage-overlay {
+      font-size: 1.05rem;
+      text-align: center;
+    }
+  
+    .semicircle1 {
+      width: 150px;
+    }
+    
+    .semicircle2 {
+      width: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    
+    .hexagon {
+      width: 6rem;
+      height: 7rem;
+    }
+  
+    .Team-imgdiv {
+      gap: 0.5rem;
+    }
+    .Teampage-overlay {
+      font-size: 0.95rem;
+    }
+      
+    .semicircle2 {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+  
+  }
+    
+  @media only screen and (min-device-width: 320px) and (max-device-width: 
+    480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+  
+  }
+  
+  
+  @media only screen and (device-width: 768px) {
+  
+  }

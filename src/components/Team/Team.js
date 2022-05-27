@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import semicircle1 from "../../assets/png/semicircle1.png";
 import semicircle2 from "../../assets/png/semicircle2.png";
@@ -9,7 +10,7 @@ import blankhexagon from "../../assets/png/blankhexagon.png";
 import chairpersonimg from "../../assets/svg/chairpersonimg.svg";
 
 import './Team.css'
-import { Link } from 'react-router-dom';
+
 
 function Team() {
   return (
