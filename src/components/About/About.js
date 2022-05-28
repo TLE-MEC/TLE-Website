@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence, motion } from "framer-motion";
 
 import './About.css';
 
@@ -6,8 +7,41 @@ import './About.css';
 import about_cubo from '../../assets/svg/about_cubo.svg'
 import about_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
 
+const texts = ["Data Structures and Algorithms Competitive Programming", "Hello helllo hello", "bye bye bye hehehe yeheh"];
+const variants = {
+  enter: direction => {
+    return {
+      y: -20,
+      opacity: 0
+    };
+  },
+  center: {
+    zIndex: 1,
+    y: 0,
+    opacity: 1
+  },
+  exit: direction => {
+    return {
+      zIndex: 0,
+      opacity: 0
+    };
+  }
+};
 
 function About() {
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      let next = index + 1;
+      if (next === texts.length) {
+        next = 0;
+      }
+      setIndex(next);
+    }, 4 * 1000);
+  }, [index, setIndex]);
+
   return (
     <div className="about" id='about'>
       <img src={about_ellipse_circle} className='about_ellipse_circle' alt="" />
@@ -25,9 +59,24 @@ function About() {
               <h3>What do we do ? </h3>
             </div>
             <div className='abc_bottom'>
-              <p>Data Structures and Algorithms Competitive Programming </p>
+              <AnimatePresence>
+                <motion.p
+                  style={{ position: "absolute" }}
+                  variants={variants}
+                  key={index}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    y: { type: "spring", stiffness: 300, damping: 300 }, opacity: { duration: 0.2  }
+                  }}
+                >
+                  {texts[index]}
+                </motion.p>
+              </AnimatePresence>
             </div>
           </div>
+          {/* <p>Data Structures and Algorithms Competitive Programming </p> */}
         </div>
         <img src={about_cubo} alt="" className="about_cubo" />  
       </div>

@@ -18,7 +18,7 @@ function Team() {
       <div className='team__container'>
         <img src={semicircle1} className="semicircle1" alt=""/>
         <h1 className='section__header'>OUR TEAM</h1>
-        <div className="Team-imgdiv-Parentdiv" fluid>
+        <div className="Team-imgdiv-Parentdiv">
           <div className="Team-imgdiv">
             <img className="hexagon" src={blankhexagon} alt=""/>
             <span className="Team-chairpersonParent">

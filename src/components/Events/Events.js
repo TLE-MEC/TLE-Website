@@ -8,8 +8,8 @@ function Events() {
     <div className='events' id='events'>
       <div className='events__container'>
         <h1 className='section__header'>EVENTS</h1>
-        <img className="events-image" src={logo} alt="" />
-        <p className="events-text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</p>
+        <img className="events_cubo" src={logo} alt="" />
+        <p className="section__text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</p>
         
         <div className='events-card'>
           {eventData.slice(0, 3).map((eve, id) => (

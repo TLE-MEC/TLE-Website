@@ -79,7 +79,6 @@
     font-size: 1.4rem;
     line-height: 35px;
     letter-spacing: -0.02em;
-
     color: #FFFFFF;
 }
 
@@ -90,6 +89,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+    height: 100px;
 }
 
 .abc_bottom p {
@@ -99,12 +100,15 @@
     font-size: 1.25rem;
     letter-spacing: -0.02em;
     color: var(--text-main);
+    white-space: normal;
+    width: 300px;
 }
 
 .about_ellipse_circle {
     position: absolute;
     right: 0;
     top: 50px;
+    pointer-events: none;
 }
 
 .about_cubo {
@@ -112,6 +116,7 @@
     left: 0;
     bottom: -32px;
     width: 180px;
+    pointer-events: none;
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
@@ -193,10 +198,31 @@
         margin-top: 1rem;
         position: relative;
     }
+
+    .abc_top {
+        padding: 0.65rem 1.8rem;
+    }
+    
+    .abc_top h3 {
+        font-size: 1.2rem;
+    }
+
+    .abc_bottom {
+        height: 80px;
+    }
+
+    .abc_bottom p {
+        font-size: 1.15rem;
+        width: 280px;
+    }
     
 }
 
 @media screen and (max-width: 600px) {
+    .abc_bottom p {
+        font-size: 1.05rem;
+        width: 280px;
+    }
 }
 
 @media screen and (max-width: 400px) {

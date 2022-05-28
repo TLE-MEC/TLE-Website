@@ -15,6 +15,15 @@
   padding: 4rem 0;
 }
 
+.section__text{
+  padding-top: 1rem;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1.85rem;
+  letter-spacing: 0.055em;
+  color: var(--text-main);
+}
+
 .events-1 {
   width:100%;
   display: flex;
@@ -24,21 +33,10 @@
   margin-top:70px;
   overflow-x: hidden;
 }
-.events-title{
-  display: flex;
-  justify-content: center;
-  font-family:var(--primary-font);
-  font-weight: 700;
-  font-size: 70px;
-  line-height: 82px;
-  letter-spacing: -0.02em;
-  align-items: center;
-  color: var(--primary-color);
-}
 
 
-.events-image {
-  width: 250px;
+.events_cubo{
+  width: 200px;
 }
 
 .events_more {
@@ -69,51 +67,7 @@
   outline: none;
 }
 
-.events-image-1 {
-  position:absolute;
-  height: 100%;
-  max-width:100%;
-  left: 0%;
-  top: 35%;
-}
 
-.events-image-4 {
-  position: absolute;
-  width: 25%;
-  height: 25%;
-  right:6%;
-  top: 110%;
-}
-
-.events-image-2 {
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  left: -15%;
-  top: 10%;
-}
-
-.events-image-3 {
-  position: absolute;
-  width:20%;
-  height: 50%;
-  right:0%;
-  top: -20%;
-}
-
-.events-text{
-  overflow-wrap: break-word;
-  display:flex;
-  justify-content: center;
-  padding-top: 30px;
-  font-family:var(--primary-font);
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 35px;
-  letter-spacing: 0.055em;
-  color: var(--text-main);
-  text-align: center;
-}
 
 .events-card{
   display: flex;
@@ -214,4 +168,52 @@
   color: var(--text-main);
   border-radius: 20px;
   transform: rotateY(180deg);
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+  .events__container {
+    width: 90%;
+    padding: 3rem 0;
+  }
+  .section__text{
+    font-size: 1.65rem;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .events__container {
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    flex-direction: column;
+  }
+  .section__text{
+    font-size: 1.45rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
 }

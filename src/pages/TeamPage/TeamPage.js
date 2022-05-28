@@ -6,13 +6,14 @@ import execData from "../../data/execData";
 import "./TeamPage.css";
 
 import landing_circle from '../../assets/svg/landing_circle.svg'
-import ellipse3 from '../../assets/svg/Ellipse 3.svg'
+import ellipse4 from '../../assets/svg/ellipse1.svg'
 
 function TeamPage() {
 
   return (
     <div className="teamPage">
-      <div className="team_ellipse3" src={ellipse3} alt="" />
+      <img className="team_ellipse4" src={ellipse4} alt="" />
+      <img className="team_ellipse1" src={ellipse4} alt="" />
       <div className="teamPage__container">
         <div className="team_core">
           <h1 className="team__header">CORE TEAM</h1>

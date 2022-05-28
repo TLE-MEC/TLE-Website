@@ -1,6 +1,6 @@
 import '../../components/Events/Events.css';
 import Logo1 from '../../assets/svg/cubo announcement 2.svg';
-import Ellipse from '../../assets/svg/Ellipse 4.svg'
+import Ellipse from '../../assets/svg/ellipse1.svg'
 import Ellipse1 from '../../assets/svg/Ellipse 3.svg'
 import Subtract from '../../assets/svg/landing_circle.svg'
 import EventCard from '../../components/Events/EventCard'
