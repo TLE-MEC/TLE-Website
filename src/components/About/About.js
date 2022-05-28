@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from "framer-motion";
+import AOS from 'aos'
 
 import './About.css';
 
@@ -30,6 +31,10 @@ const variants = {
 
 function About() {
 
+  AOS.init({
+    duration: 800,
+  })
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -46,7 +51,7 @@ function About() {
     <div className="about" id='about'>
       <img src={about_ellipse_circle} className='about_ellipse_circle' alt="" />
       <div className='about__container'>
-        <div className='about__top'>
+        <div className='about__top' data-aos="fade-right">
           <h1 className='section__header'>ABOUT US</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
@@ -54,7 +59,7 @@ function About() {
           </p>
         </div>
         <div className='about__bottom'>
-          <div className='about_bottom_content'>
+          <div className='about_bottom_content' data-aos="flip-up">
             <div className='abc_top'>
               <h3>What do we do ? </h3>
             </div>

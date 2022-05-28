@@ -1,26 +1,17 @@
 import React from "react";
 import './Resource.css';
 import { BsLink45Deg } from "react-icons/bs";
+import AOS from 'aos'
 
-
-const resourceData = [
-  {
-    id: 1,
-    name: 'HELLO WORLD',
-    desc: 'Introducing to CP & DSA',
-    image: 'https://source.unsplash.com/600x400/?computer',
-    url: ''
-  },
-  {
-    id: 2,
-    name: 'CODESPRINT',
-    desc: 'On your mark. Get Set. Code',
-    image: 'https://source.unsplash.com/600x400/?computer',
-    url: ''
-  },
-]
+import resourceData from "../../data/resourceData";
 
 function Resource() {
+
+  AOS.init({
+    duration: 800,
+  })
+
+
   return (
   <div className="resources" id="resources">
     <div className="resources_container">
@@ -30,7 +21,7 @@ function Resource() {
       <div className="resources__container">
         {
           resourceData.map((res) => (
-            <div className="resources__card" key={res.id}>
+            <div data-aos="slide-up" className="resources__card" key={res.id}>
               <div className="resources__card__header">
                 <img src={res.image} alt="card__image" className="card__image" width="600"/>
               </div>

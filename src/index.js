@@ -2,6 +2,7 @@ import React from 'react';
 
 import App from './App';
 import './index.css'
+import 'aos/dist/aos.css'
 import reportWebVitals from './reportWebVitals';
 
 import { createRoot } from 'react-dom/client';

@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import { FiPhone } from "react-icons/fi";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { motion } from 'framer-motion';
+import AOS from 'aos'
 
 import './Landing.css';
 
@@ -12,11 +13,17 @@ import ellipse1 from '../../assets/svg/ellipse1.svg'
 import landing_ellipse from '../../assets/svg/landing_ellipse.svg'
 
 function Landing() {
+
+  AOS.init({
+    duration: 800,
+  })
+
+
   return (
     <div className='landing' id='home'>
       <img src={ellipse1} className="ellipse1" alt=""/>
       <div className='landing__container'>
-        <div className='landing__left'>
+        <div className='landing__left' data-aos="zoom-in">
           <p className='welcome'>WELCOME</p>
           <h2>
             Introducing you to the <span className='primary'>Official</span> website of <br className='d-none_mob'/> 
@@ -36,6 +43,7 @@ function Landing() {
         <div className='landing__right'>
           <img src={landing_circle} className="landing_circle" alt=""/>
           <motion.img 
+            data-aos="zoom-in"
             src={landing_cubo} 
             alt="" 
             className='landing_cubo'

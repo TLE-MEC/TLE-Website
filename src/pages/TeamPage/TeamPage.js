@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion';
+import AOS from 'aos'
 
 import coreData from "../../data/coreData";
 import execData from "../../data/execData";
@@ -11,6 +12,10 @@ import landing_circle from '../../assets/svg/landing_circle.svg'
 import ellipse4 from '../../assets/svg/ellipse1.svg'
 
 function TeamPage() {
+
+  AOS.init({
+    duration: 800,
+  })
 
   return (
     <motion.div 
@@ -29,7 +34,7 @@ function TeamPage() {
             <div className="team_core_container_1">
               {
                 coreData.slice(0, 4).map((data) => (
-                  <div className="singleCore" key={data.id}>
+                  <div className="singleCore" key={data.id} data-aos="fade-up">
                       <img src={data.image} alt="" />
                       <h3>{data.name}</h3>
                       <p>{data.title}</p>
@@ -40,7 +45,7 @@ function TeamPage() {
             <div className="team_core_container_2">
               {
                 coreData.slice(4, 9).map((data) => (
-                  <div className="singleCore" key={data.id}>
+                  <div className="singleCore" key={data.id} data-aos="fade-up">
                       <img src={data.image} alt="" />
                       <h3>{data.name}</h3>
                       <p>{data.title}</p>
@@ -55,7 +60,7 @@ function TeamPage() {
             <div className="team_core_container_1">
               {
                 execData.map((data) => (
-                  <div className="singleCore" key={data.id}>
+                  <div className="singleCore" key={data.id} data-aos="fade-up">
                       <img src={data.image} alt="" />
                       <h3>{data.name}</h3>
                   </div>
