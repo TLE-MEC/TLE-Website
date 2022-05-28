@@ -2,6 +2,7 @@ import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { FiPhone } from "react-icons/fi";
 import { HiOutlineUserGroup } from "react-icons/hi";
+import { motion } from 'framer-motion';
 
 import './Landing.css';
 
@@ -34,7 +35,18 @@ function Landing() {
         </div>
         <div className='landing__right'>
           <img src={landing_circle} className="landing_circle" alt=""/>
-          <img src={landing_cubo} alt="" className='landing_cubo'/>
+          <motion.img 
+            src={landing_cubo} 
+            alt="" 
+            className='landing_cubo'
+            drag
+            dragConstraints={{
+              top: -150,
+              left: -150,
+              right: 150,
+              bottom: 150
+            }}
+          />
         </div>
       </div>
       <img src={landing_ellipse} className="landing_ellipse" alt=""/>

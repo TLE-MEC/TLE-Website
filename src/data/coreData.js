@@ -22,7 +22,7 @@ const coreData = [
     {
         id: 4,
         name: 'Tom Thomas',
-        title: 'Faculty Advisor',
+        title: 'CP Head',
         image: TomVempala
     },
     {

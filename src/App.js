@@ -1,10 +1,7 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import './App.css';
-
-import { HomePage, TeamPage ,EventPage, FaqPage } from './pages'
-import { PageNotFound } from './components'
-
+import AnimatedRoutes from "./routes/AnimatedRoutes";
 import ScrollToTop from "./utils/ScrollToTop"
 
 function App() {
@@ -12,13 +9,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/events" element={<EventPage />} />
-            <Route path="/faq" element={<FaqPage />} />
-            <Route path="*" element={<PageNotFound />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </div>
   );

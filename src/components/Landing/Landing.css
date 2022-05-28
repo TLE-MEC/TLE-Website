@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .landing__container {
@@ -84,6 +85,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.landing_cubo {
+    width: 40%;
 }
 
 .landing_circle {
