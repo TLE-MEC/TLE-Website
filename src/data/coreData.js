@@ -1,4 +1,4 @@
-import { Hanna_Salam, Hemanth_R, Nayana_Vinod, Nikita_menon, Shimil, Sony_P, TomVempala, Vishruth_Subramanian } from "../assets/team/teamImages"
+import { Anagha_Sivadas, Hanna_Salam, Hemanth_R, Nayana_Vinod, Nikita_menon, Shimil, Sony_P, TomVempala, Vishruth_Subramanian } from "../assets/team/teamImages"
 
 const coreData = [
     {
@@ -29,7 +29,7 @@ const coreData = [
         id: 5,
         name: 'Anagha Sivadas',
         title: 'Events Head',
-        image: Sony_P
+        image: Anagha_Sivadas
     },
     {
         id: 6,

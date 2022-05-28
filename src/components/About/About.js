@@ -54,8 +54,10 @@ function About() {
         <div className='about__top' data-aos="fade-right">
           <h1 className='section__header'>ABOUT US</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
+            TLE MEC is the Competitive Programming and Data Structures & Algorithms club of MEC. It was with the motive of having a club to guide students in honing their 
+            problem-solving abilities and analytical skills, that we launched the Codechef MEC Chapter in 2020, and later transformed it to the independent club of TLE MEC. 
+            We seek to inculcate a culture of competitive programming and problem-solving in the campus while helping students gain exposure within a peer-learning environment. 
+            Proficiency in these fields after all, will help students face real-world problems from both a personal as well as a professional skill development perspective.
           </p>
         </div>
         <div className='about__bottom'>

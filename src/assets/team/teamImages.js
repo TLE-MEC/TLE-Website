@@ -1,3 +1,4 @@
+import Anagha_Sivadas from './Anagha_Sivadas.jpg'
 import Athul_Reji from './Athul_Reji.jpg'
 import George_Sabu from './George_Sabu.jpg'
 import Hanna_Salam from './Hanna_Salam.jpeg'
@@ -14,6 +15,7 @@ import Vishruth_Subramanian from './Vishruth_Subramanian.jpg'
 
 
 export {
+    Anagha_Sivadas,
     Athul_Reji,
     George_Sabu,
     Hanna_Salam,

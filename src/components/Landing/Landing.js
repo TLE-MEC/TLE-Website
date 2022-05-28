@@ -43,7 +43,7 @@ function Landing() {
         <div className='landing__right'>
           <img src={landing_circle} className="landing_circle" alt=""/>
           <motion.img 
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             src={landing_cubo} 
             alt="" 
             className='landing_cubo'
