@@ -44,7 +44,7 @@
   align-items: flex-end;
   justify-content: flex-end;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
   margin-top: 2rem;
 }
 
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 15px;
   gap: 0.4rem;
   padding: 0.8rem 1.2rem;
   text-decoration: none;
@@ -79,96 +79,81 @@
   align-content: center;
 }
 
-.events-card-1{
-  padding-top: 50px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 50px;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 50px;
-}
 
-.events-card-rect-1 {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 69.86%;
-  bottom: 0%;
-  background: var(--primary-color);
-  border-radius: 0px 0px 20px 20px;
-}
 
-.events-card-text-1 {
-  position: relative;
-  top: 76.6%;
-  bottom: 6.38%;
-  text-align: center;
-  font-family:var(--tertiary-font);
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 48px;
-  letter-spacing: -0.02em;
-  color: var(--text-card);
+.eventCard{
+  font-family: 'Raleway', sans-serif;  
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(230,230,230,0.1);
 }
-
-.flip-card-1 {
-  background-color: transparent;
-  width: 352px;
-  height: 282px;
+.eventCard:hover{
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2), -5px -5px 20px rgba(255,255,255,0.1);
+  
 }
-
-.flip-card-1-inner {
-  width: 352px;
-  height: 282px;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+.eventCard .eventCard_image{
+  height: 35%;
+  width: 100%;
 }
-
-.flip-card-1:hover .flip-card-1-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-1:hover .events-card-text-1 {
-  transform: rotateY(180deg);
-}
-
-.flip-card-1:hover .events-card-rect-1 {
-  transform: rotateY(180deg);
-}
-
-.flip-card-1-front, .flip-card-1-back {
-  position: absolute;
+.eventCard .eventCard_image img{
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  object-fit: cover;
+  object-position: 0 55%;
+}
+.eventCard .content{
+  height: 50%;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  overflow: hidden;
+  color: #333;
+}
+.eventCard .content .title{
+  text-align: center;
+  font-weight: 800;  
+}
+.eventCard .content .title .time{
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+.eventCard .content .title .name{
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.eventCard .content .para{
+  height: 50%;
+  overflow-y: scroll;
+}
+.eventCard .content .para::-webkit-scrollbar {
+  display: none;
+}
+.eventCard .activity{
+  height: 15%;
+  width: 100%;
+  background-color: #003a3a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.flip-card-1-front { 
-  background: var(--secondary-color);
-  border-radius: 20px;
-}
-.events-card-image{
-  width: 352px;
-  height: 197px;
-  border-radius: 20px 20px 0 0;
+.eventCard__icon {
+  font-size: 2rem;
+  color: #ffffff;
 }
 
-.flip-card-1-back {
-  background: var(--bg-color);
-  font-family:var(--tertiary-font);
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 48px;
-  letter-spacing: -0.02em;
-  padding-top: 10px;
-  color: var(--text-main);
-  border-radius: 20px;
-  transform: rotateY(180deg);
-}
 
 
 
@@ -197,6 +182,14 @@
   }
   .section__text{
     font-size: 1.45rem;
+  }
+  .events_more {
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+  .events_btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 18px;
   }
 }
 

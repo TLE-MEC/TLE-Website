@@ -1,9 +1,20 @@
-import '../../components/Events/Events.css';
+import React from 'react';
+import AOS from 'aos'
+
 import logo from '../../assets/svg/cubo-announcement.svg'
 import EventCard from './EventCard'
 import eventData from '../../data/eventData';
 
+import './Events.css';
+
+
 function Events() {
+
+  AOS.init({
+    duration: 800,
+  })
+
+
   return (
     <div className='events' id='events'>
       <div className='events__container'>
@@ -12,8 +23,17 @@ function Events() {
         <p className="section__text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</p>
         
         <div className='events-card'>
-          {eventData.slice(0, 3).map((eve, id) => (
-            <EventCard key={id} name={eve.name} description={eve.description} details={eve.details}/>
+          {eventData.slice(0, 3).map((eve) => (
+            <EventCard 
+              id={eve.id} 
+              key={eve.id} 
+              name={eve.name} 
+              desc={eve.desc} 
+              image={eve.image}
+              date={eve.date}
+              youtube={eve.youtube}
+              github={eve.github}
+            />
           ))}
         </div>
 

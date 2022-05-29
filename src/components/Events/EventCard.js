@@ -1,18 +1,42 @@
+import React from 'react';
+import { AiFillYoutube, AiFillGithub } from "react-icons/ai";
+import AOS from 'aos'
+
 import './Events.css';
 
-function EventCard(props) {
+function EventCard({ id, name, desc, image, date, youtube, github }) {
+
+  console.log(id)
+  
+  AOS.init()
+
   return (
-    <div className="flip-card-1">
-      <div className="flip-card-1-inner">
-        <div className="flip-card-1-front">
-          <img src="https://source.unsplash.com/600x400/?computer" alt="card__image" className="events-card-image"/>
+    <div key={id} className="eventCard" data-aos="fade-up" data-aos-duration={`${400*id}`}>
+      <div className="eventCard_image">
+        <img src={image} alt="" />
+      </div>
+      <div className="content">
+        <div className="title">
+          <div className="time">{date}</div>
+          <div className="name">{name}</div>
         </div>
-        <div className="flip-card-1-back">
-          <h4>{props.description}</h4><br/>
-          <p>{props.details}</p>
+        <div className="para">{desc}</div>
+      </div>
+      <div className="activity">
+        <div className="logo">
+          {youtube && (
+            <a className="link" href={youtube} target="_blank" rel='noreferrer'>
+              <AiFillYoutube className='eventCard__icon'/>
+            </a>
+          )}
         </div>
-        <div className='events-card-rect-1'></div>
-        <div className='events-card-text-1'>{props.name}</div>
+        <div className="logo">
+          {github && (
+            <a className="link" href={github} target="_blank" rel='noreferrer'>
+              <AiFillGithub className='eventCard__icon'/>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   )

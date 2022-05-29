@@ -68,6 +68,7 @@
     font-weight: 500;
     font-size: 22px;
     cursor: pointer;
+    transition: ease-in-out 0.1s;
 }
 
 .phone_btn {
@@ -75,9 +76,18 @@
     color: #ffffff;
 }
 
+.phone_btn:hover {
+    background: #003a3a;
+}
+
 .team_btn {
     border: 2px solid #0B8B8B;
     color: #0B8B8B;
+}
+
+.team_btn:hover {
+    border: 2px solid #003a3a;
+    color: #003a3a;
 }
 
 .landing__right {
