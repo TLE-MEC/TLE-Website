@@ -24,7 +24,7 @@ function FaqPage() {
 
   
   AOS.init({
-    duration: 800,
+    once: true
   })
 
   return (
@@ -32,7 +32,7 @@ function FaqPage() {
       <CustomTitle title="FAQ" />
       <div className='faqPage__container'>
         <div className='faq__left'>
-          <h1>FAQ</h1>
+          <h1 className='faq__header' data-aos="zoom-in">FAQ</h1>
           <div className='faq_content'>
             {faqData.map((faq) => (
               <Accordion 
@@ -50,17 +50,27 @@ function FaqPage() {
                 }}
               >
                 <AccordionSummary
-                  expandIcon={expanded === `${faq.id}` ? <FiMinus className='acc--icon  bg-acc' /> : <FiPlus className='acc--icon' />}
+                  expandIcon={expanded === `${faq.id}` ? <FiMinus className='acc__icon  bg-acc' /> : <FiPlus className='acc__icon' />}
                   aria-controls={`panel${faq.id}bh-content`}
                   id={`panel${faq.id}bh-header`}
                   sx={{
                     padding: 0,
                   }}
                 >
-                  {faq.question}
+                  <h2 
+                    className='faq_qs'                 
+                    data-aos="fade-up"
+                    data-aos-duration={`${300*faq.id}`}
+                  >
+                    {faq.question}
+                  </h2>
                 </AccordionSummary>
-                <AccordionDetails>
-                    <p>
+                <AccordionDetails
+                  sx={{
+                    padding: '0.5rem 2rem',
+                  }}
+                >
+                    <p className='faq_ans'>
                       {faq.answer}
                     </p>
                 </AccordionDetails>
@@ -69,7 +79,7 @@ function FaqPage() {
           </div>
         </div>
         <div className='faq__right'>
-          <img src={faq_image} alt="" className='faq_image' />
+          <img src={faq_image} alt="" className='faq_image' data-aos="fade-up-left"/>
         </div>
       </div>
     </div>

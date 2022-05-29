@@ -40,6 +40,7 @@
     line-height: 82px;
     letter-spacing: -0.02em;
     color: var(--primary-color);
+    z-index: 9;
 }
 
 .about__bottom {
@@ -118,6 +119,7 @@
     width: 180px;
     pointer-events: none;
 }
+
 
 @media (min-width: 992px) and (max-width: 1380px) {
     .about {

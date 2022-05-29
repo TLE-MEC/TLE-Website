@@ -1,5 +1,6 @@
 import React from 'react';
 import AOS from 'aos'
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/svg/cubo-announcement.svg'
 import EventCard from './EventCard'
@@ -23,7 +24,7 @@ function Events() {
         <p className="section__text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</p>
         
         <div className='events-card'>
-          {eventData.slice(0, 3).map((eve) => (
+          {eventData.slice(0).reverse().slice(0, 3).map((eve) => (
             <EventCard 
               id={eve.id} 
               key={eve.id} 
@@ -38,7 +39,11 @@ function Events() {
         </div>
 
         <div className='events_more'>
-          <button className='events_btn'>View More</button>
+          <Link to='events'>
+            <button className='events_btn'>
+              View All
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,94 @@
+.eventsPage {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+.eventsPage__container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.eventsPageCubo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    pointer-events: none;
+}
+
+.eventsPage_circle {
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+    width: 200px;
+    pointer-events: none;
+    transform: translateY(50%);
+}
+
+.eventsPage_ellipse {
+    position: fixed;
+    top: -100px;
+    right: 0;
+    transform: rotate(135deg);
+    width: 150px;
+    pointer-events: none;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 800px) {
+    .eventsPage__container {
+        width: 100%;
+    }
+
+    .eventsPageCubo {
+        width: 250px;
+    }
+    
+    .eventsPage_circle {
+        right: 5%;
+        width: 100px;
+    }
+    
+    .eventsPage_ellipse {
+        position: fixed;
+        top: -100px;
+        right: 0;
+        transform: rotate(135deg);
+        width: 150px;
+        pointer-events: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
+}

@@ -1,36 +1,45 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import '../../components/Events/Events.css';
+import './EventPage.css'
 
-import Logo1 from '../../assets/svg/cubo announcement 2.svg';
-import Ellipse from '../../assets/svg/ellipse1.svg'
-import Ellipse1 from '../../assets/svg/Ellipse 3.svg'
-import Subtract from '../../assets/svg/landing_circle.svg'
 import EventCard from '../../components/Events/EventCard'
 import eventData from '../../data/eventData';
+
+import eventsCubo from '../../assets/svg/eventsCubo.svg';
+import eventsPage_ellipse from '../../assets/svg/ellipse1.svg'
+import eventsPage_circle from '../../assets/svg/landing_circle.svg'
+
 
 
 function EventPage() {
   return (
     <motion.div 
-      className='events-1'
+      className='eventsPage'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
-      <div className='events-title'>EVENTS</div>
-      <div className='outer'><img className="events-image-1" src={Logo1} alt="logo1" /></div>
-      <img className="events-image-2" src={Ellipse} alt="ellipse" />
-      <img className="events-image-3" src={Ellipse1} alt="ellipse1" />
-      <img className="events-image-4" src={Subtract} alt="subtract" />
-      <img className="events-image-2" src={Ellipse} alt="ellipse" />
-      <div className='events-card-1'>
-        {eventData.map((e)=>{
-          return (
-            <EventCard name={e.name} description={e.description} details={e.details}/>
-        )})}
-      </div>  
+      <img src={eventsCubo} alt="" className="eventsPageCubo" />
+      <img src={eventsPage_circle} alt="" className="eventsPage_circle" />
+      <img src={eventsPage_ellipse} alt="" className="eventsPage_ellipse" />
+      <div className='eventsPage__container'>
+        <h1 className='section__header'>EVENTS</h1>
+        <div className='events-card'>
+          {eventData.slice(0).reverse().map((eve) => (
+            <EventCard 
+              id={eve.id} 
+              key={eve.id} 
+              name={eve.name} 
+              desc={eve.desc} 
+              image={eve.image}
+              date={eve.date}
+              youtube={eve.youtube}
+              github={eve.github}
+            />
+          ))}
+        </div>
+      </div>
     </motion.div>
   );
 }
