@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Skeleton from '@mui/material/Skeleton';
 import AOS from 'aos'
 
 import coreData from "../../data/coreData";
@@ -12,6 +13,14 @@ import landing_circle from '../../assets/svg/landing_circle.svg'
 import ellipse4 from '../../assets/svg/ellipse1.svg'
 
 function TeamPage() {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+      setTimeout(() => {
+          setLoading(false)
+      }, 3000);
+  })
 
   AOS.init({
     duration: 800,
@@ -35,7 +44,11 @@ function TeamPage() {
               {
                 coreData.slice(0, 4).map((data) => (
                   <div className="singleCore" key={data.id} data-aos="fade-up">
-                      <img src={data.image} alt="" />
+                    {loading ? (
+                      <Skeleton variant="circular" width={120} height={120} />
+                    ) : (
+                      <img src={data.image} alt="" loading='lazy'/>
+                    )}
                       <h3>{data.name}</h3>
                       <p>{data.title}</p>
                   </div>
@@ -46,7 +59,11 @@ function TeamPage() {
               {
                 coreData.slice(4, 9).map((data) => (
                   <div className="singleCore" key={data.id} data-aos="fade-up">
-                      <img src={data.image} alt="" />
+                    {loading ? (
+                      <Skeleton variant="circular" width={120} height={120} />
+                    ) : (
+                      <img src={data.image} alt="" loading='lazy'/>
+                    )}
                       <h3>{data.name}</h3>
                       <p>{data.title}</p>
                   </div>
@@ -61,7 +78,11 @@ function TeamPage() {
               {
                 execData.map((data) => (
                   <div className="singleCore" key={data.id} data-aos="fade-up">
-                      <img src={data.image} alt="" />
+                    {loading ? (
+                      <Skeleton variant="circular" width={120} height={120} />
+                    ) : (
+                      <img src={data.image} alt="" loading='lazy'/>
+                    )}
                       <h3>{data.name}</h3>
                   </div>
                 ))

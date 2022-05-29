@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
+
 }
 
 .landing__container {
@@ -90,6 +90,7 @@
 
 .landing_cubo {
     width: 40%;
+    z-index: 999;
 }
 
 .landing_circle {

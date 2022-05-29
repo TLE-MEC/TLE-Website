@@ -160,6 +160,9 @@
     .nav__desktop {
         display: none;
     }
+    .nav__drawer {
+        width: 300px;
+    }
 }
 
 @media screen and (max-width: 600px) {

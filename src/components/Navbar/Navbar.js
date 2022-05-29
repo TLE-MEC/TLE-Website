@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Drawer } from '@mui/material';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link } from 'react-router-dom';
+import AOS from 'aos'
 
 import './Navbar.css';
 
@@ -13,6 +14,8 @@ import meclogo from '../../assets/svg/college-logo.svg'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+
+  AOS.init()
 
   const handleDrawerOpen = () => {
       setOpen(true);
@@ -89,30 +92,30 @@ function Navbar() {
         <div className='nav__drawer'>
 
           <div className='nav__drawer_header'>
-            <Link to='/team'>
+            <Link to='/team' data-aos='slide-down' data-aos-duration='600'>
               <img src={logo} alt="" className='nav_logo' />
             </Link>
             <div className='navbar_items_mob'>
-              <HashLink to="#home" className='nav_item_mob' smooth>
+              <HashLink to="#home" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='200'>
                 Home
               </HashLink>
-              <HashLink to="#about" className='nav_item_mob' smooth>
+              <HashLink to="#about" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='600'>
                 About
               </HashLink>
-              <HashLink to="#events" className='nav_item_mob' smooth>
+              <HashLink to="#events" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1000'>
                 Events
               </HashLink>
-              <HashLink to="#resources" className='nav_item_mob' smooth>
+              <HashLink to="#resources" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1400'>
                 Resources
               </HashLink>
-              <HashLink to="#team" className='nav_item_mob' smooth>
+              <HashLink to="#team" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1600'>
                 Team
               </HashLink>
             </div>
           </div>
-          <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
-              <img src={meclogo} alt="" className='meclogo__mob' />
-            </a>
+          <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer" >
+            <img src={meclogo} alt="" className='meclogo__mob' />
+          </a>
         </div>
       </Drawer>
     </div>
