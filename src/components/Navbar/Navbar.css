@@ -67,7 +67,8 @@
     height: 50px;
     border-radius: 50%;
     background-color: #ffffff;
-    box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.3);    
+    margin-left: auto;
 }
 
 .nav__mob {

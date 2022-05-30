@@ -34,7 +34,7 @@ function Landing() {
               <FiPhone />
               Contact
             </HashLink>
-            <HashLink to="#resources" className='landing_btn team_btn' smooth>
+            <HashLink to="#team" className='landing_btn team_btn' smooth>
               <HiOutlineUserGroup />
               Our Team
             </HashLink>

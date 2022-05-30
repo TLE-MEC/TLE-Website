@@ -3,7 +3,8 @@ import AOS from 'aos'
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import { FiPlus, FiMinus } from "react-icons/fi";
+import { FiPlus, FiMinus, FiArrowLeft } from "react-icons/fi";
+import { useNavigate } from 'react-router-dom';
 
 import faqData from '../../data/faqData'
 
@@ -22,6 +23,11 @@ function FaqPage() {
     setExpanded(isExpanded ? panel : false);
   };
 
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate('/')
+  }
   
   AOS.init({
     once: true
@@ -31,6 +37,7 @@ function FaqPage() {
     <div className='faqPage'>
       <CustomTitle title="FAQ" />
       <div className='faqPage__container'>
+      <FiArrowLeft onClick={goBack} className="goBack"/>
         <div className='faq__left'>
           <h1 className='faq__header' data-aos="zoom-in">Frequently Asked Questions</h1>
           <div className='faq_content'>

@@ -14,6 +14,7 @@ import meclogo from '../../assets/svg/college-logo.svg'
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+  const [mobLogo, setMobLogo] = useState(true)
 
   AOS.init()
 
@@ -24,6 +25,17 @@ function Navbar() {
   const handleDrawerClose = () => {
       setOpen(false);
   };
+
+  const showLogo = () => {
+    if(window.scrollY >= 80) {
+      setMobLogo(false)
+    } else {
+      setMobLogo(true)
+    }
+  }
+
+  window.addEventListener('scroll', showLogo)
+
   return (
     <div className='navbar'>
       <div className='nav__desktop'>
@@ -55,9 +67,11 @@ function Navbar() {
 
       <div className='nav__mob'>
         <div className='nav__mob_container'>
-          <Link to='/'>
-            <img src={logo} alt="" className='nav_logo' />
-          </Link>
+          {mobLogo && (
+            <Link to='/'>
+              <img src={logo} alt="" className='nav_logo' />
+            </Link>
+          )}
           <button className='nav_btn' onClick={handleDrawerOpen}>
             <HiOutlineMenuAlt3 className='hamburger'/>
           </button>

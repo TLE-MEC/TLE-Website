@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Skeleton from '@mui/material/Skeleton';
 import AOS from 'aos'
+import { HashLink } from 'react-router-hash-link';
+import { useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from "react-icons/fi";
 
 import coreData from "../../data/coreData";
 import execData from "../../data/execData";
@@ -22,9 +25,16 @@ function TeamPage() {
       }, 3000);
   })
 
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate('/')
+  }
+
   AOS.init({
     duration: 800,
   })
+  
 
   return (
     <motion.div 
@@ -34,21 +44,25 @@ function TeamPage() {
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
       <CustomTitle title="Team" />
+      <FiArrowLeft onClick={goBack} className="goBack"/>
       <div className='teamPage__header_div'>
         <div className='tp__header_left'>
-          <h1>Our Team</h1>
-          <button>View</button>
+          <h1>Our <span className="primary">Team</span></h1>
+          <HashLink to="#core" smooth>
+            <button>View</button>
+          </HashLink>
+          
         </div>
         <div className='tp__header_right'>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            TLE MEC is made not by its projects, its events or the hackathons, but by its people. Here is the team behind this vision who are the current torch bearers of the chapter for the 2021-22 term.
           </p>
         </div>
       </div>
       <div className="teamPage__container">
       <img className="team_ellipse4" src={ellipse4} alt="" />
       <img className="team_ellipse1" src={ellipse4} alt="" />
-        <div className="team_core">
+        <div className="team_core" id='core'>
           <h1 className="team__header">CORE TEAM</h1>
           <div className="team_core_container">
             <div className="team_core_container_1">
