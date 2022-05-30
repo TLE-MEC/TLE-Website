@@ -26,8 +26,8 @@ function Landing() {
         <div className='landing__left' data-aos="zoom-in">
           <p className='welcome'>WELCOME</p>
           <h2>
-            Introducing you to the <span className='primary'>Official</span> website of <br className='d-none_mob'/> 
-            <span className='primary bold'>TLE MEC.</span>
+            Navigate your path to being an ace <span className='primary'>Problem-Solver</span> with <span className='primary bold'>TLE MEC.</span>
+
           </h2>
           <div className='landing__btns'>
             <HashLink to="#resources" className='landing_btn phone_btn' smooth>
@@ -49,10 +49,10 @@ function Landing() {
             className='landing_cubo'
             drag
             dragConstraints={{
-              top: -150,
-              left: -150,
-              right: 150,
-              bottom: 150
+              top: -200,
+              left: -200,
+              right: 200,
+              bottom: 200
             }}
           />
         </div>

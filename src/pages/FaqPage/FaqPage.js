@@ -32,7 +32,7 @@ function FaqPage() {
       <CustomTitle title="FAQ" />
       <div className='faqPage__container'>
         <div className='faq__left'>
-          <h1 className='faq__header' data-aos="zoom-in">FAQ</h1>
+          <h1 className='faq__header' data-aos="zoom-in">Frequently Asked Questions</h1>
           <div className='faq_content'>
             {faqData.map((faq) => (
               <Accordion 
@@ -44,9 +44,7 @@ function FaqPage() {
                 sx={{
                   background: 'transparent',
                   padding: 0,
-                  '&:before': {
-                    display: 'none',
-                  }
+                  margin: '0.5rem 0'
                 }}
               >
                 <AccordionSummary

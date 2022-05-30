@@ -8,7 +8,7 @@ import './About.css';
 import about_cubo from '../../assets/svg/about_cubo.svg'
 import about_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
 
-const texts = ["Data Structures and Algorithms Competitive Programming", "Hello helllo hello", "bye bye bye hehehe yeheh"];
+const texts = ["DSA Mentorship", "Coding Bootcamps", "Timely Mock Contests", "Learning Sessions"];
 const variants = {
   enter: direction => {
     return {
@@ -54,12 +54,10 @@ function About() {
         <div className='about__top' data-aos="fade-right">
           <h1 className='section__header'>ABOUT US</h1>
           <p>
-            TLE MEC is the Competitive Programming and Data Structures & Algorithms club of MEC. It was with the motive of having a club to guide students in honing their 
-            problem-solving abilities and analytical skills, that we launched the Codechef MEC Chapter in 2020, and later transformed it to the independent club of TLE MEC. 
+            TLE MEC is the Competitive Programming and Data Structures & Algorithms club of Govt. Model Engineering College, Thrikkakara, Kochi. 
           </p>
           <p>
-            We seek to inculcate a culture of competitive programming and problem-solving in the campus while helping students gain exposure within a peer-learning environment. 
-            Proficiency in these fields after all, will help students face real-world problems from both a personal as well as a professional skill development perspective.
+            We’re an enthusiastic community of students who seek to inculcate a culture of competitive programming and problem-solving in the campus while helping students gain exposure within a peer-learning environment. 
           </p>
         </div>
         <div className='about__bottom'>

@@ -5,6 +5,8 @@ import AOS from 'aos'
 
 import resourceData from "../../data/resourceData";
 
+import res_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
+
 function Resource() {
 
   AOS.init({
@@ -14,10 +16,13 @@ function Resource() {
 
   return (
   <div className="resources" id="resources">
+    <img src={res_ellipse_circle} alt="" className="res_ellipse_circle" />
     <div className="resources_container">
       <h1 className='section__header'>RESOURCES</h1>
 
-      <p className="section__text">The official announcements about upcoming events will be published here. Keep checking to know more...</p>
+      <p className="section__text">
+        Here are some resources we've made specifically to guide you in your learning, updated every couple of months. Let us know what else you'd like to see here!
+      </p>
       <div className="resources__container">
         {
           resourceData.map((res) => (
