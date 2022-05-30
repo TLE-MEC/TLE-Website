@@ -47,6 +47,7 @@
   box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 1em;
   background-color: #37B9B9;
+  font-family: var(--primary-font);
 }
 
 
