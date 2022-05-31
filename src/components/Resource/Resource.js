@@ -23,7 +23,7 @@ function Resource() {
       <p className="section__text">
         Here are some resources we've made specifically to guide you in your learning, updated every couple of months. Let us know what else you'd like to see here!
       </p>
-      <div className="resources__container">
+      <div className="resources__div">
         {
           resourceData.map((res) => (
             <div data-aos="slide-up" className="resources__card" key={res.id}>

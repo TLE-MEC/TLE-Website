@@ -5,6 +5,8 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import AOS from 'aos'
 
+import { useScrollPosition } from '../../hooks/useScrollPosition';
+
 import './Navbar.css';
 
 import logo from '../../assets/svg/logo.svg'
@@ -14,6 +16,8 @@ import meclogo from '../../assets/svg/college-logo.svg'
 function Navbar() {
   const [open, setOpen] = useState(false)
   const [mobLogo, setMobLogo] = useState(true)
+
+  const scrollPosition = useScrollPosition()
 
   AOS.init()
 
@@ -26,7 +30,7 @@ function Navbar() {
   };
 
   const showLogo = () => {
-    if(window.scrollY >= 80) {
+    if(scrollPosition>= 320) {
       setMobLogo(false)
     } else {
       setMobLogo(true)
