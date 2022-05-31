@@ -62,6 +62,9 @@ function Navbar() {
           <HashLink to="#team" className='nav_item' smooth>
             Team
           </HashLink>
+          <HashLink to="#contact" className='nav_item' smooth>
+            Contact
+          </HashLink>
         </div>
         <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
           <img src={meclogo} alt="" className='meclogo' />
@@ -127,6 +130,9 @@ function Navbar() {
               </HashLink>
               <HashLink to="#team" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1600'>
                 Team
+              </HashLink>
+              <HashLink to="#contact" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1800'>
+                Contact
               </HashLink>
             </div>
           </div>
