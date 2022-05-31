@@ -11,7 +11,6 @@ import logo from '../../assets/svg/logo.svg'
 import meclogo from '../../assets/svg/college-logo.svg'
 
 
-
 function Navbar() {
   const [open, setOpen] = useState(false)
   const [mobLogo, setMobLogo] = useState(true)

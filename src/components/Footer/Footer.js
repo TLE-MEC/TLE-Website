@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import './Footer.css'
   
 import { FaYoutube } from "react-icons/fa";
@@ -14,9 +14,9 @@ function Footer() {
     <div className='footer'>
       <img src={footer_img} alt='' className='footer_img'/>
        <div className='footer_container'>
-         <Link to='/'>
+         <HashLink to='#home' smooth>
           <img src={footer_logoimg} alt='' className='footer_logoimg'/>
-         </Link>
+         </HashLink>
          <div className='footer_body'>
             <h4>Contact Us</h4>
             <div className='footer_icons'>
@@ -30,7 +30,6 @@ function Footer() {
                 <FaLinkedin />
               </a>   
             </div>
-            <Link to='/faq' className='footer_faq'>FaQ</Link>
          </div>
           <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
             <img src={mec_notext} alt='' className='footer_colglogo'/>

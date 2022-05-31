@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-import { Events, Footer, Resource, Navbar, Landing, About, Team } from '../../components'
+import { Events, Footer, Resource, Navbar, Landing, About, Team, Faq } from '../../components'
 
 import './HomePage.css'
 
@@ -19,6 +19,7 @@ function HomePage() {
       <Events />
       <Resource/>
       <Team />
+      <Faq />
       <Footer />
     </motion.div>
   )
