@@ -1,5 +1,6 @@
 import React from 'react';
-import { AiFillYoutube, AiFillGithub } from "react-icons/ai";
+// import { AiFillYoutube, AiFillGithub } from "react-icons/ai";
+import { GoTelescope } from "react-icons/go"
 import AOS from 'aos'
 
 import eventData from '../../data/eventData';
@@ -23,21 +24,11 @@ function EventCard({ id, name, desc, image, date, youtube, github }) {
         </div>
         <div className="para">{desc}</div>
       </div>
-      <div className="activity">
-        <div className="logo">
-          {youtube && (
-            <a className="link" href={youtube} target="_blank" rel='noreferrer'>
-              <AiFillYoutube className='eventCard__icon'/>
-            </a>
-          )}
-        </div>
-        <div className="logo">
-          {github && (
-            <a className="link" href={github} target="_blank" rel='noreferrer'>
-              <AiFillGithub className='eventCard__icon'/>
-            </a>
-          )}
-        </div>
+      <div className="eventCard_activity">
+        <button>
+          Explore
+          <GoTelescope />
+        </button>
       </div>
     </div>
   )

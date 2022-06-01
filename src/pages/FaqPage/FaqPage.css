@@ -12,6 +12,7 @@
   height: 100%;
   margin: auto;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 2rem;
 }

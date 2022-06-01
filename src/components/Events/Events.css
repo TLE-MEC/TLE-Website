@@ -87,17 +87,17 @@
 
 
 .eventCard{
-  font-family: var(--primary-font);  
+  font-family: var(--secondary-font);  
   width: 300px;
   height: 450px;
   border-radius: 15px;
-  
+  z-index: 9;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  
   box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(230,230,230,0.1);
 }
+
 .eventCard:hover{
   transform: scale(1.05);
   box-shadow: 5px 5px 20px rgba(0,0,0,0.2), -5px -5px 20px rgba(255,255,255,0.1);
@@ -138,25 +138,39 @@
   margin-bottom: 15px;
 }
 .eventCard .content .para{
-  height: 50%;
+  height: 55%;
   overflow-y: scroll;
 }
 .eventCard .content .para::-webkit-scrollbar {
   display: none;
 }
-.eventCard .activity{
-  height: 15%;
-  width: 100%;
-  background-color: #003a3a;
+
+.eventCard_activity {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  height: 15%;
   padding: 0 20px;
+  width: 100%;
 }
 
-.eventCard__icon {
-  font-size: 2rem;
-  color: #ffffff;
+.eventCard_activity button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 90%;
+  margin: auto;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-family: var(--primary-font);
+  color: #003a3a;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background: rgba(0, 150, 136, 0.4);
 }
 
 
