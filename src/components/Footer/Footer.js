@@ -1,40 +1,28 @@
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
 import './Footer.css'
   
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import footer_img from '../../assets/svg/footer.svg'
-import footer_logoimg from '../../assets/svg/logo.svg'
-import mec_notext from '../../assets/svg/mec_notext.svg'
 
 function Footer() {
   return (
     <div className='footer'>
-      <img src={footer_img} alt='' className='footer_img'/>
        <div className='footer_container'>
-         <HashLink to='#home' smooth>
-          <img src={footer_logoimg} alt='' className='footer_logoimg'/>
-         </HashLink>
-         <div className='footer_body'>
-            <h4>Contact Us</h4>
-            <div className='footer_icons'>
-              <a href='https://www.youtube.com/' target="_blank" rel="noreferrer" className='social_icons'>
-                <FaYoutube />
-              </a>
-              <a href='https://www.instagram.com/tle.mec/' target="_blank" rel="noreferrer" className='social_icons'>
-                <FaInstagram />
-              </a>
-              <a href='https://www.linkedin.com/' target="_blank" rel="noreferrer" className='social_icons'>
-                <FaLinkedin />
-              </a>   
+          <div className="footer_left">
+            <h1>Stay Updated</h1>
+            <p>
+              Want to stay updated with the latest news about TLE MEC? Enter your email address and allow notifications.
+            </p>
+
+            <div className='footer_input_div'>
+              <input type="text" placeholder='Enter your email' className='footer_input'/>
+              <button>Get Updates</button>
             </div>
-         </div>
-          <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
-            <img src={mec_notext} alt='' className='footer_colglogo'/>
-          </a>
-          
+          </div>  
+          <div className="footer_right">
+            
+          </div>  
        </div>
     </div>
   )

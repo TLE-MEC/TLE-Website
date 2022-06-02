@@ -3,155 +3,41 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 200px;
-}
-
-
-.footer_img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 200px;
+    background: #0B8B8B;
+    min-height: 50vh;
 }
 
 .footer_container {
     padding: 1rem;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
 }
 
-
-.footer_logoimg {
-    width: 100px;
+.footer_left {
+    flex: 0.6;
 }
 
-.footer_body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family:var(--primary-font);
-    color: var(--primary-color);
-    
+.footer_right {
+    flex: 0.4;
 }
-
-.footer_body > h4 {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.footer_icons {
-    display: flex;
-    flex-direction: row;
-    color: var(--primary-color);
-    padding: 0.75rem;
-}
-
-.social_icons {
-    padding: 0.5rem;
-    font-size: 2rem;
-    color: var(--primary-color);
-    transition: ease-in-out 200ms;
-}
-
-.social_icons:hover {
-    transform: scale(1.35);
-}
-
-.footer_faq {
-    font-size: 25px;
-    font-weight: 400;
-    font-family:var(--primary-font);
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.footer_colglogo {
-    width: 100px;
-}
-
 
 @media (min-width: 992px) and (max-width: 1380px) {
-    .footer { 
-        height: 180px;
-    }
-    
-    
-    .footer_img {
-        height: 180px;
-    }
 
-    .footer_logoimg {
-        width: 80px;
-    }    
-    .footer_colglogo {
-        width: 90px;
-    }
 }
 
 
 @media screen and (max-width: 992px) {
-    .footer { 
-        height: 180px;
-    }
-    
-    .footer_img {
-        height: 180px;
-    }
-    .footer_body > h4 {
-        font-size: 1.85rem;
-    }
 
-    .footer_logoimg {
-        width: 80px;
-    }    
-    .footer_colglogo {
-        width: 85px;
-    }
 }
 
 @media screen and (max-width: 800px) {
-    .footer_img {
-        display: none;
-    }
-    .footer_container {
-        width: 100%;
-    }
 
-    .footer_container {
-        width: 100%;
-    }
-    .footer_icons {
-        padding: 0.25rem;
-    }
-
-    .footer_body > h4 {
-        font-size: 1.55rem;
-    }
-    .footer_faq {
-        font-size: 21px;
-    }
-    .social_icons {
-        font-size: 1.5rem;
-    }
-
-    .footer_logoimg {
-        width: 60px;
-    }    
-    .footer_colglogo {
-        width: 65px;
-    }
 }
 
 @media screen and (max-width: 600px) {
-    .footer_logoimg {
-        width: 50px;
-    }    
-    .footer_colglogo {
-        width: 50px;
-    }
+
 }
 
 @media screen and (max-width: 400px) {
