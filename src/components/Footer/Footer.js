@@ -1,9 +1,8 @@
 import React from 'react';
 import './Footer.css'
   
-import { FaYoutube } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
   return (
@@ -17,11 +16,31 @@ function Footer() {
 
             <div className='footer_input_div'>
               <input type="text" placeholder='Enter your email' className='footer_input'/>
-              <button>Get Updates</button>
+              <button className='footer_btn'>Get Updates</button>
             </div>
           </div>  
           <div className="footer_right">
-            
+            <h2>Address</h2>
+            <div className='footer_right_content'>
+              <HiOutlineLocationMarker className='footer_right_icon' />
+              <p>28HH+8CR, Model Engineering College Road, Karimakkad, Thrikkakara, Edappally, Kochi, Kerala 682021</p>
+            </div>
+            <h2>Email</h2>
+            <div className='footer_right_content'>
+              <HiOutlineMail className='footer_right_icon' />
+              <p>something@gmail.com</p>
+            </div>
+            <div className='footer_social'>
+              <a href="/" target="_blank" rel="noreferrer">
+                <FaLinkedinIn className='footer_social_icon'/>
+              </a>
+              <a href="/" target="_blank" rel="noreferrer">
+                <FaInstagram className='footer_social_icon'/>
+              </a>
+              <a href="/" target="_blank" rel="noreferrer">
+                <FaYoutube className='footer_social_icon'/>
+              </a>
+            </div>
           </div>  
        </div>
     </div>

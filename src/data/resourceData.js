@@ -2,7 +2,7 @@ const resourceData = [
     {
       id: 1,
       name: 'HELLO WORLD',
-      desc: 'Introducing to CP & DSA',
+      desc: 'Introducing to CP & DSA Introducing to CP & DSA Introducing to CP & DSA to toIntroducing to CP & DSA Introducing to CP & DSA',
       image: 'https://source.unsplash.com/600x400/?computer',
       url: ''
     },

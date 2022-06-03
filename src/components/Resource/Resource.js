@@ -6,6 +6,7 @@ import AOS from 'aos'
 import resourceData from "../../data/resourceData";
 
 import res_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
+import books from '../../assets/svg/books.svg'
 
 function Resource() {
 
@@ -27,20 +28,15 @@ function Resource() {
         {
           resourceData.map((res) => (
             <div data-aos="slide-up" className="resources__card" key={res.id}>
-              <div className="resources__card__header">
-                <img src={res.image} alt="card__image" className="card__image" width="600"/>
+              <div className="resources__card__left">
+                <img src={books} alt="" className="resources__card__img" width="600"/>
               </div>
-              <div className="resources__card__body">  
+              <div className="resources__card__right">  
                 <h4>{res.name}</h4>
                 <p>{res.desc}</p>
-              </div>
-            
-              <div className="resources__card__footer">
-                <div className="resources__logo">
-                  <div className="resources__logo__info">
-                    <h5>Open Link <BsLink45Deg size={20}/></h5>
-                  </div>
-                </div>
+                <button className="resourceCard__btn">
+                  Open <BsLink45Deg size={22}/>
+                </button>
               </div>
             </div>  
           ))

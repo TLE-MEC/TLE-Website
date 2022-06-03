@@ -19,7 +19,7 @@
   padding-top: 1rem;
   font-family: var(--primary-font);
   font-weight: 400;
-  font-size: 1.85rem;
+  font-size: 1.65rem;
   letter-spacing: 0.055em;
   color: var(--text-main);
 }
@@ -187,7 +187,7 @@
     padding: 3rem 0;
   }
   .section__text{
-    font-size: 1.65rem;
+    font-size: 1.45rem;
   }
 
 }
@@ -200,7 +200,7 @@
     flex-direction: column;
   }
   .section__text{
-    font-size: 1.45rem;
+    font-size: 1.25rem;
   }
   .events_more {
     padding: 1rem 0;
