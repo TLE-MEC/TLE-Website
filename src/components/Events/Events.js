@@ -34,6 +34,7 @@ function Events() {
               date={eve.date}
               youtube={eve.youtube}
               github={eve.github}
+              participants={eve.participants}
             />
           ))}
         </div>

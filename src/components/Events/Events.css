@@ -174,7 +174,150 @@
 }
 
 
+.eventDialog {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
 
+.eventDialog::-webkit-scrollbar {
+  display: none;
+}
+
+.eventDialog__header {
+  display: flex;
+}
+
+.edh__left {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.edh__left img {
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+}
+
+.edh__right {
+  position: relative;
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 40px 0px 40px;
+  background: #0BAAAA;
+  padding: 2rem;
+  color: #ffffff;
+  gap: 1.55rem;
+}
+
+.eventDialog__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.edh__right__btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edh_btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #FFFFFF;
+  color: #0BAAAA;
+  border-radius: 30px;
+  padding: 0.5rem 0.85rem;
+}
+
+.edh_btn p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 9px;
+  font-size: 0.8rem;
+  color: #0BAAAA;
+}
+
+.edh__right_p {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.eventDialog__leaderboard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  width: 100%;
+  gap: 1.25rem;
+}
+
+.leaderboard__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.leaderboard__row {
+  flex: 0.33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.leaderboard__row img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #0BAAAA;
+}
+
+.second__image {
+  transform: scale(0.9);
+}
+
+.third__image {
+  transform: scale(0.8);
+}
+
+.leaderboard__row h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 31px;
+  text-align: center;
+
+  color: #0BAAAA;
+}
+
+.crown {
+  font-size: 2.5rem;
+  color: #FFCC4D;
+}
 
 @media (min-width: 992px) and (max-width: 1380px) {
 

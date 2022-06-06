@@ -6,7 +6,8 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=1lj8vcOeqkexBG4tlGw7cZEBHfEU4Abu_',
     date: '18th to 24th September',
     youtube:'',
-    github: ''
+    github: '',
+    participants: 20
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=1HrarUGEMS6DbUu0wp18ifPdg5mzrLDgp',
     date: '2nd October',
     youtube: 'https://www.youtube.com/watch?v=6679UV9xOuQ&t=1301s',
-    github: 'https://github.com/TLE-MEC/Hack-CP-DSA'
+    github: 'https://github.com/TLE-MEC/Hack-CP-DSA',
+    participants: 20
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=1O2bHvGaBd9fkCwToikCVNsRJ-_YFVY3U',
     date: '11th December',
     youtube: 'https://youtu.be/9CkYcdIjK3A',
-    github: ''
+    github: '',
+    participants: 20
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=17dTkz8yAOqi-eEOmxjG6oxUor6BmYjt_',
     date: '15th Dec to 19th Dec',
     youtube: 'https://youtube.com/playlist?list=PLXgac_DZMistQX5DxSfn16OXMxHUy1882',
-    github: ''
+    github: '',
+    participants: 20
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=1jA_dBAyYyt_fAqL4RWY-V0gLHn91S7bL',
     date: '18th to 21st January',
     youtube: '',
-    github: ''
+    github: '',
+    participants: 20
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
     date: '14th to 21st February',
     youtube: '',
-    github: ''
+    github: '',
+    participants: 20
   },
 ]; 
 export default eventData;
