@@ -102,6 +102,7 @@
   line-height: 23px;
   color: #FFFFFF;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .res_ellipse_circle {

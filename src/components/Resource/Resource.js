@@ -34,9 +34,9 @@ function Resource() {
               <div className="resources__card__right">  
                 <h4>{res.name}</h4>
                 <p>{res.desc}</p>
-                <button className="resourceCard__btn">
+                <a href={res.url} target="_blank" rel="noreferrer" className="resourceCard__btn">
                   Open <BsLink45Deg size={22}/>
-                </button>
+                </a>
               </div>
             </div>  
           ))
