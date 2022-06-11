@@ -193,12 +193,23 @@
 .event_divider_line {
   width: 100%;
   pointer-events: none;
-  
+
 }
 
 .eventDialog__header {
   display: flex;
   padding-bottom: 2rem;
+  position: relative;
+}
+
+.eventDialog__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 999;
 }
 
 .edh__left {
@@ -227,15 +238,6 @@
   padding: 2rem;
   color: #ffffff;
   gap: 1.55rem;
-}
-
-.eventDialog__close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  color: #ffffff;
-  font-size: 2.5rem;
-  cursor: pointer;
 }
 
 .edh__right__btns {
@@ -444,14 +446,120 @@
   .events-card {
     padding-top: 35px;
   }
+
+  .eventDialog {
+    padding-bottom: 2rem;
+  }
+
+  .eventDialog__header {
+    flex-direction: column;
+  }
+
+  .edh__right {
+    padding: 1rem;
+    gap: 1.55rem;
+    border-radius: 0;
+  }
+  .eventDialog__close {
+    top: 20px;
+    right: 20px;
+    color: #0BAAAA;
+    font-size: 2rem;
+  }
+  .edh_btn {
+    gap: 0.25rem;
+    padding: 0.4rem 0.75rem;
+  }
+  .edh_btn p {
+    font-size: 0.7rem;
+  }
+
+  .eventDialog__leaderboard {
+    padding: 1rem 0;
+    width: 100%;
+    gap: 1.25rem;
+  }
+  .eventDialog__leaderboard h1 {
+    font-size: 1.5rem;
+  }
+
+  .leaderboard__container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .leaderboard__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .leaderboard__row img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper {
+    margin: 16px !important;
+  }
+
+  .first__row {
+    z-index: 1;
+  }
+
+  .second__row {
+    transform: translateX(40px);
+  }
+
+  .third__row {
+    transform: translateX(-40px);
+  }
+  .leaderboard__row h3 {
+    font-size: 1rem;
+    line-height: 31px;
+  }
+  
+  .leaderboard__row h3 span {
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+  
+  .leaderboard__row h4 {
+    font-size: 0.9rem;
+  }
+  .eventDialog__footer {
+    width: 90%;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .eventDialog__footer h1 {
+    font-size: 1.35rem;
+  }
+
+  .edf_btn {
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    padding: 0.5rem 0.85rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-
+  .leaderboard__row img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-
+  .leaderboard__row img {
+    width: 130px;
+    height: 130px;
+  }
 }
   
 @media only screen and (min-device-width: 320px) and (max-device-width: 
