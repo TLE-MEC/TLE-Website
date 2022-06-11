@@ -177,17 +177,28 @@
 .eventDialog {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  -ms-overflow-style: none; 
-  scrollbar-width: none;  
+  align-items: flex-start; 
 }
 
-.eventDialog::-webkit-scrollbar {
-  display: none;
+.css-ypiqx9-MuiDialogContent-root {
+  -ms-overflow-style: none !important; 
+  scrollbar-width: none !important;   
+}
+
+.css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+.event_divider_line {
+  width: 100%;
+  pointer-events: none;
+  
 }
 
 .eventDialog__header {
   display: flex;
+  padding-bottom: 2rem;
 }
 
 .edh__left {
@@ -195,7 +206,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .edh__left img {
@@ -271,6 +282,16 @@
   gap: 1.25rem;
 }
 
+.eventDialog__leaderboard h1 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 38px;
+  text-align: center;
+  color: #333333;
+}
+
 .leaderboard__container {
   display: flex;
   align-items: center;
@@ -285,7 +306,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 .leaderboard__row img {
@@ -304,19 +325,86 @@
 }
 
 .leaderboard__row h3 {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.3rem;
   line-height: 31px;
   text-align: center;
-
   color: #0BAAAA;
 }
 
+.leaderboard__row h3 span {
+  font-weight: 800;
+  font-size: 2.1rem;
+}
+
+.leaderboard__row h4 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 18px;
+  text-align: center;
+  color: #333333;
+}
+
 .crown {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #FFCC4D;
+}
+
+
+.eventDialog__footer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1.25rem;
+}
+
+.eventDialog__footer h1 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 38px;
+  text-align: center;
+  color: #333333;
+}
+
+.edf__btns {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+.edf_btn {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: #0BAAAA;
+  border-radius: 64.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding: 0.75rem 1rem;
+  transition: ease-in-out 0.1s;
+}
+
+.edf_btn:hover {
+  background: #003a3a;
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { AiFillYoutube, AiFillGithub } from "react-icons/ai";
+import { AiFillYoutube, AiFillGithub } from "react-icons/ai";
 import { IoCloseOutline } from "react-icons/io5";
 import { RiTeamLine, RiCalendarLine, RiVipCrown2Fill } from "react-icons/ri";
 import { GoTelescope } from "react-icons/go"
@@ -10,6 +10,8 @@ import Slide from '@mui/material/Slide';
 
 import eventData from '../../data/eventData';
 import './Events.css';
+
+import divider from '../../assets/svg/divider.svg'
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -52,10 +54,10 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants 
         </button>
       </div>
       <Dialog
-        style={{padding: 0, borderRadius: 10 }}
+        style={{ padding: 0, borderRadius: 10 }}
         fullWidth={true}
         maxWidth={"lg"}
-        PaperProps={{ sx: { width: "100%", height: "100%", borderRadius: 10, msOverflowStyle: 'none', scrollbarWidth: 0 } }}
+        PaperProps={{ sx: { width: "100%", height: "100%", borderRadius: 10 } }}
         open={open}
         TransitionComponent={Transition}
         keepMounted
@@ -64,8 +66,7 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants 
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogContent
-        style={{ padding: 0, borderRadius: 10, msOverflowStyle: 'none', scrollbarWidth: 0 }}
-        PaperProps={{ sx: { msOverflowStyle: 'none', scrollbarWidth: 0 } }}
+        style={{ padding: 0, borderRadius: 10 }}
         >
           <div className='eventDialog'>
             <div className='eventDialog__header'>
@@ -88,25 +89,40 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants 
                 <p className='edh__right_p'>{desc}</p>
               </div>
             </div>
+            <img src={divider} alt="" className='event_divider_line' />
             <div className='eventDialog__leaderboard'>
               <h1>Leaderboard</h1>
               <div className='leaderboard__container'>
                 <div className='leaderboard__row'>
-                  <h3>2nd</h3>
+                  <h3><span>2</span>nd</h3>
                   <img className='second__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                  <h4>Shiny Jose</h4>
                 </div>
                 <div className='leaderboard__row'>
                   <RiVipCrown2Fill className='crown' />
                   <img className='first__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                  <h4>Shiny Jose</h4>
                 </div>
                 <div className='leaderboard__row'>
-                  <h3>3rd</h3>
+                  <h3><span>3</span>rd</h3>
                   <img className='third__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                  <h4>Shiny Jose</h4>
                 </div>
               </div>
             </div>
+            <img src={divider} alt="" className='event_divider_line' />
             <div className='eventDialog__footer'>
-            
+              <h1>External Links</h1>
+              <div className='edf__btns'>
+                <a className='edf_btn' href={youtube} target="_blank" rel="noreferrer">
+                  <AiFillYoutube size={25}/>
+                  Youtube
+                </a>
+                <a className='edf_btn' href={github} target="_blank" rel="noreferrer">
+                  <AiFillGithub size={25}/>
+                  Github
+                </a>
+              </div>
             </div>
           </div>
         </DialogContent>
