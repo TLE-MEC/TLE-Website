@@ -19,7 +19,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 
-function EventCard({ id, name, desc, image, date, youtube, github, participants }) {
+function EventCard({ id, name, desc, image, date, youtube, github, participants, dialog_img }) {
 
   const [open, setOpen] = useState(false);
 
@@ -70,9 +70,9 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants 
         >
           <div className='eventDialog'>
             <div className='eventDialog__header'>
-            <IoCloseOutline className='eventDialog__close'/>
+            <IoCloseOutline className='eventDialog__close' onClick={handleClose}/>
               <div className='edh__left'>
-                <img src={image} alt="" />
+                <img src={dialog_img} alt="" />
               </div>
               <div className='edh__right'>
                 <h1>{name}</h1>
@@ -110,20 +110,28 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants 
                 </div>
               </div>
             </div>
-            <img src={divider} alt="" className='event_divider_line' />
-            <div className='eventDialog__footer'>
-              <h1>External Links</h1>
-              <div className='edf__btns'>
-                <a className='edf_btn' href={youtube} target="_blank" rel="noreferrer">
-                  <AiFillYoutube size={25}/>
-                  Youtube
-                </a>
-                <a className='edf_btn' href={github} target="_blank" rel="noreferrer">
-                  <AiFillGithub size={25}/>
-                  Github
-                </a>
+            {(youtube || github) && (
+              <>
+              <img src={divider} alt="" className='event_divider_line' />
+              <div className='eventDialog__footer'>
+                <h1>External Links</h1>
+                <div className='edf__btns'>
+                  {youtube && (
+                    <a className='edf_btn' href={youtube} target="_blank" rel="noreferrer">
+                      <AiFillYoutube size={25}/>
+                      Youtube
+                    </a>
+                  )}
+                  {github && (
+                    <a className='edf_btn' href={github} target="_blank" rel="noreferrer">
+                      <AiFillGithub size={25}/>
+                      Github
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
+              </>
+            )}
           </div>
         </DialogContent>
       </Dialog>

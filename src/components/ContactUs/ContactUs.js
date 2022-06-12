@@ -4,7 +4,7 @@ import isEmail from 'validator/lib/isEmail';
 
 import './ContactUs.css'
 
-import Abstract from './Abstract';
+import contacts_abstract from '../../assets/png/abstract.png'
 
 function ContactUs() {
 
@@ -14,7 +14,6 @@ function ContactUs() {
   const [nameErr, setNameErr] = useState('')
   const [emailErr, setEmailErr] = useState('')
   const [msgErr, setMsgErr] = useState('')
-  const [success, setSuccess] = useState(false);
 
 
   const clearFields = () => {
@@ -39,7 +38,6 @@ function ContactUs() {
             };
 
             console.log(responseData)
-            setSuccess(true)
 
             clearFields()
 
@@ -88,8 +86,7 @@ function ContactUs() {
               </form>
             </div>
             <div className='contactUs__right'>
-              {/* <img src={contacts_abstract} className='contacts_abstract' alt='' /> */}
-              <Abstract success={success}/>
+              <img src={contacts_abstract} className='contacts_abstract' alt='' />
 
             </div>
         </div>

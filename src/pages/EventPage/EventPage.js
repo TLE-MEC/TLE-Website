@@ -59,6 +59,8 @@ function EventPage() {
               date={eve.date}
               youtube={eve.youtube}
               github={eve.github}
+              participants={eve.participants}
+              dialog_img={eve.dialog_img}
             />
           ))}
         </div>

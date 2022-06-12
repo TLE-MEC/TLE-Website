@@ -280,8 +280,8 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 15px;
+  font-size: 1.25rem;
+  line-height: 23px;
   color: #FFFFFF;
 }
 
@@ -479,12 +479,19 @@
     color: #0BAAAA;
     font-size: 2rem;
   }
+  .edf__btns {
+    justify-content: space-between;
+  }
   .edh_btn {
     gap: 0.25rem;
     padding: 0.4rem 0.75rem;
   }
   .edh_btn p {
     font-size: 0.7rem;
+  }
+  .edh__right_p {
+    font-size: 1.15rem;
+    line-height: 20px;
   }
 
   .eventDialog__leaderboard {
@@ -517,6 +524,7 @@
 
   .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh {
     margin: 16px !important;
+    border-radius: 20px !important;
   }
 
   .first__row {
@@ -544,7 +552,7 @@
     font-size: 0.9rem;
   }
   .eventDialog__footer {
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     gap: 1rem;
   }
