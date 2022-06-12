@@ -180,12 +180,12 @@
   align-items: flex-start; 
 }
 
-.css-ypiqx9-MuiDialogContent-root {
+.css-ypiqx9-MuiDialogContent-root, .css-1ty026z {
   -ms-overflow-style: none !important; 
   scrollbar-width: none !important;   
 }
 
-.css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar {
+.css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar, .css-1ty026z::-webkit-scrollbar {
   display: none !important;
 }
 
@@ -238,6 +238,16 @@
   padding: 2rem;
   color: #ffffff;
   gap: 1.55rem;
+}
+
+.edh__right h1 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .edh__right__btns {
@@ -460,6 +470,9 @@
     gap: 1.55rem;
     border-radius: 0;
   }
+  .edh__right h1 {
+    font-size: 1.5rem;
+  }
   .eventDialog__close {
     top: 20px;
     right: 20px;
@@ -502,7 +515,7 @@
     height: 160px;
   }
 
-  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper {
+  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh {
     margin: 16px !important;
   }
 

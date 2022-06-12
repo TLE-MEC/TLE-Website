@@ -55,7 +55,7 @@ function TeamPage() {
         </div>
         <div className='tp__header_right'>
           <p>
-            TLE MEC is made not by its projects, its events or the hackathons, but by its people. Here is the team behind this vision who are the current torch bearers of the chapter for the 2021-22 term.
+            TLE MEC is made by its people. The events, contests and sessions are all but a product of their teamwork. And here they are for you to see, the current torch bearers of the year 2021-22.
           </p>
         </div>
       </div>

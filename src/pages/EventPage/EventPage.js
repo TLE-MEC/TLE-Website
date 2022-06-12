@@ -43,7 +43,7 @@ function EventPage() {
         </div>
         <div className='tp__header_right'>
           <p>
-            TLE MEC is made not by its projects, its events or the hackathons, but by its people. Here is the team behind this vision who are the current torch bearers of the chapter for the 2021-22 term.
+            Contests and sessions to learn, practice, teach and grow only scratch the surface of what we do. It is our dedication to give and take constant mentorship that makes us a source of support for all your CP endeavours. Mutual support topped with friendly competition, afterall, is one of the most efficient motivators of growth and we're all in this together!
           </p>
         </div>
       </div>
