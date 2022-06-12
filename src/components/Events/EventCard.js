@@ -19,7 +19,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 
-function EventCard({ id, name, desc, image, date, youtube, github, participants, dialog_img }) {
+function EventCard({ id, name, desc, image, date, youtube, github, participants, dialog_img, leaderboard }) {
 
   const [open, setOpen] = useState(false);
 
@@ -57,7 +57,7 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
         style={{ padding: 0, borderRadius: 10 }}
         fullWidth={true}
         maxWidth={"lg"}
-        PaperProps={{ sx: { width: "100%", height: "100%", borderRadius: 10, margin: 5 } }}
+        PaperProps={{ sx: { width: "100%", borderRadius: 10, margin: 5 } }}
         open={open}
         TransitionComponent={Transition}
         keepMounted
@@ -89,27 +89,31 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
                 <p className='edh__right_p'>{desc}</p>
               </div>
             </div>
-            <img src={divider} alt="" className='event_divider_line' />
-            <div className='eventDialog__leaderboard'>
-              <h1>Leaderboard</h1>
-              <div className='leaderboard__container'>
-                <div className='leaderboard__row second__row'>
-                  <h3><span>2</span>nd</h3>
-                  <img className='second__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                  <h4>Shiny Jose</h4>
+            {leaderboard.length > 0 && (
+              <>
+                <img src={divider} alt="" className='event_divider_line' />
+                <div className='eventDialog__leaderboard'>
+                  <h1>Leaderboard</h1>
+                  <div className='leaderboard__container'>
+                    <div className='leaderboard__row second__row'>
+                      <h3><span>2</span>nd</h3>
+                      <img className='second__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                      <h4>Shiny Jose</h4>
+                    </div>
+                    <div className='leaderboard__row first__row'>
+                      <RiVipCrown2Fill className='crown' />
+                      <img className='first__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                      <h4>Shiny Jose</h4>
+                    </div>
+                    <div className='leaderboard__row third__row'>
+                      <h3><span>3</span>rd</h3>
+                      <img className='third__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
+                      <h4>Shiny Jose</h4>
+                    </div>
+                  </div>
                 </div>
-                <div className='leaderboard__row first__row'>
-                  <RiVipCrown2Fill className='crown' />
-                  <img className='first__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                  <h4>Shiny Jose</h4>
-                </div>
-                <div className='leaderboard__row third__row'>
-                  <h3><span>3</span>rd</h3>
-                  <img className='third__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                  <h4>Shiny Jose</h4>
-                </div>
-              </div>
-            </div>
+              </>
+            )}
             {(youtube || github) && (
               <>
               <img src={divider} alt="" className='event_divider_line' />

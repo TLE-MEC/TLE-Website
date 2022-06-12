@@ -193,12 +193,11 @@
 .event_divider_line {
   width: 100%;
   pointer-events: none;
-
+  margin-top: 2rem;
 }
 
 .eventDialog__header {
   display: flex;
-  padding-bottom: 2rem;
   position: relative;
 }
 
@@ -457,9 +456,7 @@
     padding-top: 35px;
   }
 
-  .eventDialog {
-    padding-bottom: 2rem;
-  }
+
 
   .eventDialog__header {
     flex-direction: column;
@@ -522,7 +519,7 @@
     height: 160px;
   }
 
-  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh {
+  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh, .css-c2c0hr-MuiPaper-root-MuiDialog-paper {
     margin: 16px !important;
     border-radius: 20px !important;
   }
@@ -555,6 +552,7 @@
     width: 100%;
     padding: 1rem;
     gap: 1rem;
+    padding-bottom: 2rem;
   }
 
   .eventDialog__footer h1 {

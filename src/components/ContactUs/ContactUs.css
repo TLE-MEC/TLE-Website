@@ -168,6 +168,9 @@
         font-size: 2rem;
         line-height: 72px;
     }
+    .contact_form_input {
+        border: 2px solid var(--primary-color);
+    }
 }
 
 @media screen and (max-width: 600px) {

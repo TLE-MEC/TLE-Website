@@ -8,7 +8,8 @@ const eventData = [
     date: '18th Sept 2021',
     youtube:'',
     github: '',
-    participants: 20
+    participants: 20,
+    leaderboard: []
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const eventData = [
     date: '2nd Oct 2021',
     youtube: 'https://www.youtube.com/watch?v=6679UV9xOuQ&t=1301s',
     github: 'https://github.com/TLE-MEC/Hack-CP-DSA',
-    participants: 20
+    participants: 20,
+    leaderboard: [{id:1}]
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const eventData = [
     date: '11th Dec 2021',
     youtube: 'https://youtu.be/9CkYcdIjK3A',
     github: '',
-    participants: 20
+    participants: 20,
+    leaderboard: []
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ const eventData = [
     date: '15th Dec 2021',
     youtube: 'https://youtube.com/playlist?list=PLXgac_DZMistQX5DxSfn16OXMxHUy1882',
     github: '',
-    participants: 20
+    participants: 20,
+    leaderboard: []
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ const eventData = [
     date: '18th Jan 2022',
     youtube: '',
     github: '',
-    participants: 20
+    participants: 20,
+    leaderboard: []
   },
   {
     id: 6,
@@ -63,7 +68,8 @@ const eventData = [
     date: '14th Feb 2022',
     youtube: '',
     github: '',
-    participants: 20
+    participants: 20,
+    leaderboard: []
   },
 ]; 
 export default eventData;

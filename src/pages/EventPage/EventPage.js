@@ -61,6 +61,7 @@ function EventPage() {
               github={eve.github}
               participants={eve.participants}
               dialog_img={eve.dialog_img}
+              leaderboard={eve.leaderboard}
             />
           ))}
         </div>
