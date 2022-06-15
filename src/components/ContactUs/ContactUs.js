@@ -61,6 +61,7 @@ function ContactUs() {
     <div className='contactUs' id='contact'>
         <div className='contactUs__container'>
             <div className='contactUs__left'>
+              {/* <h1 className="contactUs__header">Contact Us</h1> */}
               <form className='contactUs__form' onSubmit={handleContactForm}>
                 <h1>Get in Touch</h1>
                 <div className='contact_form_div'>

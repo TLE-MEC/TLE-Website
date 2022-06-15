@@ -54,10 +54,10 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
         </button>
       </div>
       <Dialog
-        style={{ padding: 0, borderRadius: 10 }}
+        style={{ padding: 0, borderRadius: 10}}
         fullWidth={true}
         maxWidth={"lg"}
-        PaperProps={{ sx: { width: "100%", borderRadius: 10, margin: 5 } }}
+        PaperProps={{ sx: { width: "100%", borderRadius: 10, m: 2 } }}
         open={open}
         TransitionComponent={Transition}
         keepMounted
@@ -66,7 +66,7 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogContent
-        style={{ padding: 0, borderRadius: 10 }}
+          style={{ padding: 0, borderRadius: 10 }}
         >
           <div className='eventDialog'>
             <div className='eventDialog__header'>

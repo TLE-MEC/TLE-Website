@@ -5,6 +5,9 @@ import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
+
+  var yr = new Date().getFullYear();
+
   return (
     <div className='footer'>
        <div className='footer_container'>
@@ -28,7 +31,9 @@ function Footer() {
             <h2>Email</h2>
             <div className='footer_right_content'>
               <HiOutlineMail className='footer_right_icon' />
-              <p>something@gmail.com</p>
+              <p>
+                <a href="mailto:tle@mec.ac.in">tle@mec.ac.in</a>
+              </p>
             </div>
             <div className='footer_social'>
               <a href="/" target="_blank" rel="noreferrer">
@@ -42,6 +47,9 @@ function Footer() {
               </a>
             </div>
           </div>  
+       </div>
+       <div className='copyright'>
+          <h4>Copyright © {yr} | TLEMEC </h4>
        </div>
     </div>
   )

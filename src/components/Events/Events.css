@@ -41,8 +41,8 @@
 
 .events_more {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 2rem 0;
   margin-top: 2rem;
@@ -519,7 +519,7 @@
     height: 160px;
   }
 
-  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh, .css-c2c0hr-MuiPaper-root-MuiDialog-paper {
+  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh, .css-c2c0hr-MuiPaper-root-MuiDialog-paper, .css-dhi2p6 {
     margin: 16px !important;
     border-radius: 20px !important;
   }

@@ -1,5 +1,6 @@
 .footer { 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -24,7 +25,7 @@
 }
 
 .footer_left h1 {
-    font-family: 'Raleway';
+    font-family: var(--primary-font);
     font-style: normal;
     font-weight: 700;
     font-size: 2.25rem;
@@ -34,7 +35,7 @@
 }
 
 .footer_left p {
-    font-family: 'Raleway';
+    font-family: var(--primary-font);
     font-style: normal;
     font-weight: 500;
     font-size: 1.1rem;
@@ -56,7 +57,7 @@
     outline: none;
     border: none;
     width: 100%;
-    font-family: 'Raleway';
+    font-family: var(--primary-font);
     font-style: normal;
     font-weight: 500;
     font-size: 0.9rem;
@@ -73,7 +74,7 @@
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: 'Raleway';
+    font-family: var(--primary-font);
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -94,7 +95,7 @@
 }
 
 .footer_right h2 {
-    font-family: 'Raleway';
+    font-family: var(--primary-font);
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
@@ -116,7 +117,7 @@
 }
 
 .footer_right_content p {
-    font-family: 'Raleway';
+    font-family: var(--primary-font);
     font-style: normal;
     font-weight: 500;
     font-size: 0.9rem;
@@ -125,6 +126,10 @@
     color: #FFFFFF;
 }
 
+.footer_right_content p a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
 
 .footer_social {
     display: flex;
@@ -146,6 +151,14 @@
     color: #0B8B8B;
     box-sizing: content-box;
     font-size: 1.35rem;
+}
+
+.copyright {
+    margin: 1rem 0;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 1rem;
+    color: #FFFFFF;
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
