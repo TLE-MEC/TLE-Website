@@ -30,7 +30,7 @@ function Landing() {
 
           </h2>
           <div className='landing__btns'>
-            <HashLink to="#resources" className='landing_btn phone_btn' smooth>
+            <HashLink to="#contact" className='landing_btn phone_btn' smooth>
               <FiPhone />
               Contact
             </HashLink>

@@ -145,6 +145,10 @@
     align-items: center;
     justify-content: center;
     padding: 0.6rem;
+    transition: ease-in 0.1s;
+}
+.footer_social a:hover {
+    transform: scale(1.15);
 }
 
 .footer_social_icon {
@@ -152,6 +156,7 @@
     box-sizing: content-box;
     font-size: 1.35rem;
 }
+
 
 .copyright {
     margin: 1rem 0;
