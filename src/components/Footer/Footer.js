@@ -26,7 +26,7 @@ function Footer() {
             <h2>Address</h2>
             <div className='footer_right_content'>
               <HiOutlineLocationMarker className='footer_right_icon' />
-              <p>28HH+8CR, Model Engineering College Road, Karimakkad, Thrikkakara, Edappally, Kochi, Kerala 682021</p>
+              <p>Govt. Model Engineering College, Model Engineering College Road, Karimakkad, Thrikkakara, Edappally, Kochi, Kerala 682021</p>
             </div>
             <h2>Email</h2>
             <div className='footer_right_content'>
