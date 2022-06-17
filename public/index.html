@@ -37,16 +37,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <form className='contactUs__form' name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <div className='contact_form_div'>
-        <input type='text' name="name" className="contact_form_input" />
-      </div>
-      <div className='contact_form_div'>
-        <input type='text' name="email" className="contact_form_input" />
-      </div>
-      <div className='contact_form_div'>
-        <textarea type='text' name="message" className="contact_form_input textarea" />
-      </div>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type='text' name="name" />
+      <input type='text' name="email" />
+      <textarea type='text' name="message" />
     </form>
   </body>
 </html>

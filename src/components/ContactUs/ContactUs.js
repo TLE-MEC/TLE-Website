@@ -61,22 +61,21 @@ function ContactUs() {
     <div className='contactUs' id='contact'>
         <div className='contactUs__container'>
             <div className='contactUs__left'>
-              {/* <h1 className="contactUs__header">Contact Us</h1> */}
               <form className='contactUs__form' onSubmit={handleContactForm} name="contact" method="post">
                 <input type="hidden" name="form-name" value="contact" />
                 <h1>Get in Touch</h1>
                 <div className='contact_form_div'>
-                  <label className='contact_form_label'>Name</label>
+                  <label htmlFor="name" className='contact_form_label'>Name</label>
                   <input type='text' name='name' value={name} onChange={(e) => setName(e.target.value)} className="contact_form_input" />
                   <p className='contact_form_error'>{nameErr}</p>
                 </div>
                 <div className='contact_form_div'>
-                  <label className='contact_form_label'>Email</label>
+                  <label htmlFor="email" className='contact_form_label'>Email</label>
                   <input type='text' name='email' value={email} onChange={(e) => setEmail(e.target.value)} className="contact_form_input" />
                   <p className='contact_form_error'>{emailErr}</p>
                 </div>
                 <div className='contact_form_div'>
-                  <label className='contact_form_label'>Message</label>
+                  <label htmlFor="message" className='contact_form_label'>Message</label>
                   <textarea type='text' name='message' value={msg} onChange={(e) => setMsg(e.target.value)} className="contact_form_input textarea" />
                   <p className='contact_form_error'>{msgErr}</p>
                 </div>
