@@ -21,7 +21,7 @@ const eventData = [
     youtube: 'https://www.youtube.com/watch?v=6679UV9xOuQ&t=1301s',
     github: 'https://github.com/TLE-MEC/Hack-CP-DSA',
     participants: 20,
-    leaderboard: [{id:1}]
+    leaderboard: []
   },
   {
     id: 3,
@@ -45,7 +45,40 @@ const eventData = [
     youtube: 'https://youtube.com/playlist?list=PLXgac_DZMistQX5DxSfn16OXMxHUy1882',
     github: '',
     participants: 20,
-    leaderboard: []
+    leaderboard: [
+      {
+        id: 1,
+        title: 'Beginner',
+        first: {
+          name: 'Christopher Roy',
+          image: 'https://drive.google.com/uc?id=1AEOEXOdNIJLpj-Kw8yoxz89mM0XMZqa_'
+        },
+        second: {
+          name: 'Aneena Prince',
+          image: 'https://drive.google.com/uc?id=1OyOuuH6VxDVnjRYYR0xaAbW5HiBx5fQA'
+        },
+        third: {
+          name: 'Adam Oomen Jacob',
+          image: 'https://drive.google.com/uc?id=1EmS5priCdq24nk699ydo59In_qxoiF9j'
+        },
+      },
+      {
+        id: 2,
+        title: 'Intermediate',
+        first: {
+          name: 'Parth Sarathi Bhunia',
+          image: 'https://drive.google.com/uc?id=1OunKbc9M_5uVXoW2bFCWgQKGj4BePnJE'
+        },
+        second: {
+          name: 'Arya Jayadev K M',
+          image: 'https://drive.google.com/uc?id='
+        },
+        third: {
+          name: 'George Mathew',
+          image: 'https://drive.google.com/uc?id=1rwEHUdhNAVEb1b0jYe2NTP9StsKxvZOk'
+        },
+      },
+    ]
   },
   {
     id: 5,
@@ -69,7 +102,22 @@ const eventData = [
     youtube: '',
     github: '',
     participants: 20,
-    leaderboard: []
+    leaderboard: [
+      {
+        id: 1,
+        title: '',
+        prize: [
+          {
+            name: 'Adam Oomen Jacob',
+            image: 'https://drive.google.com/uc?id=1EmS5priCdq24nk699ydo59In_qxoiF9j'
+          },
+          {
+            name: 'Mathew Davis',
+            image: 'https://drive.google.com/uc?id=1CnhHvAUhPuieIRFCN3XaezoFN-yTuuNO'
+          },
+        ]
+      },
+    ]
   },
 ]; 
 export default eventData;

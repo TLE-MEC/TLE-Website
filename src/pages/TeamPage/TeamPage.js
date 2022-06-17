@@ -5,6 +5,7 @@ import AOS from 'aos'
 import { HashLink } from 'react-router-hash-link';
 import { useNavigate } from 'react-router-dom';
 import { FiArrowLeft } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa";
 
 import coreData from "../../data/coreData";
 import execData from "../../data/execData";
@@ -72,7 +73,14 @@ function TeamPage() {
                     {loading ? (
                       <Skeleton variant="circular" width={120} height={120} />
                     ) : (
-                      <img src={data.image} alt="" loading='lazy'/>
+                      <>
+                        <img src={data.image} alt="" loading='lazy'/>
+                        {data.linkedIn && (
+                          <a href={data.linkedIn} target="_blank" rel="noreferrer" className='core_linkedin'>
+                            <FaLinkedinIn color='#ffffff' size={18} className="linkedin"/>
+                          </a>
+                        )}
+                      </>
                     )}
                       <h3>{data.name}</h3>
                       <p>{data.title}</p>
@@ -87,7 +95,12 @@ function TeamPage() {
                     {loading ? (
                       <Skeleton variant="circular" width={120} height={120} />
                     ) : (
-                      <img src={data.image} alt="" loading='lazy'/>
+                      <>
+                        <img src={data.image} alt="" loading='lazy'/>
+                        <a href={data.linkedIn} target="_blank" rel="noreferrer" className='core_linkedin'>
+                          <FaLinkedinIn color='#ffffff' size={18} className="linkedin"/>
+                        </a>
+                      </>
                     )}
                       <h3>{data.name}</h3>
                       <p>{data.title}</p>
@@ -106,7 +119,12 @@ function TeamPage() {
                     {loading ? (
                       <Skeleton variant="circular" width={120} height={120} />
                     ) : (
-                      <img src={data.image} alt="" loading='lazy'/>
+                      <>
+                        <img src={data.image} alt="" loading='lazy'/>
+                        <a href={data.linkedIn} target="_blank" rel="noreferrer" className='core_linkedin'>
+                          <FaLinkedinIn color='#ffffff' size={18} className="linkedin"/>
+                        </a>
+                      </>
                     )}
                       <h3>{data.name}</h3>
                   </div>

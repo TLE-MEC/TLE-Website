@@ -138,14 +138,30 @@
   align-items: center;
   justify-content: center;
   z-index: 999;
+  position: relative;
 }
 
 .singleCore img {
-  width: 120px;
+  width: 130px;
   border-radius: 100%;
   margin-bottom: 0.95rem;
   border: 4px solid #0BAAAA;
   padding: 1px;
+}
+
+.core_linkedin {
+  position: absolute;
+  top: 85px;
+  right: 0;
+  background-color: #0BAAAA;
+  padding: 0.55rem;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 
@@ -195,7 +211,9 @@
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
-
+  .tp__header_right p {
+    font-size: 1.75rem;
+  }
 }
 
 
@@ -215,6 +233,9 @@
   .tp__header_left h1 {
     font-size: 3.75rem;
     line-height: 75px;
+  }
+  .tp__header_right p {
+    font-size: 1.75rem;
   }
 }
 

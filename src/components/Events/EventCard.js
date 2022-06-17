@@ -94,23 +94,41 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
                 <img src={divider} alt="" className='event_divider_line' />
                 <div className='eventDialog__leaderboard'>
                   <h1>Leaderboard</h1>
-                  <div className='leaderboard__container'>
-                    <div className='leaderboard__row second__row'>
-                      <h3><span>2</span>nd</h3>
-                      <img className='second__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                      <h4>Shiny Jose</h4>
+                  {leaderboard.map((ldbrd) => (
+                    <div key={ldbrd.id}>
+                    <h3 className='ldbrd__title'>{ldbrd.title}</h3>
+                    <div className='leaderboard__container' >
+                      {ldbrd.second && (
+                        <div className='leaderboard__row second__row'>
+                          <h3><span>2</span>nd</h3>
+                          <img className='second__image' src={ldbrd.second.image} alt="" />
+                          <h4>{ldbrd.second.name}</h4>
+                        </div>
+                      )}
+                      {ldbrd.first && (
+                        <div className='leaderboard__row first__row'>
+                          <RiVipCrown2Fill className='crown' />
+                          <img className='first__image' src={ldbrd.first.image} alt="" />
+                          <h4>{ldbrd.first.name}</h4>
+                        </div>
+                      )}
+                      {ldbrd.third && (
+                        <div className='leaderboard__row third__row'>
+                          <h3><span>3</span>rd</h3>
+                          <img className='third__image' src={ldbrd.third.image} alt="" />
+                          <h4>{ldbrd.third.name}</h4>
+                        </div>
+                      )}
+                      {ldbrd.prize && ldbrd.prize.map((p, id) => (
+                        <div className='leaderboard__row first__row' key={id}>
+                          <RiVipCrown2Fill className='crown' />
+                          <img className='first__image' src={p.image} alt="" />
+                          <h4>{p.name}</h4>
+                        </div>
+                      ))}
                     </div>
-                    <div className='leaderboard__row first__row'>
-                      <RiVipCrown2Fill className='crown' />
-                      <img className='first__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                      <h4>Shiny Jose</h4>
                     </div>
-                    <div className='leaderboard__row third__row'>
-                      <h3><span>3</span>rd</h3>
-                      <img className='third__image' src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                      <h4>Shiny Jose</h4>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </>
             )}

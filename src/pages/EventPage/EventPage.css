@@ -62,12 +62,18 @@
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
-
+    .eventsPage__container {
+        width: 90%;
+        padding: 3rem 0;
+    }
 }
 
 
 @media screen and (max-width: 992px) {
-
+    .eventsPage__container {
+        width: 90%;
+        padding: 3rem 0;
+    }
 }
 
 @media screen and (max-width: 800px) {
