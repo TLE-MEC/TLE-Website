@@ -120,7 +120,7 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
                         </div>
                       )}
                       {ldbrd.prize && ldbrd.prize.map((p, id) => (
-                        <div className='leaderboard__row first__row' key={id}>
+                        <div style={{ margin: '0 1rem'}} className='leaderboard__row first__row' key={id}>
                           <RiVipCrown2Fill className='crown' />
                           <img className='first__image' src={p.image} alt="" />
                           <h4>{p.name}</h4>

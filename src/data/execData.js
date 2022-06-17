@@ -11,7 +11,7 @@ const execData = [
         id: 2,
         name: 'Athul Reji',
         image: Athul_Reji,
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/athul-reji-a99ab2201'
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const execData = [
         id: 5,
         name: 'Jessica Jolly',
         image: Jessica_Jolly,
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/jessica-jolly-b424841aa/'
     },
     
 ]

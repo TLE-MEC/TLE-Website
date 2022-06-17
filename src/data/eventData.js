@@ -71,7 +71,7 @@ const eventData = [
         },
         second: {
           name: 'Arya Jayadev K M',
-          image: 'https://drive.google.com/uc?id='
+          image: 'https://drive.google.com/uc?id=1UZvmmMk285Q3mIW7jjJK9hMvZ5bHXY5y'
         },
         third: {
           name: 'George Mathew',

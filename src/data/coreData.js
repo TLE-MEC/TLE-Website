@@ -27,14 +27,14 @@ const coreData = [
         name: 'Tom Thomas',
         title: 'CP Head',
         image: TomVempala,
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/tom-vempala-6175ab175/'
     },
     {
         id: 5,
         name: 'Anagha Sivadas',
         title: 'Events Head',
         image: Anagha_Sivadas,
-        linkedIn: ''
+        linkedIn: 'https://www.linkedin.com/in/anagha-sivadas'
     },
     {
         id: 6,
