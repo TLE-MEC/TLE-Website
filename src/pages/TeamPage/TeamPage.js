@@ -135,9 +135,9 @@ function TeamPage() {
         </div>
         <div className="tp_teammemberdiv">
           <div>
-        <h1 className="team__header">TEAM MEMBERS</h1>
-        </div>
-        <TeamMember ></TeamMember>
+            <h1 className="team__header">TEAM MEMBERS</h1>
+          </div>
+          <TeamMember />
         </div>
       </div>
       <img src={landing_circle} alt="" className="team_circle" />

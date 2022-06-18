@@ -1,39 +1,36 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
-//import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from "@mui/material/AccordionSummary";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import "./TeamMember.css";
 import { FiChevronRight } from "react-icons/fi";
-import { techteam, cpteam, content_team, team } from "../../data/TeamData";
 import { BsDot } from "react-icons/bs";
 
+import { team } from "../../data/TeamData";
+import "./TeamMember.css";
+
 const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
+  <MuiAccordion disableGutters elevation={0}  {...props} />
 ))(({ theme }) => ({
-  border: `1px solid ${theme.palette.divider}`,
   "&:not(:last-child)": {
     borderBottom: 0,
   },
   "&:before": {
     display: "none",
   },
+  borderRadius: 10
 }));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<FiChevronRight></FiChevronRight>}
+    expandIcon={<FiChevronRight color="#003a3a" size={20}/>}
     {...props}
   />
 ))(({ theme }) => ({
   backgroundColor:
     theme.palette.mode === "dark"
-      ? "rgba(255, 255, 255, .05)"
-      : "rgba(0, 0, 0, .03)",
+      ? "#c2e6e6"
+      : "#c2e6e6",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -49,7 +46,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = React.useState("");
+  const [expanded, setExpanded] = useState(false);
 
   const handleChange =
     (panel ) => (event , newExpanded ) => {
@@ -58,7 +55,7 @@ export default function CustomizedAccordions() {
 
   return (
     <div className="tp-memberaccordion">
-      {team.map((item,index) => {
+      {team.map((item, index) => {
         return (
           <Accordion
             expanded={expanded === `panel${index}`}
@@ -69,15 +66,15 @@ export default function CustomizedAccordions() {
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <Typography className="tp-teamname">{item.name}</Typography>
+              <h3 className="tp-teamname">{item.name}</h3>
             </AccordionSummary>
             <AccordionDetails>
               {item.members.map((it,no) => {
                 return (
-                  <Typography key={no}>
-                    <BsDot></BsDot>
+                  <p key={no} className="tp-membername">
+                    <BsDot color="#212121" size={18}/>
                     {it.name}
-                  </Typography>
+                  </p>
                 );
               })}
             </AccordionDetails>

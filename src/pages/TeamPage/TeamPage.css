@@ -208,14 +208,6 @@
   width: 80px;
 }
 
-.tp_teammemberdiv{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
@@ -232,7 +224,7 @@
 
   .team_circle {
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 300px;

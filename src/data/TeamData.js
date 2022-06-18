@@ -71,19 +71,19 @@ export const team = [
         name: "Stephen Saji Mathew ",
       },
       {
-        name: " Sneha shaji",
+        name: "Sneha shaji",
       },
       {
         name: "Reshma J Nair",
       },
       {
-        name: " Sonah S Tiju",
+        name: "Sonah S Tiju",
       },
       {
-        name: " Anish Pillai",
+        name: "Anish Pillai",
       },
       {
-        name: " Ann Maria",
+        name: "Ann Maria",
       },
       {
         name: "Mrinalini Nair Ani",
@@ -170,22 +170,22 @@ export const team = [
         name: "Maria Rachel Joseph",
       },
       {
-        name: " Swathy Prakash ",
+        name: "Swathy Prakash ",
       },
       {
-        name: "K B SREE LAKSHMY ",
+        name: "K B Sree Lakshmy ",
       },
       {
-        name: " Rose Mariya Davis ",
+        name: "Rose Mariya Davis ",
       },
       {
-        name: " Lakshmi Sajilal",
+        name: "Lakshmi Sajilal",
       },
       {
         name: "Crystal Bejoy",
       },
       {
-        name: "K B SREE PARVATHY",
+        name: "K B Sree Parvathy",
       },
     ],
   },
@@ -202,7 +202,7 @@ export const team = [
         name: "Medha K",
       },
       {
-        name: "j vikaas",
+        name: "J Vikaas",
       },
       {
         name: "Jubel Benny",
@@ -211,7 +211,7 @@ export const team = [
         name: "Sumayya Parvin",
       },
       {
-        name: " SWATHI SATHEESH CHANDRAN",
+        name: "Swathi Satheesh Chandran",
       },
       {
         name: "Saad Moopan",
@@ -220,7 +220,7 @@ export const team = [
         name: "Roshna Sunil",
       },
       {
-        name: " Arjun Jayakumar",
+        name: "Arjun Jayakumar",
       },
     ],
   },
