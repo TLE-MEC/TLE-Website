@@ -69,7 +69,7 @@ export default function CustomizedAccordions() {
               aria-controls="panel1d-content"
               id="panel1d-header"
             >
-              <Typography>{item.name}</Typography>
+              <Typography className="tp-teamname">{item.name}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               {item.members.map((it,no) => {

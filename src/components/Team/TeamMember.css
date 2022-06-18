@@ -2,3 +2,8 @@
     width: 75%;
     z-index: 3;
 }
+@media(max-width:360px){
+    .tp-teamname{
+        font-size: 0.8rem !important;
+    }
+}
