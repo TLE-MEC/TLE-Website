@@ -1,4 +1,4 @@
-.contactUs{
+.contactUs {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,7 +7,7 @@
     background: #E6F4F4;
     padding: 2rem 0;
 }
-  
+
 .contactUs__container {
     width: 60%;
     overflow: hidden;
@@ -27,7 +27,7 @@
     justify-content: flex-start;
     height: 100%;
     width: 100%;
-}   
+}
 
 .contactUs__header {
     font-family: var(--primary-font);
@@ -35,7 +35,7 @@
     font-weight: 700;
     font-size: 2.25rem;
     letter-spacing: -0.02em;
-    color: var(--primary-color);    
+    color: var(--primary-color);
     margin: 1rem;
 }
 
@@ -142,9 +142,14 @@
     object-fit: cover;
     border-radius: 0 30px 30px 0;
     pointer-events: none;
-    
+
 }
 
+.conact-section-heading {
+    background-color: #E6F4F4;
+    margin: auto;
+    text-align: center;
+}
 
 @media (min-width: 992px) and (max-width: 1380px) {
     .contactUs__container {
@@ -157,11 +162,13 @@
     .contactUs {
         padding: 2rem;
     }
+
     .contactUs__container {
         width: 100%;
         flex-direction: column;
         border-radius: 20px;
     }
+
     .contactUs__left {
         flex: 1;
     }
@@ -169,6 +176,7 @@
     .contactUs__right {
         display: none;
     }
+
     .contactUs__form {
         padding: 2rem 4rem;
         width: 80%;
@@ -180,14 +188,17 @@
     .contactUs {
         padding: 1.5rem;
     }
+
     .contactUs__form {
         padding: 2rem 3rem;
         width: 100%;
     }
+
     .contactUs__form h1 {
         font-size: 2rem;
         line-height: 72px;
     }
+
     .contact_form_input {
         border: 2px solid var(--primary-color);
     }
@@ -197,22 +208,16 @@
     .contactUs__form {
         padding: 1rem 1.5rem;
     }
+
     .contactUs__form h1 {
         font-size: 1.75rem;
         line-height: 62px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {}
 
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
 
-@media only screen and (device-width: 768px) {
-
-}
+@media only screen and (device-width: 768px) {}

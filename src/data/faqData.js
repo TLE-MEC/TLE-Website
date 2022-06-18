@@ -2,7 +2,7 @@ const faqData = [
     {
         id: 1,
         question: 'What is TLE MEC?',
-        answer: 'TLE MEC is the Competitive Programming and Data Structures & Algorithms club of MEC'
+        answer: 'TLE MEC is the Competitive Programming and Data Structures & Algorithms club of Govt. Model Engineering College, Thrikkakara, Kochi.'
     },
     {
         id: 2,
@@ -21,25 +21,20 @@ const faqData = [
     },
     {
         id: 5,
-        question: 'How are they different?',
-        answer: '(petition to cancel this question. the answer would basically be copy pasting the above two questions)'
-    },
-    {
-        id: 6,
         question: 'Why do I need these?',
         answer: 'A deep study into data structures and algorithms ensures well-optimized efficient code and great problem-solving skills that many tech companies seek. But not only is this beneficial for landing jobs, it also hones your skill to tackle real-world problems.'
     },
     {
-        id: 7,
+        id: 6,
         question: 'Where do I get started!',
         answer: 'Try online courses by Coursera, Udemy or attend free videos from youtube! Some channel suggestions from our side are freeCodeCamp.org, thenewboston and Edureka! You can also try to master data structures using sites like geeksforgeeks & tutorialspoint. Just choose a language, learn the basics and start coding!'
     },
     {
-        id: 8,
+        id: 7,
         question: 'How can TLE help you?',
         answer: "It can be hard to find your way through the cluttered mess of the internet as you navigate resources and so we're here to point you in the right direction. We will be sharing timely resources and tips, along with holding contests from time to time so your skills don't ever get rusty!"
     },
-    
+
 ]
 
 

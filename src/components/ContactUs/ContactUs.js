@@ -29,22 +29,22 @@ function ContactUs() {
     e.preventDefault();
 
     if (name) {
-        if(email) {
-          if (isEmail(email)) {
-            const responseData = {
-                name: name,
-                email: email,
-                msg: msg,
-            };
+      if (email) {
+        if (isEmail(email)) {
+          const responseData = {
+            name: name,
+            email: email,
+            msg: msg,
+          };
 
-            console.log(responseData)
+          console.log(responseData)
 
-            clearFields()
+          clearFields()
 
         } else {
-            setEmailErr('Invalid email address')
+          setEmailErr('Invalid email address')
         }
-          if (msg) {
+        if (msg) {
 
         } else {
           setMsgErr('Message cannot be blank');
@@ -55,43 +55,46 @@ function ContactUs() {
     } else {
       setNameErr('Name cannot be blank');
     }
-};
+  };
 
   return (
-    <div className='contactUs' id='contact'>
+    <>
+      <h1 className='section__header conact-section-heading'>CONTACT US</h1>
+      <div className='contactUs' id='contact'>
         <div className='contactUs__container'>
-            <div className='contactUs__left'>
-              <form className='contactUs__form' onSubmit={handleContactForm} name="contact" method="post">
-                <input type="hidden" name="form-name" value="contact" />
-                <h1>Get in Touch</h1>
-                <div className='contact_form_div'>
-                  <label htmlFor="name" className='contact_form_label'>Name</label>
-                  <input type='text' name='name' value={name} onChange={(e) => setName(e.target.value)} className="contact_form_input" />
-                  <p className='contact_form_error'>{nameErr}</p>
-                </div>
-                <div className='contact_form_div'>
-                  <label htmlFor="email" className='contact_form_label'>Email</label>
-                  <input type='text' name='email' value={email} onChange={(e) => setEmail(e.target.value)} className="contact_form_input" />
-                  <p className='contact_form_error'>{emailErr}</p>
-                </div>
-                <div className='contact_form_div'>
-                  <label htmlFor="message" className='contact_form_label'>Message</label>
-                  <textarea type='text' name='message' value={msg} onChange={(e) => setMsg(e.target.value)} className="contact_form_input textarea" />
-                  <p className='contact_form_error'>{msgErr}</p>
-                </div>
+          <div className='contactUs__left'>
+            <form className='contactUs__form' onSubmit={handleContactForm} name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <h1>Get in Touch</h1>
+              <div className='contact_form_div'>
+                <label htmlFor="name" className='contact_form_label'>Name</label>
+                <input type='text' name='name' value={name} onChange={(e) => setName(e.target.value)} className="contact_form_input" />
+                <p className='contact_form_error'>{nameErr}</p>
+              </div>
+              <div className='contact_form_div'>
+                <label htmlFor="email" className='contact_form_label'>Email</label>
+                <input type='text' name='email' value={email} onChange={(e) => setEmail(e.target.value)} className="contact_form_input" />
+                <p className='contact_form_error'>{emailErr}</p>
+              </div>
+              <div className='contact_form_div'>
+                <label htmlFor="message" className='contact_form_label'>Message</label>
+                <textarea type='text' name='message' value={msg} onChange={(e) => setMsg(e.target.value)} className="contact_form_input textarea" />
+                <p className='contact_form_error'>{msgErr}</p>
+              </div>
 
-                <button type='submit' className='contact_form_btn'>
-                  Send 
-                  <IoIosPaperPlane size={20}/>
-                </button>
-              </form>
-            </div>
-            <div className='contactUs__right'>
-              <img src={contacts_abstract} className='contacts_abstract' alt='' />
+              <button type='submit' className='contact_form_btn'>
+                Send
+                <IoIosPaperPlane size={20} />
+              </button>
+            </form>
+          </div>
+          <div className='contactUs__right'>
+            <img src={contacts_abstract} className='contacts_abstract' alt='' />
 
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </>
   )
 }
 

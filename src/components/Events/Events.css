@@ -1,4 +1,4 @@
-.events{
+.events {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
   padding: 4rem 0;
 }
 
-.section__text{
+.section__text {
   padding-top: 1rem;
   font-family: var(--primary-font);
   font-weight: 400;
@@ -25,17 +25,17 @@
 }
 
 .events-1 {
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items:center ;
+  align-items: center;
   flex-direction: column;
-  margin-top:70px;
+  margin-top: 70px;
   overflow-x: hidden;
 }
 
 
-.events_cubo{
+.events_cubo {
   width: 200px;
 }
 
@@ -47,6 +47,7 @@
   padding: 2rem 0;
   margin-top: 2rem;
 }
+
 .events_more a {
   text-decoration: none;
 }
@@ -71,10 +72,20 @@
 
 }
 
+.events-subheading {
+  text-transform: uppercase;
+  color: #0b8b8b;
+  font-size: 25px;
+  margin: 30px 0px 0px 0px;
+}
+
+.events-subheading-text {
+  font-size: 18px;
+  margin-top: 18px;
+}
 
 
-
-.events-card{
+.events-card {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
@@ -86,8 +97,8 @@
 
 
 
-.eventCard{
-  font-family: var(--secondary-font);  
+.eventCard {
+  font-family: var(--secondary-font);
   width: 300px;
   height: 450px;
   border-radius: 15px;
@@ -95,25 +106,28 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2), -5px -5px 10px rgba(230,230,230,0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(230, 230, 230, 0.1);
 }
 
-.eventCard:hover{
+.eventCard:hover {
   transform: scale(1.05);
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.2), -5px -5px 20px rgba(255,255,255,0.1);
-  
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2), -5px -5px 20px rgba(255, 255, 255, 0.1);
+
 }
-.eventCard .eventCard_image{
+
+.eventCard .eventCard_image {
   height: 35%;
   width: 100%;
 }
-.eventCard .eventCard_image img{
+
+.eventCard .eventCard_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 0 55%;
 }
-.eventCard .content{
+
+.eventCard .content {
   height: 50%;
   width: 100%;
   background-color: #fff;
@@ -124,23 +138,28 @@
   overflow: hidden;
   color: #333;
 }
-.eventCard .content .title{
+
+.eventCard .content .title {
   text-align: center;
-  font-weight: 800;  
+  font-weight: 800;
 }
-.eventCard .content .title .time{
+
+.eventCard .content .title .time {
   font-size: 0.8rem;
   margin-bottom: 5px;
   color: var(--primary-color);
 }
-.eventCard .content .title .name{
+
+.eventCard .content .title .name {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
-.eventCard .content .para{
+
+.eventCard .content .para {
   height: 55%;
   overflow-y: scroll;
 }
+
 .eventCard .content .para::-webkit-scrollbar {
   display: none;
 }
@@ -177,15 +196,17 @@
 .eventDialog {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 }
 
-.css-ypiqx9-MuiDialogContent-root, .css-1ty026z {
-  -ms-overflow-style: none !important; 
-  scrollbar-width: none !important;   
+.css-ypiqx9-MuiDialogContent-root,
+.css-1ty026z {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
-.css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar, .css-1ty026z::-webkit-scrollbar {
+.css-ypiqx9-MuiDialogContent-root::-webkit-scrollbar,
+.css-1ty026z::-webkit-scrollbar {
   display: none !important;
 }
 
@@ -431,9 +452,7 @@
   background: #003a3a;
 }
 
-@media (min-width: 992px) and (max-width: 1380px) {
-
-}
+@media (min-width: 992px) and (max-width: 1380px) {}
 
 
 @media screen and (max-width: 992px) {
@@ -441,7 +460,8 @@
     width: 90%;
     padding: 3rem 0;
   }
-  .section__text{
+
+  .section__text {
     font-size: 1.45rem;
   }
 
@@ -454,17 +474,21 @@
     padding: 1.5rem;
     flex-direction: column;
   }
-  .section__text{
+
+  .section__text {
     font-size: 1.25rem;
   }
+
   .events_more {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+
   .events_btn {
     padding: 0.8rem 1.2rem;
     font-size: 18px;
   }
+
   .events-card {
     padding-top: 35px;
   }
@@ -480,25 +504,31 @@
     gap: 1.55rem;
     border-radius: 0;
   }
+
   .edh__right h1 {
     font-size: 1.5rem;
   }
+
   .eventDialog__close {
     top: 20px;
     right: 20px;
     color: #0BAAAA;
     font-size: 2rem;
   }
+
   .edf__btns {
     justify-content: space-between;
   }
+
   .edh_btn {
     gap: 0.25rem;
     padding: 0.4rem 0.75rem;
   }
+
   .edh_btn p {
     font-size: 0.7rem;
   }
+
   .edh__right_p {
     font-size: 1.15rem;
     line-height: 20px;
@@ -509,6 +539,7 @@
     width: 100%;
     gap: 1.25rem;
   }
+
   .eventDialog__leaderboard h1 {
     font-size: 1.5rem;
   }
@@ -532,7 +563,10 @@
     height: 160px;
   }
 
-  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper, .css-134mzkh, .css-c2c0hr-MuiPaper-root-MuiDialog-paper, .css-dhi2p6 {
+  .css-1kfeeuf-MuiPaper-root-MuiDialog-paper,
+  .css-134mzkh,
+  .css-c2c0hr-MuiPaper-root-MuiDialog-paper,
+  .css-dhi2p6 {
     margin: 16px !important;
     border-radius: 20px !important;
   }
@@ -548,20 +582,22 @@
   .third__row {
     transform: translateX(-40px);
   }
+
   .leaderboard__row h3 {
     font-size: 1rem;
     line-height: 31px;
   }
-  
+
   .leaderboard__row h3 span {
     font-weight: 800;
     font-size: 1.5rem;
   }
-  
+
   .leaderboard__row h4 {
     font-size: 0.9rem;
     white-space: nowrap;
   }
+
   .eventDialog__footer {
     width: 100%;
     padding: 1rem;
@@ -594,13 +630,8 @@
     height: 130px;
   }
 }
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
 
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
 
-@media only screen and (device-width: 768px) {
-
-}
+@media only screen and (device-width: 768px) {}

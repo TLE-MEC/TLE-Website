@@ -21,15 +21,18 @@ function Events() {
       <div className='events__container'>
         <h1 className='section__header'>EVENTS</h1>
         <img className="events_cubo" src={logo} alt="" />
-        <p className="section__text">The official announcements about upcoming events will be published here.<br/>Keep checking to know more...</p>
-        
+        <p className="section__text">The official announcements about our upcoming events will be published here.</p>
+
+        <h3 className='events-subheading'>Upcoming Events</h3>
+        <p className='events-subheading-text'>There are no upcoming events right now, check back later!</p>
+        <h3 className='events-subheading'>Past Events</h3>
         <div className='events-card'>
           {eventData.slice(0).reverse().slice(0, 3).map((eve) => (
-            <EventCard 
-              id={eve.id} 
-              key={eve.id} 
-              name={eve.name} 
-              desc={eve.desc} 
+            <EventCard
+              id={eve.id}
+              key={eve.id}
+              name={eve.name}
+              desc={eve.desc}
               image={eve.image}
               date={eve.date}
               youtube={eve.youtube}
