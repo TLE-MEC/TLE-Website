@@ -15,6 +15,7 @@ import "./TeamPage.css";
 
 import landing_circle from '../../assets/svg/landing_circle.svg'
 import ellipse4 from '../../assets/svg/ellipse1.svg'
+import TeamMember from '../../components/Team/TeamMember';
 
 function TeamPage() {
 
@@ -131,6 +132,12 @@ function TeamPage() {
                 ))
               }
             </div>
+        </div>
+        <div className="tp_teammemberdiv">
+          <div>
+        <h1 className="team__header">TEAM MEMBERS</h1>
+        </div>
+        <TeamMember ></TeamMember>
         </div>
       </div>
       <img src={landing_circle} alt="" className="team_circle" />
