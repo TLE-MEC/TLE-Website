@@ -52,7 +52,7 @@
 .landing__btns {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1.1rem;
 }
 
 .landing_btn {
@@ -66,7 +66,7 @@
     font-family: var(--primary-font);
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 17px;
     cursor: pointer;
     transition: ease-in-out 0.1s;
 }
@@ -127,9 +127,7 @@
 }
 
 
-@media (min-width: 992px) and (max-width: 1380px) {
-
-}
+@media (min-width: 992px) and (max-width: 1380px) {}
 
 
 @media screen and (max-width: 992px) {
@@ -142,6 +140,7 @@
     .landing {
         min-height: calc(100vh - 90px);
     }
+
     .landing__container {
         width: 100%;
         margin: auto;
@@ -226,25 +225,20 @@
         height: 34px;
         font-size: 14px;
     }
+
     .landing__left h2 {
         font-size: 1.8rem;
         line-height: 35px;
     }
+
     .landing__btns {
         gap: 0.85rem;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {}
 
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
 
-@media only screen and (device-width: 768px) {
-
-}
+@media only screen and (device-width: 768px) {}

@@ -21,7 +21,7 @@ function Landing() {
 
   return (
     <div className='landing' id='home'>
-      <img src={ellipse1} className="ellipse1" alt=""/>
+      <img src={ellipse1} className="ellipse1" alt="" />
       <div className='landing__container'>
         <div className='landing__left' data-aos="zoom-in">
           <p className='welcome'>WELCOME</p>
@@ -32,20 +32,20 @@ function Landing() {
           <div className='landing__btns'>
             <HashLink to="#contact" className='landing_btn phone_btn' smooth>
               <FiPhone />
-              Contact
+              Contact Us
             </HashLink>
             <HashLink to="#team" className='landing_btn team_btn' smooth>
               <HiOutlineUserGroup />
-              Our Team
+              Meet our Team
             </HashLink>
           </div>
         </div>
         <div className='landing__right'>
-          <img src={landing_circle} className="landing_circle" alt=""/>
-          <motion.img 
+          <img src={landing_circle} className="landing_circle" alt="" />
+          <motion.img
             // data-aos="zoom-in"
-            src={landing_cubo} 
-            alt="" 
+            src={landing_cubo}
+            alt=""
             className='landing_cubo'
             drag
             dragConstraints={{
@@ -57,7 +57,7 @@ function Landing() {
           />
         </div>
       </div>
-      <img src={landing_ellipse} className="landing_ellipse" alt=""/>
+      <img src={landing_ellipse} className="landing_ellipse" alt="" />
     </div>
   );
 }

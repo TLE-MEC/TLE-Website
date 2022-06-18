@@ -6,7 +6,7 @@
   overflow: hidden;
   background: #E6F4F4;
 }
-  
+
 .faqPage__container {
   width: 80%;
   height: 100%;
@@ -78,7 +78,8 @@
 }
 
 .faq_image {
-  width: 90%;
+  width: 80%;
+  margin-top: 20%;
   pointer-events: none;
 }
 
@@ -86,6 +87,7 @@
   .faqPage__container {
     width: 90%;
   }
+
   .faq__header {
     font-size: 2.25rem;
     line-height: 50px;
@@ -98,12 +100,14 @@
     min-height: 100vh;
     padding: 2rem;
   }
+
   .faqPage__container {
     flex-direction: column-reverse;
     align-items: center;
     gap: 2rem;
     width: 90%;
   }
+
   .faq__header {
     font-size: 2.5rem;
     line-height: 59px;
@@ -115,25 +119,29 @@
   .faqPage {
     padding: 1.5rem;
   }
+
   .faqPage__container {
     width: 100%;
   }
+
   .faq__left {
     padding: 0;
   }
+
   .faq__header {
     font-size: 2rem;
     line-height: 39px;
   }
+
   .faq__header:after {
     border-bottom: 3px solid var(--primary-color);
   }
 
-  
+
   .faq_qs {
     font-size: 1rem;
   }
-  
+
   .faq_ans {
     font-size: 0.85rem;
   }
@@ -147,16 +155,9 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {}
 
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
 
-@media only screen and (device-width: 768px) {
-
-}
+@media only screen and (device-width: 768px) {}
