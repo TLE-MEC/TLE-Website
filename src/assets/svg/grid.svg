@@ -1,11 +1,1 @@
-<svg width="103" height="103" viewBox="0 0 103 103" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="42.6207" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect y="85.2414" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect x="43.1936" y="42.6207" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect x="43.1936" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect x="43.1936" y="85.2414" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect x="86.3872" y="42.6207" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect x="86.3872" width="16.6129" height="17.7586" fill="#86CECE"/>
-<rect x="86.3872" y="85.2414" width="16.6129" height="17.7586" fill="#86CECE"/>
-</svg>
+<svg width="103" height="103" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#86CECE" d="M0 42.621h16.613V60.38H0zM0 0h16.613v17.759H0zM0 85.241h16.613V103H0zM43.194 42.621h16.613V60.38H43.194zM43.194 0h16.613v17.759H43.194zM43.194 85.241h16.613V103H43.194zM86.387 42.621H103V60.38H86.387zM86.387 0H103v17.759H86.387zM86.387 85.241H103V103H86.387z"/></svg>
