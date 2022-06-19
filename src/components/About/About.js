@@ -5,7 +5,7 @@ import AOS from 'aos'
 import './About.css';
 
 // import grid from '../../assets/svg/grid.svg'
-import about_cubo from '../../assets/svg/about_cubo.svg'
+import about_cubo2 from '../../assets/png/about_cubo2.png'
 import about_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
 
 const texts = ["DSA Mentorship", "Programming Bootcamps", "Coding Contests", "Learning Sessions"];
@@ -85,8 +85,8 @@ function About() {
           </div>
           {/* <p>Data Structures and Algorithms Competitive Programming </p> */}
         </div>
-        <img src={about_cubo} alt="" className="about_cubo" />
       </div>
+      <img src={about_cubo2} alt="" className="about_cubo" />
     </div>
   );
 }

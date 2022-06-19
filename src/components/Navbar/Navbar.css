@@ -17,6 +17,10 @@
     width: 100%;
 }
 
+.nav__desktop>a {
+    cursor: pointer;
+}
+
 .nav_logo {
     width: 60px;
     flex-shrink: 0;
@@ -36,6 +40,7 @@
 }
 
 .nav_item {
+    cursor: pointer;
     text-decoration: none;
     color: #0B8B8B;
     font-size: 16px;
@@ -67,7 +72,7 @@
     height: 50px;
     border-radius: 50%;
     background-color: #ffffff;
-    box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.3);    
+    box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-left: auto;
 }
 
@@ -131,6 +136,12 @@
     color: white;
 }
 
+.navbar-link-active {
+    background-color: #0B8B8B;
+    border-radius: 40px;
+    color: white;
+}
+
 @media (min-width: 992px) and (max-width: 1380px) {
     .navbar_items {
         gap: 1.75rem;
@@ -142,6 +153,7 @@
     .navbar_items {
         gap: 1rem;
     }
+
     .nav_item {
         font-size: 15px;
         padding: 0.75rem 1.1rem;
@@ -153,7 +165,7 @@
         background-color: transparent;
         box-shadow: none;
     }
-    
+
     .nav__mob {
         display: block;
     }
@@ -161,26 +173,17 @@
     .nav__desktop {
         display: none;
     }
+
     .nav__drawer {
         width: 300px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {}
 
-}
+@media screen and (max-width: 400px) {}
 
-@media screen and (max-width: 400px) {
-
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
-}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
 
-@media only screen and (device-width: 768px) {
-
-}
-
+@media only screen and (device-width: 768px) {}

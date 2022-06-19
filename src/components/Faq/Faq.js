@@ -13,16 +13,16 @@ import faq_image from '../../assets/svg/faq_image.svg'
 
 function Faq() {
 
-    const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-    const handleChange = (panel) => (event, isExpanded) => {
-      setExpanded(isExpanded ? panel : false);
-    };
-  
-    
-    AOS.init({
-      once: true
-    })
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
+
+  AOS.init({
+    once: true
+  })
 
   return (
     <div className='faqPage' id="faq">
@@ -31,9 +31,9 @@ function Faq() {
           <h1 className='faq__header' data-aos="zoom-in">Frequently Asked Questions</h1>
           <div className='faq_content'>
             {faqData.map((faq) => (
-              <Accordion 
-                key={faq.id} 
-                expanded={expanded === `${faq.id}`} 
+              <Accordion
+                key={faq.id}
+                expanded={expanded === `${faq.id}`}
                 onChange={handleChange(`${faq.id}`)}
                 disableGutters
                 elevation={0}
@@ -51,10 +51,10 @@ function Faq() {
                     padding: 0,
                   }}
                 >
-                  <h2 
-                    className='faq_qs'                 
+                  <h2
+                    className='faq_qs'
                     data-aos="fade-up"
-                    data-aos-duration={`${300*faq.id}`}
+                    data-aos-duration={`${300 * faq.id}`}
                   >
                     {faq.question}
                   </h2>
@@ -64,16 +64,16 @@ function Faq() {
                     padding: '0.5rem 2rem',
                   }}
                 >
-                    <p className='faq_ans'>
-                      {faq.answer}
-                    </p>
+                  <p className='faq_ans'>
+                    {faq.answer}
+                  </p>
                 </AccordionDetails>
               </Accordion>
             ))}
           </div>
         </div>
         <div className='faq__right'>
-          <img src={faq_image} alt="" className='faq_image' data-aos="fade-up-left"/>
+          <img src={faq_image} alt="" className='faq_image' data-aos="fade-up-left" />
         </div>
       </div>
     </div>

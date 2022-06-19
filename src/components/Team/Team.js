@@ -8,8 +8,8 @@ import semicircle2 from "../../assets/png/semicircle2.png";
 import tom from "../../assets/png/tom.png";
 import nayana from "../../assets/png/nayana.png";
 import vishruth from "../../assets/png/vishruth.png";
+import hemanth from "../../assets/png/hemanth.png"
 import viewmore from "../../assets/svg/viewmore.svg";
-import blankhexagon from "../../assets/png/blankhexagon.png";
 
 import './Team.css'
 
@@ -19,35 +19,35 @@ function Team() {
   AOS.init({
     duration: 800,
   })
-  
+
   return (
     <div className='team' id='team'>
       <div className='team__container'>
-        <img src={semicircle1} className="semicircle1" alt=""/>
+        <img src={semicircle1} className="semicircle1" alt="" />
         <h1 className='section__header'>OUR TEAM</h1>
         <div className="Team-imgdiv-Parentdiv">
           <div className="Team-imgdiv">
-            <img className="hexagon blankhexagon" src={blankhexagon} alt="" data-aos="fade-up"/>
+            <img className="hexagon blankhexagon" src={vishruth} alt="" data-aos="fade-up" />
             <span className="Team-chairpersonParent">
-              <img src={vishruth} className="hexagon" alt="" data-aos="fade-up"/>
+              <img src={nayana} className="hexagon" alt="" data-aos="fade-up" />
               {/* <span className="Teampage-overlay hexagon">Chairperson</span> */}
             </span>
           </div>
           <div className="Team-imgdiv">
             <span className="Team-chairpersonParent">
-              <img className="hexagon" src={nayana} alt="" data-aos="fade-left"/>
+              <img className="hexagon" src={tom} alt="" data-aos="fade-left" />
               {/* <span className="Teampage-overlay hexagon">Vice Chairperson</span> */}
             </span>
             <span className="Team-chairpersonParent">
-            <img className="hexagon" src={tom} alt="" data-aos="fade-down"/>
+              <img className="hexagon" src={hemanth} alt="" data-aos="fade-down" />
               {/* <span className="Teampage-overlay hexagon">CP Head</span> */}
             </span>
             <Link to='/team'>
-              <img className="hexagon viewmore" src={viewmore} alt="" data-aos="fade-right"/>
+              <img className="hexagon viewmore" src={viewmore} alt="" data-aos="fade-right" />
             </Link>
           </div>
         </div>
-        <img src={semicircle2} className="semicircle2" alt=""/>
+        <img src={semicircle2} className="semicircle2" alt="" />
       </div>
     </div>
   )

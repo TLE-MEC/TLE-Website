@@ -114,8 +114,8 @@
 
 .about_cubo {
     position: absolute;
-    left: 0;
-    bottom: -32px;
+    left: 10%;
+    bottom: 0px;
     width: 180px;
     pointer-events: none;
 }
@@ -125,25 +125,29 @@
     .about {
         min-height: 110vh;
     }
+
     .section__header {
         font-size: 4rem;
         line-height: 72px;
     }
+
     .about_cubo {
         width: 160px;
     }
-    
+
 }
 
 
 @media screen and (max-width: 992px) {
     .about {
-        height: 100%;
+        height: 77vh;
     }
+
     .about__container {
         width: 90%;
         padding: 3rem 0;
     }
+
     .section__header {
         font-size: 3.65rem;
         line-height: 72px;
@@ -153,16 +157,22 @@
         font-size: 1.35rem;
         line-height: 25px;
     }
+
     .about_ellipse_circle {
         width: 250px;
     }
+
     .about_cubo {
-        width: 150px;
+        width: 90px;
+        left: 8%;
     }
-    
+
 }
 
 @media screen and (max-width: 800px) {
+    .about {
+        height: 95vh;
+    }
 
     .about__container {
         width: 100%;
@@ -178,12 +188,12 @@
         align-items: flex-start;
         gap: 0.55rem;
     }
-    
+
     .about__top p {
         font-size: 1.15rem;
         line-height: 25px;
     }
-    
+
     .section__header {
         font-size: 2.65rem;
         line-height: 72px;
@@ -192,10 +202,7 @@
     .about_ellipse_circle {
         opacity: 0.5;
     }
-    .about_cubo {
-        position: static;
-        width: 120px;
-    }
+
     .about__bottom {
         margin-top: 1rem;
         position: relative;
@@ -204,7 +211,7 @@
     .abc_top {
         padding: 0.65rem 1.8rem;
     }
-    
+
     .abc_top h3 {
         font-size: 1.2rem;
     }
@@ -217,7 +224,7 @@
         font-size: 1.15rem;
         width: 280px;
     }
-    
+
 }
 
 @media screen and (max-width: 600px) {
@@ -227,16 +234,39 @@
     }
 }
 
+@media screen and (max-width: 420px) {
+    .about {
+        height: 75vh;
+    }
+}
+
+
+
 @media screen and (max-width: 400px) {
-
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
+    .about {
+        height: 80vh;
+    }
 }
 
-
-@media only screen and (device-width: 768px) {
-
+@media screen and (max-width: 380px) {
+    .about {
+        height: 105vh;
+    }
 }
+
+@media screen and (max-width: 370px) {
+    .about {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .about {
+        height: 130vh;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
+
+
+@media only screen and (device-width: 768px) {}

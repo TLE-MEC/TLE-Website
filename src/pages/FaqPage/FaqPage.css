@@ -1,10 +1,12 @@
 .faqPage {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   position: relative;
   padding: 2rem;
   overflow: hidden;
   background: #E6F4F4;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .faqPage__container {
@@ -97,7 +99,7 @@
 
 @media screen and (max-width: 992px) {
   .faqPage {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 2rem;
   }
 

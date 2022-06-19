@@ -1,8 +1,7 @@
 import { useState, React } from 'react'
-import { HashLink } from 'react-router-hash-link';
 import { Drawer } from '@mui/material';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import AOS from 'aos'
 
 import { useScrollPosition } from '../../hooks/useScrollPosition';
@@ -22,15 +21,15 @@ function Navbar() {
   AOS.init()
 
   const handleDrawerOpen = () => {
-      setOpen(true);
+    setOpen(true);
   };
 
   const handleDrawerClose = () => {
-      setOpen(false);
+    setOpen(false);
   };
 
   const showLogo = () => {
-    if(scrollPosition>= 320) {
+    if (scrollPosition >= 320) {
       setMobLogo(false)
     } else {
       setMobLogo(true)
@@ -42,29 +41,26 @@ function Navbar() {
   return (
     <div className='navbar'>
       <div className='nav__desktop'>
-        <Link to='/'>
+        <a href="/" >
           <img src={logo} alt="" className='nav_logo' />
-        </Link>
+        </a>
 
         <div className='navbar_items'>
-          <HashLink to="#home" className='nav_item' smooth>
-            Home
-          </HashLink>
-          <HashLink to="#about" className='nav_item' smooth>
+          <Link to="about" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active">
             About
-          </HashLink>
-          <HashLink to="#events" className='nav_item' smooth>
+          </Link>
+          <Link to="events" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active">
             Events
-          </HashLink>
-          <HashLink to="#resources" className='nav_item' smooth>
+          </Link>
+          <Link to="resources" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active">
             Resources
-          </HashLink>
-          <HashLink to="#team" className='nav_item' smooth>
+          </Link>
+          <Link to="team" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active">
             Team
-          </HashLink>
-          <HashLink to="#contact" className='nav_item' smooth>
+          </Link>
+          <Link to="contact" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active" offset={-100}>
             Contact
-          </HashLink>
+          </Link>
         </div>
         <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
           <img src={meclogo} alt="" className='meclogo' />
@@ -74,14 +70,14 @@ function Navbar() {
       <div className='nav__mob'>
         <div className='nav__mob_container'>
           {mobLogo && (
-            <Link to='/'>
+            <a href="/" >
               <img src={logo} alt="" className='nav_logo' />
-            </Link>
+            </a>
           )}
           <button className='nav_btn' onClick={handleDrawerOpen}>
-            <HiOutlineMenuAlt3 className='hamburger'/>
+            <HiOutlineMenuAlt3 className='hamburger' />
           </button>
-          
+
         </div>
       </div>
       <Drawer
@@ -90,12 +86,12 @@ function Navbar() {
         onClick={handleDrawerClose}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick') {
-              handleDrawerClose();
+            handleDrawerClose();
           } else if (reason !== 'escapeKeyDown') {
-              handleDrawerClose();
+            handleDrawerClose();
           }
         }}
-        
+
         anchor="left"
         PaperProps={{
           sx: {
@@ -116,24 +112,21 @@ function Navbar() {
               <img src={logo} alt="" className='nav_logo' />
             </Link>
             <div className='navbar_items_mob'>
-              <HashLink to="#home" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='200'>
-                Home
-              </HashLink>
-              <HashLink to="#about" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='600'>
+              <Link to="about" className='nav_item_mob' spy={true} smooth={true}>
                 About
-              </HashLink>
-              <HashLink to="#events" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1000'>
+              </Link>
+              <Link to="events" className='nav_item_mob' spy={true} smooth={true}>
                 Events
-              </HashLink>
-              <HashLink to="#resources" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1400'>
+              </Link>
+              <Link to="resources" className='nav_item_mob' spy={true} smooth={true}>
                 Resources
-              </HashLink>
-              <HashLink to="#team" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1600'>
+              </Link>
+              <Link to="team" className='nav_item_mob' spy={true} smooth={true}>
                 Team
-              </HashLink>
-              <HashLink to="#contact" className='nav_item_mob' smooth data-aos='fade-right' data-aos-duration='1800'>
+              </Link>
+              <Link to="contact" className='nav_item_mob' spy={true} smooth={true} >
                 Contact
-              </HashLink>
+              </Link>
             </div>
           </div>
           <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer" >

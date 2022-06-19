@@ -58,26 +58,26 @@ function ContactUs() {
   };
 
   return (
-    <>
+    <div id='contact'>
       <h1 className='section__header conact-section-heading'>CONTACT US</h1>
-      <div className='contactUs' id='contact'>
+      <div className='contactUs' >
         <div className='contactUs__container'>
           <div className='contactUs__left'>
             <form className='contactUs__form' onSubmit={handleContactForm} name="contact" method="post">
               <input type="hidden" name="form-name" value="contact" />
-              <h1>Get in Touch</h1>
+              <h1>Get in Touch!</h1>
               <div className='contact_form_div'>
-                <label htmlFor="name" className='contact_form_label'>Name</label>
+                <label htmlFor="name" className='contact_form_label'>Your name</label>
                 <input type='text' name='name' value={name} onChange={(e) => setName(e.target.value)} className="contact_form_input" />
                 <p className='contact_form_error'>{nameErr}</p>
               </div>
               <div className='contact_form_div'>
-                <label htmlFor="email" className='contact_form_label'>Email</label>
+                <label htmlFor="email" className='contact_form_label'>Your email</label>
                 <input type='text' name='email' value={email} onChange={(e) => setEmail(e.target.value)} className="contact_form_input" />
                 <p className='contact_form_error'>{emailErr}</p>
               </div>
               <div className='contact_form_div'>
-                <label htmlFor="message" className='contact_form_label'>Message</label>
+                <label htmlFor="message" className='contact_form_label'>Your message</label>
                 <textarea type='text' name='message' value={msg} onChange={(e) => setMsg(e.target.value)} className="contact_form_input textarea" />
                 <p className='contact_form_error'>{msgErr}</p>
               </div>
@@ -94,7 +94,7 @@ function ContactUs() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
