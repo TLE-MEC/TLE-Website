@@ -108,9 +108,9 @@ function Navbar() {
         <div className='nav__drawer'>
 
           <div className='nav__drawer_header'>
-            <Link to='/team' data-aos='slide-down' data-aos-duration='600'>
+            <a href="/" data-aos='slide-down' data-aos-duration='600'>
               <img src={logo} alt="" className='nav_logo' />
-            </Link>
+            </a>
             <div className='navbar_items_mob'>
               <Link to="about" className='nav_item_mob' spy={true} smooth={true}>
                 About
