@@ -112,19 +112,19 @@ function Navbar() {
               <img src={logo} alt="" className='nav_logo' />
             </a>
             <div className='navbar_items_mob'>
-              <Link to="about" className='nav_item_mob' spy={true} smooth={true}>
+              <Link to="about" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
                 About
               </Link>
-              <Link to="events" className='nav_item_mob' spy={true} smooth={true}>
+              <Link to="events" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
                 Events
               </Link>
-              <Link to="resources" className='nav_item_mob' spy={true} smooth={true}>
+              <Link to="resources" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
                 Resources
               </Link>
-              <Link to="team" className='nav_item_mob' spy={true} smooth={true}>
+              <Link to="team" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
                 Team
               </Link>
-              <Link to="contact" className='nav_item_mob' spy={true} smooth={true} >
+              <Link to="contact" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
                 Contact
               </Link>
             </div>

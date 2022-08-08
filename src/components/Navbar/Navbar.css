@@ -116,6 +116,7 @@
 
 .meclogo__mob {
     margin-top: auto;
+    margin-bottom: 2rem;
     width: 120px;
     flex-shrink: 0;
 }
@@ -179,9 +180,17 @@
     }
 }
 
-@media screen and (max-width: 600px) {}
+@media screen and (max-width: 600px) {
+    .meclogo__mob {
+        margin-bottom: 3.25rem;
+    }
+}
 
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 400px) {
+    .meclogo__mob {
+        margin-bottom: 2.25rem;
+    }
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
 
