@@ -30,7 +30,9 @@ function ContactUs() {
     e.preventDefault();
 
     if (name) {
+      setNameErr('')
       if (email) {
+        setEmailErr('')
         if (isEmail(email)) {
           const responseData = {
             name: name,
@@ -48,14 +50,11 @@ function ContactUs() {
             clearFields()
           })
 
-
-          
-
         } else {
           setEmailErr('Invalid email address')
         }
         if (msg) {
-
+          setMsgErr('')
         } else {
           setMsgErr('Message cannot be blank');
         }
