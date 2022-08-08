@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  frontend:
+    container_name: tlemec-frontend
+    build:
+      context: .
+    restart: always
+    environment:
+      - VIRTUAL_HOST=tle.mec.ac.in
+
+    ports:
+      - 80
+
+networks:
+  default:
+    external:
+      name: mec
