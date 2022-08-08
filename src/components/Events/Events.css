@@ -74,13 +74,17 @@
 
 .events-subheading {
   text-transform: uppercase;
+  font-family: var(--primary-font);
   color: #0b8b8b;
   font-size: 25px;
   margin: 30px 0px 0px 0px;
+  margin-top: 2rem;
 }
 
 .events-subheading-text {
   font-size: 18px;
+  text-decoration: none;
+  font-family: var(--primary-font);
   margin-top: 18px;
 }
 

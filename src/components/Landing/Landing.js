@@ -31,12 +31,12 @@ function Landing() {
           </h2>
           <div className='landing__btns'>
             <HashLink to="#contact" className='landing_btn phone_btn' smooth>
-              <FiPhone />
+              <FiPhone className='landing_btn__icon'/>
               Contact Us
             </HashLink>
             <HashLink to="#team" className='landing_btn team_btn' smooth>
-              <HiOutlineUserGroup />
-              Meet our Team
+              <HiOutlineUserGroup className='landing_btn__icon'/>
+              <span className='d-none_mob'>Meet</span> Our Team
             </HashLink>
           </div>
         </div>

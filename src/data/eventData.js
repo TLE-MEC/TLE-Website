@@ -119,5 +119,31 @@ const eventData = [
       },
     ]
   },
+  {
+    id: 7,
+    name: 'Code Conundrum',
+    desc: '',
+    image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
+    dialog_img: 'https://drive.google.com/uc?id=1q3uqFJt4zFUg9oTKSf4e5uwkhz5QsF8A',
+    date: '9th July 2022',
+    youtube: '',
+    github: '',
+    participants: 60,
+    leaderboard: []
+  },
+  {
+    id: 8,
+    name: 'Global Pointers',
+    desc: '',
+    image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
+    dialog_img: 'https://drive.google.com/uc?id=1ZVqrQoPqZ27w2ZurlVaklRc48n_K4QzA',
+    date: '11th July 2022',
+    youtube: '',
+    github: '',
+    participants: 60,
+    leaderboard: []
+  },
 ]; 
+
+
 export default eventData;

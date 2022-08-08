@@ -71,6 +71,10 @@
     transition: ease-in-out 0.1s;
 }
 
+.landing_btn__icon {
+    flex-shrink: 0;
+}
+
 .phone_btn {
     background: #0B8B8B;
     color: #ffffff;

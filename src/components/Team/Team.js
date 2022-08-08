@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import AOS from 'aos'
 
-
 import semicircle1 from "../../assets/png/semicircle1.png";
 import semicircle2 from "../../assets/png/semicircle2.png";
 import tom from "../../assets/png/tom.png";
