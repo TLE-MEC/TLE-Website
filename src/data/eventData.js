@@ -6,7 +6,7 @@ const eventData = [
     image: 'https://drive.google.com/uc?id=1lj8vcOeqkexBG4tlGw7cZEBHfEU4Abu_',
     dialog_img: 'https://drive.google.com/uc?id=1Bo-BepwSzOym7h1sCLtep7WLZk3d52E7',
     date: '18th Sept 2021',
-    youtube:'',
+    youtube: '',
     github: '',
     participants: 20,
     leaderboard: []
@@ -122,7 +122,7 @@ const eventData = [
   {
     id: 7,
     name: 'Code Conundrum',
-    desc: '',
+    desc: 'Code Conundrum was a 2 hour-long programming contest, with questions ranging all difficulty levels and covering all major topics of DSA',
     image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
     dialog_img: 'https://drive.google.com/uc?id=1q3uqFJt4zFUg9oTKSf4e5uwkhz5QsF8A',
     date: '9th July 2022',
@@ -134,7 +134,7 @@ const eventData = [
   {
     id: 8,
     name: 'Global Pointers',
-    desc: '',
+    desc: "When it comes to gathering tips on how to prepare for and present yourself in interviews, who better to ask than those who've been there and done that? For the first session of Global Pointers, TLE MEC brings to you, Srividya Krishnakumar, a Software Engineer at Google and an xMECian from the Batch of 2021.",
     image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
     dialog_img: 'https://drive.google.com/uc?id=1ZVqrQoPqZ27w2ZurlVaklRc48n_K4QzA',
     date: '11th July 2022',
@@ -143,7 +143,7 @@ const eventData = [
     participants: 60,
     leaderboard: []
   },
-]; 
+];
 
 
 export default eventData;
