@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IoIosPaperPlane } from "react-icons/io";
+import axios from "axios";
 import isEmail from 'validator/lib/isEmail';
 
 import './ContactUs.css'
@@ -37,9 +38,18 @@ function ContactUs() {
             msg: msg,
           };
 
-          console.log(responseData)
+          axios({
+            method: "post",
+            url: process.env.REACT_APP_FORMSPREE_API,
+            data: responseData
+          }).then(() => {
+            alert('Submitted')
+          }).then(() => {
+            clearFields()
+          })
 
-          clearFields()
+
+          
 
         } else {
           setEmailErr('Invalid email address')

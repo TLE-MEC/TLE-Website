@@ -1,12 +1,39 @@
-import React from 'react';
-import './Footer.css'
-
+import React, { useState } from 'react';
+import axios from "axios";
+import isEmail from 'validator/lib/isEmail';
 import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineLocationMarker, HiOutlineMail } from "react-icons/hi";
 
+import './Footer.css'
+
 function Footer() {
 
+  const [email, setEmail] = useState('')
+  const [emailErr, setEmailErr] = useState('')
+
   var yr = new Date().getFullYear();
+
+  const handleContactForm = (e) => {
+    e.preventDefault();
+
+    if (email) {
+      if (isEmail(email)) {
+        const responseData = {
+            email: email,
+        };
+
+        axios.post(process.env.REACT_APP_SHEETDB_API, responseData).then((res) => {
+            setEmail('');
+          }).then(() => {
+            setEmailErr('Subscribed');
+          });
+      } else {
+          setEmailErr('Invalid Email!');
+      }
+    } else {
+        setEmailErr('Enter Email');
+    }
+};
 
   return (
     <div className='footer'>
@@ -18,9 +45,10 @@ function Footer() {
           </p>
 
           <div className='footer_input_div'>
-            <input type="text" placeholder='Enter your email' className='footer_input' />
-            <button className='footer_btn'>Get Updates</button>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' className='footer_input' />
+            <button className='footer_btn' onClick={handleContactForm}>Get Updates</button>
           </div>
+          <p>{emailErr}</p>
         </div>
         <div className="footer_right">
           <h2>Address</h2>
