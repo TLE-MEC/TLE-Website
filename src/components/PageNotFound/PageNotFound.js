@@ -9,7 +9,6 @@ import './PageNotFound.css'
 import about_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
 import pnf_circle from '../../assets/svg/landing_circle.svg'
 import pnf_ellipse from '../../assets/svg/ellipse1.svg'
-import fnf from '../../assets/png/404.png'
 import logo from '../../assets/svg/logo.svg'
 
 
@@ -31,7 +30,7 @@ function PageNotFound() {
         <p>Page Not Found</p>
         <div className='pnf__content'>
           <span className='fnf_bold'>4</span>
-          <img src={fnf} className="fnf_image" alt="" />
+          <span className='fnf_bold'>0</span>
           <span className='fnf_bold'>4</span>
         </div>
         <Link to='/'>

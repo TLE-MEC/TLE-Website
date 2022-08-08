@@ -103,10 +103,7 @@
     width: 60px;
 }
 
-.fnf_image {
-    pointer-events: none;
-    width: 300px;
-}
+
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
@@ -119,9 +116,7 @@
     .fnf_bold {
         font-size: 250px;
     }
-    .fnf_image {
-        width: 250px;
-    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -134,9 +129,7 @@
     .fnf_bold {
         font-size: 200px;
     }
-    .fnf_image {
-        width: 200px;
-    }
+
 
     .pnf_ellipse_circle {
         width: 150px;
@@ -147,9 +140,7 @@
     .fnf_bold {
         font-size: 150px;
     }
-    .fnf_image {
-        width: 150px;
-    }
+
 }
 
 @media screen and (max-width: 400px) {
