@@ -8,7 +8,7 @@ const eventData = [
     date: '18th Sept 2021',
     youtube: '',
     github: '',
-    participants: 20,
+    participants: 100,
     leaderboard: []
   },
   {
@@ -20,7 +20,7 @@ const eventData = [
     date: '2nd Oct 2021',
     youtube: 'https://www.youtube.com/watch?v=6679UV9xOuQ&t=1301s',
     github: 'https://github.com/TLE-MEC/Hack-CP-DSA',
-    participants: 20,
+    participants: 40,
     leaderboard: []
   },
   {
@@ -32,7 +32,7 @@ const eventData = [
     date: '11th Dec 2021',
     youtube: 'https://youtu.be/9CkYcdIjK3A',
     github: '',
-    participants: 20,
+    participants: 120,
     leaderboard: []
   },
   {
@@ -44,7 +44,7 @@ const eventData = [
     date: '15th Dec 2021',
     youtube: 'https://youtube.com/playlist?list=PLXgac_DZMistQX5DxSfn16OXMxHUy1882',
     github: '',
-    participants: 20,
+    participants: 150,
     leaderboard: [
       {
         id: 1,
@@ -101,7 +101,7 @@ const eventData = [
     date: '14th Feb 2022',
     youtube: '',
     github: '',
-    participants: 20,
+    participants: 40,
     leaderboard: [
       {
         id: 1,
@@ -123,8 +123,8 @@ const eventData = [
     id: 7,
     name: 'Code Conundrum',
     desc: 'Code Conundrum was a 2 hour-long programming contest, with questions ranging all difficulty levels and covering all major topics of DSA',
-    image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
-    dialog_img: 'https://drive.google.com/uc?id=1q3uqFJt4zFUg9oTKSf4e5uwkhz5QsF8A',
+    image: 'https://drive.google.com/uc?id=188yxHFzqj9W24W4Tk9e1swAE58NguMPM',
+    dialog_img: 'https://drive.google.com/uc?id=188yxHFzqj9W24W4Tk9e1swAE58NguMPM',
     date: '9th July 2022',
     youtube: '',
     github: '',
@@ -135,12 +135,12 @@ const eventData = [
     id: 8,
     name: 'Global Pointers',
     desc: "When it comes to gathering tips on how to prepare for and present yourself in interviews, who better to ask than those who've been there and done that? For the first session of Global Pointers, TLE MEC brings to you, Srividya Krishnakumar, a Software Engineer at Google and an xMECian from the Batch of 2021.",
-    image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
-    dialog_img: 'https://drive.google.com/uc?id=1ZVqrQoPqZ27w2ZurlVaklRc48n_K4QzA',
+    image: 'https://drive.google.com/uc?id=1FjJ7X3mBw87Rb73fPM54Ncm4sOIaGCtW',
+    dialog_img: 'https://drive.google.com/uc?id=1FjJ7X3mBw87Rb73fPM54Ncm4sOIaGCtW',
     date: '11th July 2022',
     youtube: '',
     github: '',
-    participants: 60,
+    participants: 100,
     leaderboard: []
   },
 ];
