@@ -3,8 +3,8 @@ const eventData = [
     id: 1,
     name: 'CallByValue',
     desc: 'An Instagram IGTV Series consisting of xMECians and their experience with DSA & CP released on Instagram. The speakers for this series included Aswin M Prabhu from Linkedin, Farha Kareem from Amazon, Prince Mathew from DE Shaw and Srividya Krishnakumar from Google.',
-    image: 'https://drive.google.com/uc?id=1lj8vcOeqkexBG4tlGw7cZEBHfEU4Abu_',
-    dialog_img: 'https://drive.google.com/uc?id=1Bo-BepwSzOym7h1sCLtep7WLZk3d52E7',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110628/TLE%20Website/Events/CallByValue_e0nubs.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110754/TLE%20Website/Events/Events%20Dialog/callbyvalue_j19nhx.png',
     date: '18th Sept 2021',
     youtube: '',
     github: '',
@@ -15,8 +15,8 @@ const eventData = [
     id: 2,
     name: 'Hacktoberfest Weekend',
     desc: 'TLE MEC collaborated with FOSSMEC and MACS to organize a workshop on Git & Github. A Github repository was created to encourage open source contributions while learning DSA and this repository had a total of 171 stars, 273 forks, 650 merged pull requests and 236 contributors.',
-    image: 'https://drive.google.com/uc?id=1HrarUGEMS6DbUu0wp18ifPdg5mzrLDgp',
-    dialog_img: 'https://drive.google.com/uc?id=1hX2YxScW1TcHfaAekOu3gfUNt8KFe8om',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110629/TLE%20Website/Events/hacktoberfest_rytjer.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110755/TLE%20Website/Events/Events%20Dialog/hacktoberfest_hegktu.png',
     date: '2nd Oct 2021',
     youtube: 'https://www.youtube.com/watch?v=6679UV9xOuQ&t=1301s',
     github: 'https://github.com/TLE-MEC/Hack-CP-DSA',
@@ -27,8 +27,8 @@ const eventData = [
     id: 3,
     name: 'Hello World ',
     desc: 'The first official and inaugural session of TLE MEC, Hello World was conducted to introduce students to CP and DSA by going over their merits as well as walking them through some basic problems.',
-    image: 'https://drive.google.com/uc?id=1O2bHvGaBd9fkCwToikCVNsRJ-_YFVY3U',
-    dialog_img: 'https://drive.google.com/uc?id=1exoOLCHw-dnFxvnJ3fJkcdwdiBdKSr0v',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110630/TLE%20Website/Events/Hello_World_jhubgh.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110755/TLE%20Website/Events/Events%20Dialog/helloworld_ht0il3.png',
     date: '11th Dec 2021',
     youtube: 'https://youtu.be/9CkYcdIjK3A',
     github: '',
@@ -39,8 +39,8 @@ const eventData = [
     id: 4,
     name: 'CodeSprint Contests',
     desc: 'A series of coding contests conducted in collaboration with MACS, with two tracks for participants to choose from - beginner and intermediate, conducted on the platform Hackerearth. The preliminary contests were one hour long and the advanced contests were 2.5 hours long.',
-    image: 'https://drive.google.com/uc?id=17dTkz8yAOqi-eEOmxjG6oxUor6BmYjt_',
-    dialog_img: 'https://drive.google.com/uc?id=1Iu1cyNSzwpxDdIgZwTvMqptFhkjefyhV',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110629/TLE%20Website/Events/Codesprint_d9lyao.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110754/TLE%20Website/Events/Events%20Dialog/codesprint_z56ci2.png',
     date: '15th Dec 2021',
     youtube: 'https://youtube.com/playlist?list=PLXgac_DZMistQX5DxSfn16OXMxHUy1882',
     github: '',
@@ -51,15 +51,15 @@ const eventData = [
         title: 'Beginner',
         first: {
           name: 'Christopher Roy',
-          image: 'https://drive.google.com/uc?id=1AEOEXOdNIJLpj-Kw8yoxz89mM0XMZqa_'
+          image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110842/TLE%20Website/Events/Winners/Christopher_Roy_nxekuj.jpg'
         },
         second: {
           name: 'Aneena Prince',
-          image: 'https://drive.google.com/uc?id=1OyOuuH6VxDVnjRYYR0xaAbW5HiBx5fQA'
+          image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110842/TLE%20Website/Events/Winners/Aneena_Prince_oau92y.jpg'
         },
         third: {
           name: 'Adam Oomen Jacob',
-          image: 'https://drive.google.com/uc?id=1EmS5priCdq24nk699ydo59In_qxoiF9j'
+          image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110842/TLE%20Website/Events/Winners/Adam_Oomen_Jacob_n7wy2a.jpg'
         },
       },
       {
@@ -67,15 +67,15 @@ const eventData = [
         title: 'Intermediate',
         first: {
           name: 'Parth Sarathi Bhunia',
-          image: 'https://drive.google.com/uc?id=1OunKbc9M_5uVXoW2bFCWgQKGj4BePnJE'
+          image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110843/TLE%20Website/Events/Winners/Parth_Sarathi_Bhunia_ef8wxg.jpg'
         },
         second: {
           name: 'Arya Jayadev K M',
-          image: 'https://drive.google.com/uc?id=1UZvmmMk285Q3mIW7jjJK9hMvZ5bHXY5y'
+          image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110842/TLE%20Website/Events/Winners/Arya_Jayadev_wisxnk.jpg'
         },
         third: {
           name: 'George Mathew',
-          image: 'https://drive.google.com/uc?id=1rwEHUdhNAVEb1b0jYe2NTP9StsKxvZOk'
+          image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110842/TLE%20Website/Events/Winners/George_Mathew_bbxndo.jpg'
         },
       },
     ]
@@ -84,10 +84,10 @@ const eventData = [
     id: 5,
     name: 'DS404 Sessions',
     desc: 'TLE MEC collaborated with the Training Cell to organize a series of four events covering the basic data structures and algorithm topics. The sessions were on Algorithm Analysis, Arrays, Stacks & Queues.',
-    image: 'https://drive.google.com/uc?id=1jA_dBAyYyt_fAqL4RWY-V0gLHn91S7bL',
-    dialog_img: 'https://drive.google.com/uc?id=1T6-kjqKYKv-Mlt8DDDj-hNEMNcrHR8Gm',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110629/TLE%20Website/Events/DS404_cfr1mh.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110754/TLE%20Website/Events/Events%20Dialog/ds404_lakekk.png',
     date: '18th Jan 2022',
-    youtube: '',
+    youtube: 'https://youtube.com/playlist?list=PLXgac_DZMissDO7Vo9iGP4kLAG6mMRNAW',
     github: '',
     participants: 20,
     leaderboard: []
@@ -96,8 +96,8 @@ const eventData = [
     id: 6,
     name: 'O(zone)',
     desc: 'O(zone) was a pair coding contest held by TLE MEC in collaboration with Github. The winners were awarded T-shirts sponsored by Github. ',
-    image: 'https://drive.google.com/uc?id=1qzazDlZJqljh75PrUoPME59AClA8MBlg',
-    dialog_img: 'https://drive.google.com/uc?id=1SAu9Lkx3gixEmnNaInbwTYOgHG-6ybtV',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110629/TLE%20Website/Events/Ozone_cqgjre.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110755/TLE%20Website/Events/Events%20Dialog/ozone_iuw5ok.png',
     date: '14th Feb 2022',
     youtube: '',
     github: '',
@@ -109,11 +109,11 @@ const eventData = [
         prize: [
           {
             name: 'Adam Oomen Jacob',
-            image: 'https://drive.google.com/uc?id=1EmS5priCdq24nk699ydo59In_qxoiF9j'
+            image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110842/TLE%20Website/Events/Winners/Adam_Oomen_Jacob_n7wy2a.jpg'
           },
           {
             name: 'Mathew Davis',
-            image: 'https://drive.google.com/uc?id=1CnhHvAUhPuieIRFCN3XaezoFN-yTuuNO'
+            image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110843/TLE%20Website/Events/Winners/Mathew_Davis_ozcmwd.jpg'
           },
         ]
       },
@@ -123,8 +123,8 @@ const eventData = [
     id: 7,
     name: 'Code Conundrum',
     desc: 'Code Conundrum was a 2 hour-long programming contest, with questions ranging all difficulty levels and covering all major topics of DSA',
-    image: 'https://drive.google.com/uc?id=188yxHFzqj9W24W4Tk9e1swAE58NguMPM',
-    dialog_img: 'https://drive.google.com/uc?id=188yxHFzqj9W24W4Tk9e1swAE58NguMPM',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110629/TLE%20Website/Events/CodeConundrum_wzn3cn.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110754/TLE%20Website/Events/Events%20Dialog/codeconundrum_rcmecs.png',
     date: '9th July 2022',
     youtube: '',
     github: '',
@@ -135,8 +135,8 @@ const eventData = [
     id: 8,
     name: 'Global Pointers',
     desc: "When it comes to gathering tips on how to prepare for and present yourself in interviews, who better to ask than those who've been there and done that? For the first session of Global Pointers, TLE MEC brings to you, Srividya Krishnakumar, a Software Engineer at Google and an xMECian from the Batch of 2021.",
-    image: 'https://drive.google.com/uc?id=1FjJ7X3mBw87Rb73fPM54Ncm4sOIaGCtW',
-    dialog_img: 'https://drive.google.com/uc?id=1FjJ7X3mBw87Rb73fPM54Ncm4sOIaGCtW',
+    image: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110629/TLE%20Website/Events/GlobalPointers_mx1o7w.png',
+    dialog_img: 'https://res.cloudinary.com/dpt7fy6g5/image/upload/v1660110755/TLE%20Website/Events/Events%20Dialog/globalpointers_isay0a.png',
     date: '11th July 2022',
     youtube: '',
     github: '',
