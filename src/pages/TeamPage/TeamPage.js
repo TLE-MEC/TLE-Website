@@ -9,7 +9,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 import coreData from "../../data/coreData";
 import core21Data from "../../data/core21Data";
-import execData from "../../data/execData";
+// import execData from "../../data/execData";
 
 import CustomTitle from "../../utils/CustomTitle";
 import "./TeamPage.css";
@@ -70,7 +70,7 @@ function TeamPage() {
           <h1 className="team__header">CORE TEAM</h1>
           <div className="team_core_container">
             <div className="team_core_container_1">
-              {coreData.slice(0, 4).map((data) => (
+              {coreData.slice(0, 3).map((data) => (
                 <div className="singleCore" key={data.id} data-aos="fade-up">
                   {loading ? (
                     <Skeleton variant="circular" width={120} height={120} />
@@ -99,7 +99,34 @@ function TeamPage() {
               ))}
             </div>
             <div className="team_core_container_2">
-              {coreData.slice(4, 9).map((data) => (
+              {coreData.slice(3, 7).map((data) => (
+                <div className="singleCore" key={data.id} data-aos="fade-up">
+                  {loading ? (
+                    <Skeleton variant="circular" width={120} height={120} />
+                  ) : (
+                    <>
+                      <img src={data.image} alt="" loading="lazy" />
+                      <a
+                        href={data.linkedIn}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="core_linkedin"
+                      >
+                        <FaLinkedinIn
+                          color="#ffffff"
+                          size={18}
+                          className="linkedin"
+                        />
+                      </a>
+                    </>
+                  )}
+                  <h3>{data.name}</h3>
+                  <p>{data.title}</p>
+                </div>
+              ))}
+            </div>
+            <div className="team_core_container_3">
+              {coreData.slice(7, 12).map((data) => (
                 <div className="singleCore" key={data.id} data-aos="fade-up">
                   {loading ? (
                     <Skeleton variant="circular" width={120} height={120} />
@@ -127,7 +154,7 @@ function TeamPage() {
             </div>
           </div>
         </div>
-        <div className="team_exec">
+        {/* <div className="team_exec">
           <h1 className="team__header">EXECUTIVE TEAM</h1>
           <div className="team_core_container_1">
             {execData.map((data) => (
@@ -155,7 +182,7 @@ function TeamPage() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="tp_teammemberdiv">
           <div>
             <h1 className="team__header">TEAM MEMBERS</h1>
