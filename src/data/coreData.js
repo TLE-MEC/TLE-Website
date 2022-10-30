@@ -1,70 +1,103 @@
-import { Anagha_Sivadas, Hanna_Salam, Hemanth_R, Nayana_Vinod, Nikita_menon, Shimil, Sony_P, TomVempala, Vishruth_Subramanian } from "../assets/team/teamImages"
+import {
+  Achyuth_Mohan,
+  Adam,
+  George_Sabu,
+  Hanna_Salam,
+  Jeswin,
+  Lisa_VC,
+  Mrinalini_Nair_Ani,
+  Nayana_Vinod,
+  Neha_Mariam_Mathew,
+  Snehal_Sha,
+  Sony_P,
+  Sony_Thomas,
+} from "../assets/team/teamImages";
 
 const coreData = [
-    {
-        id: 1,
-        name: 'Sony P',
-        title: 'Faculty Advisor',
-        image: Sony_P,
-        linkedIn: ''
-    },
-    {
-        id: 2,
-        name: 'Vishruth S',
-        title: 'Chairperson',
-        image: Vishruth_Subramanian,
-        linkedIn: 'https://www.linkedin.com/in/vishruth-subramanian/'
-    },
-    {
-        id: 3,
-        name: 'Nayana Vinod',
-        title: 'Vice-Chairperson',
-        image: Nayana_Vinod,
-        linkedIn: 'https://www.linkedin.com/in/nayana-vinod'
-    },
-    {
-        id: 4,
-        name: 'Tom Thomas',
-        title: 'CP Head',
-        image: TomVempala,
-        linkedIn: 'https://www.linkedin.com/in/tom-vempala-6175ab175/'
-    },
-    {
-        id: 5,
-        name: 'Anagha Sivadas',
-        title: 'Events Head',
-        image: Anagha_Sivadas,
-        linkedIn: 'https://www.linkedin.com/in/anagha-sivadas'
-    },
-    {
-        id: 6,
-        name: 'Hanna Salam',
-        title: 'Outreach Head',
-        image: Hanna_Salam,
-        linkedIn: 'https://www.linkedin.com/in/hanna-salam'
-    },
-    {
-        id: 7,
-        name: 'Shimil Abraham',
-        title: 'Design Head',
-        image: Shimil,
-        linkedIn: 'https://www.linkedin.com/in/shimil-abraham-47049a1b6'
-    },
-    {
-        id: 8,
-        name: 'Hemanth R',
-        title: 'Tech Head',
-        image: Hemanth_R,
-        linkedIn: 'https://www.linkedin.com/in/hhhrrrttt222111/'
-    },
-    {
-        id: 9,
-        name: 'Nikita Menon',
-        title: 'Content Head',
-        image: Nikita_menon,
-        linkedIn: 'https://www.linkedin.com/in/nikita-menon-b2248079'
-    },
-    
-]
+  {
+    id: 1,
+    name: "Sony P",
+    title: "Faculty Advisor",
+    image: Sony_P,
+    linkedIn: "",
+  },
+  {
+    id: 2,
+    name: "Nayana Vinod",
+    title: "Chairperson",
+    image: Nayana_Vinod,
+    linkedIn: "https://www.linkedin.com/in/nayana-vinod",
+  },
+  {
+    id: 3,
+    name: "George Sabu",
+    title: "Vice-Chairperson",
+    image: George_Sabu,
+    linkedIn: "https://www.linkedin.com/in/george-sabu-63370717a",
+  },
+  {
+    id: 4,
+    name: "Adam Oommen Jacob ",
+    title: "Operations Head",
+    image: Adam,
+    linkedIn: "https://www.linkedin.com/in/tom-vempala-6175ab175/",
+  },
+  {
+    id: 5,
+    name: "Snehal Sha ",
+    title: "CP Lead",
+    image: Snehal_Sha,
+    linkedIn: "https://www.linkedin.com/in/anagha-sivadas",
+  },
+  {
+    id: 6,
+    name: "Sony Thomas",
+    title: "Events Lead",
+    image: Sony_Thomas,
+    linkedIn: "https://www.linkedin.com/in/hanna-salam",
+  },
+  {
+    id: 7,
+    name: "Achyuth Mohan",
+    title: "Tech Lead",
+    image: Achyuth_Mohan,
+    linkedIn: "https://www.linkedin.com/in/shimil-abraham-47049a1b6",
+  },
+  {
+    id: 8,
+    name: "Lisa V Cherian ",
+    title: "Outreach Lead",
+    image: Lisa_VC,
+    linkedIn: "https://www.linkedin.com/in/hhhrrrttt222111/",
+  },
+  {
+    id: 9,
+    name: "Neha Mariam Mathew",
+    title: "Content Lead",
+    image: Neha_Mariam_Mathew,
+    linkedIn: "https://www.linkedin.com/in/nikita-menon-b2248079",
+  },
+  {
+    id: 10,
+    name: "Jeswin Thomas",
+    title: "Design Lead",
+    image: Jeswin,
+    linkedIn: "https://www.linkedin.com/in/nikita-menon-b2248079",
+  },
+  {
+    id: 11,
+    name: "Mrinalini Nair Ani",
+    title: "Community Lead",
+    image: Mrinalini_Nair_Ani,
+    linkedIn: "https://www.linkedin.com/in/nikita-menon-b2248079",
+  },
+  {
+    id: 12,
+    name: "Hanna Salam",
+    title: "Inclusivity Lead",
+    image: Hanna_Salam,
+    linkedIn: "https://www.linkedin.com/in/nikita-menon-b2248079",
+  },
+];
 
 export default coreData;
