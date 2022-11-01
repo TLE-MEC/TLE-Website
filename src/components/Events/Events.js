@@ -30,6 +30,7 @@ function Events() {
               eve.isUpcoming === true? (
                 <EventCard
                   id={eve.id}
+                  link={eve.link}
                   key={eve.id}
                   name={eve.name}
                   desc={eve.desc}

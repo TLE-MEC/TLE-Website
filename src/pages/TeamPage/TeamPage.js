@@ -61,7 +61,7 @@ function TeamPage() {
           <p>
             TLE MEC is made by its people. The events, contests and sessions are
             all but a product of their teamwork. And here they are for you to
-            see, the current torch bearers of the year 2021-22.
+            see, the current torch bearers of the year 2022-23.
           </p>
         </div>
       </div>
