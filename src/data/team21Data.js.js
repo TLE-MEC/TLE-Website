@@ -1,4 +1,4 @@
-export const team = [
+export const team21 = [
   {
     name: "Competitive Programming",
     members: [

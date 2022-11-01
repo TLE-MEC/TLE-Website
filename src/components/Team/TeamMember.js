@@ -6,7 +6,6 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import { FiChevronRight } from "react-icons/fi";
 import { BsDot } from "react-icons/bs";
 
-import { team } from "../../data/TeamData";
 import "./TeamMember.css";
 
 const Accordion = styled((props) => (
@@ -45,7 +44,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function CustomizedAccordions() {
+export default function CustomizedAccordions({team}) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange =
