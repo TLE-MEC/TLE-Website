@@ -36,7 +36,7 @@
   font-size: 3rem;
   background: linear-gradient(90deg, #0baaaa 4.48%, #008080 100%);
   -webkit-background-clip: text;
-  text-fill-color: transparent;
+  /* text-fill-color: transparent; */
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-align: center;
