@@ -152,6 +152,9 @@ export const team = [
         {
           name: "Amal Jojo",
         },
+        {
+          name: "Sanjith Ram",
+        },
       ],
     },
     {
