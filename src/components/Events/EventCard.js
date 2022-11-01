@@ -7,7 +7,7 @@ import AOS from 'aos'
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Slide from '@mui/material/Slide';
-
+import {FaLink} from 'react-icons/fa'
 import eventData from '../../data/eventData';
 import './Events.css';
 
@@ -19,7 +19,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 
-function EventCard({ id, name, desc, image, date, youtube, github, participants, dialog_img, leaderboard }) {
+function EventCard({ id, name, desc, image, date, youtube, github, participants, dialog_img, leaderboard,link }) {
 
   const [open, setOpen] = useState(false);
 
@@ -132,12 +132,18 @@ function EventCard({ id, name, desc, image, date, youtube, github, participants,
                 </div>
               </>
             )}
-            {(youtube || github) && (
+            {(youtube || github ||link) && (
               <>
               <img src={divider} alt="" className='event_divider_line' />
               <div className='eventDialog__footer'>
                 <h1>External Links</h1>
                 <div className='edf__btns'>
+                {link && (
+                    <a className='edf_btn' href={link} target="_blank" rel="noreferrer">
+                      <FaLink size={25}/>
+                      Register
+                    </a>
+                  )}
                   {youtube && (
                     <a className='edf_btn' href={youtube} target="_blank" rel="noreferrer">
                       <AiFillYoutube size={25}/>

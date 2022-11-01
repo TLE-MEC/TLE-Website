@@ -164,6 +164,7 @@ const eventData = [
       helloworld2,
     date: "2nd Nov 2022",
     youtube: "",
+    link:'https://docs.google.com/forms/d/e/1FAIpQLSeqVfySHfphlrtJd4-UM5r3dO91T7OHfaWWI9dLbPE6x3vBlQ/viewform',
     github: "",
     leaderboard: [],
   },
