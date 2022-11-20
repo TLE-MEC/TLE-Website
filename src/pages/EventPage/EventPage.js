@@ -52,6 +52,7 @@ function EventPage() {
           {eventData.slice(0).reverse().map((eve) => (
             <EventCard 
               id={eve.id} 
+              link={eve.link}
               key={eve.id} 
               name={eve.name} 
               desc={eve.desc} 

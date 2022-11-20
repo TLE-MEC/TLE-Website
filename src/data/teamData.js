@@ -32,6 +32,12 @@ export const team = [
         {
           name: "Mary Ann Jose",
         },
+        {
+          name: "Sreehari",
+        },
+        {
+          name: "Emmanuel Sibi",
+        },
       ],
     },
     {
@@ -45,6 +51,9 @@ export const team = [
         },
         {
           name: "Jaison Dennis",
+        },
+        {
+          name: "Hemanth R",
         },
   
         {
@@ -75,7 +84,7 @@ export const team = [
           name: "Aleena Prince",
         },
         {
-          name: "Mrinalini",
+          name: "Mrinalini Nair Ani",
         },
       ],
     },
@@ -89,7 +98,19 @@ export const team = [
           name: "Sneha Shaji",
         },
         {
-          name: "Sona S Tiju",
+          name: "Sonah S Tiju",
+        },
+        {
+          name: "Srilakshmi R",
+        },
+        {
+          name: "Binitha Babu",
+        },
+        {
+          name: "A Theertha",
+        },
+        {
+          name: "Surabhi Thiruvoth",
         },
       ],
     },
@@ -104,6 +125,24 @@ export const team = [
         },
         {
           name: "Sreehari KN",
+        },
+        {
+          name: "Annu Kuruvila",
+        },
+        {
+          name: "Devadath K V",
+        },
+        {
+          name: "Geethu Sebastian",
+        },
+        {
+          name: "Medha K",
+        },
+        {
+          name: "Sethukrishna M",
+        },
+        {
+          name: "Meenakshi Suresh",
         },
       ],
     },
@@ -125,10 +164,13 @@ export const team = [
           name: "Arathy Sha",
         },
         {
-          name: "Emilin",
+          name: "Emilin Seby",
         },
         {
           name: "Kalyani Reji",
+        },
+        {
+          name: "Arpitha Sudhir",
         },
       ],
     },
@@ -137,6 +179,36 @@ export const team = [
       members: [
         {
           name: "Sony Thomas",
+        },
+        {
+          name: "Alvin John Mathew",
+        },
+        {
+          name: "Crystal Bejoy",
+        },
+        {
+          name: "Angela",
+        },
+        {
+          name: "Anu Maria",
+        },
+        {
+          name: "Jensine Soji",
+        },
+        {
+          name: "Rose Mariya",
+        },
+        {
+          name: "Shivaram S",
+        },
+        {
+          name: "Swathy Prakash",
+        },
+        {
+          name: "Vimal Krishna V",
+        },
+        {
+          name: "Lakshmi Sajilal",
         },
       ],
     },
@@ -153,7 +225,7 @@ export const team = [
           name: "Amal Jojo",
         },
         {
-          name: "Sanjith Ram",
+          name: "V Sanjith Ram",
         },
       ],
     },
