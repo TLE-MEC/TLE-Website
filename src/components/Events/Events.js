@@ -16,12 +16,17 @@ function Events() {
   });
   const [events, setEvents] = useState();
   const [loading, setLoading] = useState(true);
+  let count = 0;
   async function getEvents() {
     let temp = [];
     const querySnapshot = await getDocs(
       query(collection(db, "events"), orderBy("id", "asc"))
     );
     querySnapshot.forEach((doc) => {
+      let data = doc.data();
+      if (data.isUpcoming === true) {
+        count++;
+      }
       temp.push(doc.data());
     });
     setEvents(temp);
@@ -29,6 +34,7 @@ function Events() {
   }
   useEffect(() => {
     getEvents();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (loading) return <div className="loading">Loading...</div>;
   return (
@@ -42,28 +48,34 @@ function Events() {
         </p>
 
         <h3 className="events-subheading">Upcoming Events</h3>
-        <div className="events-card">
-          {events?.map((eve) =>
-            eve.isUpcoming === true ? (
-              <EventCard
-                id={eve.id}
-                link={eve.link}
-                key={eve.id}
-                name={eve.name}
-                desc={eve.desc}
-                image={eve.image}
-                date={eve.date}
-                youtube={eve.youtube}
-                github={eve.github}
-                participants={eve.participants}
-                dialog_img={eve.dialog_img}
-                leaderboard={eve.leaderboard}
-              />
-            ) : (
-              ""
-            )
-          )}
-        </div>
+        {count === 0 ? (
+          <p className="events-subheading-text">
+            There are no upcoming events right now, check back later!
+          </p>
+        ) : (
+          <div className="events-card">
+            {events?.map((eve) =>
+              eve.isUpcoming === true ? (
+                <EventCard
+                  id={eve.id}
+                  link={eve.link}
+                  key={eve.id}
+                  name={eve.name}
+                  desc={eve.desc}
+                  image={eve.image}
+                  date={eve.date}
+                  youtube={eve.youtube}
+                  github={eve.github}
+                  participants={eve.participants}
+                  dialog_img={eve.dialog_img}
+                  leaderboard={eve.leaderboard}
+                />
+              ) : (
+                ""
+              )
+            )}
+          </div>
+        )}
 
         <h3 className="events-subheading">Past Events</h3>
         <div className="events-card">
