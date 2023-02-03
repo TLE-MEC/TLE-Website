@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
 
-import { HomePage, TeamPage ,EventPage, FaqPage } from '../pages'
+import { HomePage, TeamPage ,EventPage, FaqPage, BlogPage } from '../pages'
 import { PageNotFound, Loader } from '../components'
 
 
@@ -30,6 +30,7 @@ function AnimatedRoutes() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/events" element={<EventPage />} />
         <Route path="/faq" element={<FaqPage />} />
+        <Route path="/blog" element={<BlogPage/>}/>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </AnimatePresence>
