@@ -1,6 +1,7 @@
 import Achyuth_Mohan from './Achyuth_Mohan.jpg'
 import Adam from './Adam_(1).jpg'
 import Anagha_Sivadas from './Anagha_Sivadas.jpg'
+import Arathy_Sha_A from './Arathy_Sha_A.jpg'
 import Athul_Reji from './Athul_Reji.jpg'
 import George_Sabu from './George_Sabu.jpg'
 import Hanna_Salam from './Hanna_Salam.jpg'
@@ -25,6 +26,7 @@ export {
     Achyuth_Mohan,
     Adam,
     Anagha_Sivadas,
+    Arathy_Sha_A,
     Athul_Reji,
     George_Sabu,
     Hanna_Salam,
