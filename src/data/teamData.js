@@ -158,10 +158,10 @@ export const team = [
       name: "Outreach Team",
       members: [
         {
-          name: "Lisa V Cherian",
+          name: "Arathy Sha",
         },
         {
-          name: "Arathy Sha",
+          name: "Lisa V Cherian",
         },
         {
           name: "Emilin Seby",
