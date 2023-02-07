@@ -4,7 +4,7 @@ import {
   George_Sabu,
   Hanna_Salam,
   Jeswin,
-  Lisa_VC,
+  Arathy_Sha_A,
   Mrinalini_Nair_Ani,
   Nayana_Vinod,
   Neha_Mariam_Mathew,
@@ -65,10 +65,10 @@ const coreData = [
   },
   {
     id: 8,
-    name: "Lisa V Cherian ",
+    name: "Arathy Sha A",
     title: "Outreach Lead",
-    image: Lisa_VC,
-    linkedIn: "https://www.linkedin.com/in/lisa-v-cherian/",
+    image: Arathy_Sha_A,
+    linkedIn: "https://www.linkedin.com/in/arathy-sha-a-007611203",
   },
   {
     id: 9,
