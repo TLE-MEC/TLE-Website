@@ -141,8 +141,7 @@
 }
 .para_content{
     height: auto;
-    max-width: 100%; 
-    
+    max-width: 100%;     
 }
 .topic>h4{    
     border-right:solid 1px #0C8B8B;
@@ -170,7 +169,7 @@ a:link{
 @media screen and (max-width: 800px) {
     #blogpage{
         width: 95%;
-        font-size: 80%;        
+        font-size: 80%;  
     }
     .blogPage_circle {
         right: 5%;
@@ -217,9 +216,18 @@ a:link{
     }
     .icon_name{
         padding-left:6px; 
-            
+    }
+    .blog_title>h1{
+        padding-top: 5px;
+    }
+    .blog_title{
+        font-size: 80%;
+        position: relative;
+        top:5%;
+        line-height: 20px;     
     }
     .blog_title>h3{
-        right:2%;
+        position: absolute;
+        left:0;
     }
 }
