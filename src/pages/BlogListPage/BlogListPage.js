@@ -3,6 +3,7 @@ import './BlogListPage.css'
 import blogPage_ellipse1 from '../../assets/svg/ellipse1.svg'
 import blogPage_ellipse2 from "../../assets/svg/ellipse1.svg";
 import blogPage_circle from "../../assets/svg/landing_circle.svg";
+import blogPage_ellipse3 from "../../assets/svg/ellipse_inner.svg"
 import pic1 from "../../assets/png/pic1.jpg";
 import { BsClock } from "react-icons/bs";
 import { FaPenNib } from "react-icons/fa";
@@ -16,6 +17,7 @@ const BlogListPage = () => {
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
       <h1 className='heading'  >BLOGS</h1>
+      <div className='card-components'>
         <div className='card'>
           <div className='img'>
             <img className='pic' src={pic1} alt=""></img>
@@ -40,7 +42,9 @@ const BlogListPage = () => {
                 <Link to="/blogpage" className='readmore' > read more....</Link></p>
             </div>
           </div>
+          <img src={blogPage_ellipse3} alt="" className="blogPage_ellipse3" />  
         </div>
+        
                <div className='card'>
             <div className='img'>
               <img className='pic' src={pic1} alt=""></img>
@@ -65,7 +69,9 @@ const BlogListPage = () => {
                 <Link to="/blogpage" className='readmore' > read more....</Link></p>
               </div>
             </div>
+            <img src={blogPage_ellipse3} alt="" className="blogPage_ellipse3" />  
                  </div>
+                
               <div className='card'>
           <div className='img'>
             <img className='pic' src={pic1} alt=""></img>
@@ -90,8 +96,13 @@ const BlogListPage = () => {
                 <Link to="/blogpage" className='readmore' > read more....</Link></p>
                               </div>
           </div>
+          <img src={blogPage_ellipse3} alt="" className="blogPage_ellipse3" />  
         </div>
-      </div>
+        </div>
+   </div>
+      
+      
+      
      )
 }
 export default BlogListPage
