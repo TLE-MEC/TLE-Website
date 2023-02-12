@@ -42,22 +42,22 @@ const BlogPage = () => {
               <h3>20 may 2022</h3>
               <h4>DSA | Programming | Technology</h4>
             </div>              
-            <div className="icons">   
+            <div className="icons_small">   
               <div className='icon_name'>
-                <BsClock className='icon'/> 2 min read
+                <BsClock className='icon_small'/> 2 min read
               </div>  
               <div className='icon_name'>
-                <FaPenNib className='icon'/> 208 words
+                <FaPenNib className='icon_small'/> 208 words
               </div>  
               <div className='icon_name'>
-                <SlEye className='icon'/> 15 views
+                <SlEye className='icon_small'/> 15 views
               </div>  
               <div className='icon_name'>
-                <BiLike className='icon'/> 25 likes
+                <BiLike className='icon_small'/> 25 likes
               </div>            
             </div>
           </div>
-          <div className='content'>
+          <div className='content_blog'>
             <p className='para_content'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit.
