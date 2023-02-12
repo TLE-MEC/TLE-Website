@@ -89,12 +89,18 @@
     }
 }
 
-@media (min-width:800px) and (max-width: 970px) {
+@media (min-width:801px) and (max-width: 970px) {
     .icon {
-
         display: inline-flex;
         font-size: 80%;
     }
+    .details{
+        font-size: smaller;
+    }
+    .blogPage_ellipse3{
+        display: none;
+    }
+   
 }
 
 .heading {
@@ -208,7 +214,7 @@
 .icons {
    
     display: flex;
-    width: 70%;
+    width: auto;
     padding-left: 20%;
 
 }

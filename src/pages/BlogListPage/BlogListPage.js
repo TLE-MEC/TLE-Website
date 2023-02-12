@@ -38,7 +38,7 @@ const BlogListPage = () => {
               <div> 20 May 2022</div>
             </div>
             <div className='content_info'>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
+            <p className='details' > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
                 <Link to="/blogpage" className='readmore' > read more....</Link></p>
             </div>
           </div>
@@ -65,7 +65,7 @@ const BlogListPage = () => {
                 <div> 20 May 2022</div>
               </div>
               <div className='content_info'>
-               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
+               <p className='details'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
                 <Link to="/blogpage" className='readmore' > read more....</Link></p>
               </div>
             </div>
@@ -92,7 +92,7 @@ const BlogListPage = () => {
               <div> 20 May 2022</div>
             </div>
             <div className='content_info'>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
+            <p className='details'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis hendrerit proin mattis fusce. Adipiscing integer ornare id nisl elit, elit. Diam aliquam sit pellentesque odio venenatis nisl matti
                 <Link to="/blogpage" className='readmore' > read more....</Link></p>
                               </div>
           </div>
