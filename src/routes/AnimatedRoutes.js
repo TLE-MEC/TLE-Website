@@ -31,7 +31,7 @@ function AnimatedRoutes() {
         <Route path="/events" element={<EventPage />} />
         <Route path="/faq" element={<FaqPage />} />
        
-        <Route path="/blog" element={<BlogListPage/>}/>
+        <Route path="/blogs" element={<BlogListPage/>}/>
         <Route path="/blogpage" element={<BlogPage/>}/>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

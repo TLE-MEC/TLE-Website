@@ -9,15 +9,22 @@ import { BsClock } from "react-icons/bs";
 import { FaPenNib } from "react-icons/fa";
 import { SlEye } from "react-icons/sl";
 import { BiLike } from "react-icons/bi";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
+import CustomTitle from '../../utils/CustomTitle';
 const BlogListPage = () => {
+  const navigate=useNavigate();
   return (
     <div id="container" >
+      <CustomTitle title="Blogs"/>
+      <FiArrowLeft onClick={()=>{
+        navigate('/')
+      }} className="goBack" />
       <img src={blogPage_ellipse1} className="blogPage_first_ellipse" alt="" />
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
       <h1 className='heading'  >BLOGS</h1>
-      <div className='card-components'>
+      <div className='blog_card-components'>
         <div className='card'>
           <div className='img'>
             <img className='pic' src={pic1} alt=""></img>
