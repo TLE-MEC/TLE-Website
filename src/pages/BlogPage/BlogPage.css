@@ -150,7 +150,7 @@
     line-height: 22px;
     padding-right: 5px;
 }
-a:link{
+.topic>h4 a:link{
     background-color: transparent;
     text-decoration: none;
 }
