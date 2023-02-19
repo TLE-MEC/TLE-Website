@@ -93,14 +93,14 @@ function Navbar() {
             Contact
           </Link>
           <LinkPage
-            to="/blog"
+            to="/blogs"
             className="nav_item"
             spy={true}
             smooth={true}
             activeClass="navbar-link-active"
             offset={-100}
           >
-            Blog
+            Blogs
           </LinkPage>
         </div>
         <a href="https://www.mec.ac.in/" target="_blank" rel="noreferrer">
@@ -196,13 +196,13 @@ function Navbar() {
                 Contact
               </Link>
               <LinkPage
-                to="/blog"
+                to="/blogs"
                 className="nav_item_mob"
                 spy={true}
                 smooth={true}
                 onClick={handleDrawerClose}
               >
-                Blog
+                Blogs
               </LinkPage>
             </div>
           </div>
