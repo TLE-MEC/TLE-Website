@@ -2,6 +2,7 @@ import { useState, React } from 'react'
 import { Drawer } from '@mui/material';
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link } from 'react-scroll';
+import { Link as LinkPage} from 'react-router-dom';
 import AOS from 'aos'
 
 import { useScrollPosition } from '../../hooks/useScrollPosition';
@@ -61,6 +62,9 @@ function Navbar() {
           <Link to="contact" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active" offset={-100}>
             Contact
           </Link>
+          <LinkPage to="/blog" className='nav_item' spy={true} smooth={true} activeClass="navbar-link-active" offset={-100}>
+            Blog
+          </LinkPage>
         </div>
         <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer">
           <img src={meclogo} alt="" className='meclogo' />
@@ -127,6 +131,9 @@ function Navbar() {
               <Link to="contact" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
                 Contact
               </Link>
+              <LinkPage to="/blog" className='nav_item_mob' spy={true} smooth={true} onClick={handleDrawerClose}>
+                Blog
+              </LinkPage>
             </div>
           </div>
           <a href='https://www.mec.ac.in/' target="_blank" rel="noreferrer" >
