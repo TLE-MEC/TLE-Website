@@ -1,158 +1,144 @@
 .pageNotFound {
-    height: 100vh;
-    display: flex;
-    background: #E6F4F4;
-    position: relative;
-    overflow: hidden;
+  height: 100vh;
+  display: flex;
+  background: #e6f4f4;
+  position: relative;
+  overflow: hidden;
 }
 
 .pnf__container {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
 }
 
 .pnf__container p {
-    font-family: var(--primary-font);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: rgba(51, 51, 51, 0.7);
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .pnf__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fnf_bold {
-    font-family: var(--primary-font);
-    font-style: normal;
-    font-weight: 800;
-    font-size: 300px;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(143.6deg, #49D3D3 23.07%, #0B8B8B 81.98%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 300px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(143.6deg, #49d3d3 23.07%, #0b8b8b 81.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 .pnf__container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .pnf_btn {
-    background: #0BAAAA;
-    border-radius: 50px;
-    outline: none;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 30px;
-    font-family: var(--primary-font);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    cursor: pointer;
+  background: #0baaaa;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .pnf_ellipse_circle {
-    position: absolute;
-    top: 20px;
-    right: 0;
-    opacity: 0.5;
-    pointer-events: none;
-    width: 250px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  width: 250px;
 }
 
 .pnf_circle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    opacity: 0.8;
-    pointer-events: none;
-    transform: translateX(30%) translateY(30%);
-    width: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+  pointer-events: none;
+  transform: translateX(30%) translateY(30%);
+  width: 200px;
 }
 
 .pnf_ellipse {
-    position: absolute;
-    bottom: 15%;
-    left: 0;
-    opacity: 0.5;
-    pointer-events: none;
-    width: 150px;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  opacity: 0.5;
+  pointer-events: none;
+  width: 150px;
 }
 
 .pnf_logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
 }
-
-
-
 
 @media (min-width: 992px) and (max-width: 1380px) {
-
 }
 
-
 @media screen and (max-width: 992px) {
-
-    .fnf_bold {
-        font-size: 250px;
-    }
-
+  .fnf_bold {
+    font-size: 250px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .pnf__container {
-        width: 100%;
-        gap: 1rem;
-        padding: 1rem;
-    }
+  .pnf__container {
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+  }
 
-    .fnf_bold {
-        font-size: 200px;
-    }
+  .fnf_bold {
+    font-size: 200px;
+  }
 
-
-    .pnf_ellipse_circle {
-        width: 150px;
-    }
+  .pnf_ellipse_circle {
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .fnf_bold {
-        font-size: 150px;
-    }
-
+  .fnf_bold {
+    font-size: 150px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+}
 
 @media only screen and (device-width: 768px) {
-
 }

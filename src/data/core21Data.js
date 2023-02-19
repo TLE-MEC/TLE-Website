@@ -18,7 +18,7 @@ const coreData = [
     image: Sony_P,
     linkedIn: "",
   },
-  
+
   {
     id: 2,
     name: "Vishruth S",

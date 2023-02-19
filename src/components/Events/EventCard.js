@@ -54,12 +54,12 @@ function EventCard({
       <div className="eventCard_image">
         <img src={image} alt="" />
       </div>
-      <div className="content">
-        <div className="title">
-          <div className="time">{date}</div>
-          <div className="name">{name}</div>
+      <div className="eventCard_content">
+        <div className="eventCard_title">
+          <div className="eventCard_time">{date}</div>
+          <div className="eventCard_name">{name}</div>
         </div>
-        <div className="para">{desc}</div>
+        <div className="eventCard_para">{desc}</div>
       </div>
       <div className="eventCard_activity">
         <button onClick={handleClickOpen}>

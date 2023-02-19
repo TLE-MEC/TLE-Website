@@ -1,85 +1,75 @@
-.tp-memberaccordion{
-    width: 75%;
-    z-index: 3;
+.tp-memberaccordion {
+  width: 75%;
+  z-index: 3;
 }
 
-.tp_teammemberdiv{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 9;
+.tp_teammemberdiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 9;
 }
-
 
 .tp-teamname {
-    font-family: var(--primary-font);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: #003a3a;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #003a3a;
 }
 
 .tp-membername {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 0.5rem;
-    font-family: var(--primary-font);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #212121;
-    margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #212121;
+  margin: 0.5rem 0;
 }
-
 
 @media (min-width: 992px) and (max-width: 1380px) {
-    .tp-memberaccordion{
-        width: 85%;
-    }
-    
+  .tp-memberaccordion {
+    width: 85%;
+  }
 }
 
-
 @media screen and (max-width: 992px) {
-    .tp-memberaccordion{
-        width: 85%;
-    }
+  .tp-memberaccordion {
+    width: 85%;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .tp-memberaccordion{
-        width: 90%;
-    }
+  .tp-memberaccordion {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .tp-memberaccordion{
-        width: 100%;
-    }
-    .tp-teamname {
-        font-size: 1.05rem;
-    }
-    
-    .tp-membername {
-        font-size: 1rem;
-    }
+  .tp-memberaccordion {
+    width: 100%;
+  }
+  .tp-teamname {
+    font-size: 1.05rem;
+  }
+
+  .tp-membername {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
-
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+}
 
 @media only screen and (device-width: 768px) {
-
 }
-

@@ -18,7 +18,7 @@ import "./TeamPage.css";
 
 import landing_circle from "../../assets/svg/landing_circle.svg";
 import ellipse4 from "../../assets/svg/ellipse1.svg";
- import TeamMember from "../../components/Team/TeamMember";
+import TeamMember from "../../components/Team/TeamMember";
 
 function TeamPage() {
   const [loading, setLoading] = useState(true);
@@ -156,12 +156,12 @@ function TeamPage() {
             </div>
           </div>
         </div>
-        
+
         <div className="tp_teammemberdiv">
           <div>
             <h1 className="team__header">TEAM MEMBERS</h1>
           </div>
-          <TeamMember team={team}/>
+          <TeamMember team={team} />
         </div>
       </div>
       <img src={landing_circle} alt="" className="team_circle" />
@@ -230,40 +230,40 @@ function TeamPage() {
             </div>
           </div>
           <div className="team_exec">
-          <h1 className="team__header">EX-EXECUTIVE TEAM (2021-22)</h1>
-          <div className="team_core_container_1">
-            {execData.map((data) => (
-              <div className="singleCore" key={data.id} data-aos="fade-up">
-                {loading ? (
-                  <Skeleton variant="circular" width={120} height={120} />
-                ) : (
-                  <>
-                    <img src={data.image} alt="" loading="lazy" />
-                    <a
-                      href={data.linkedIn}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="core_linkedin"
-                    >
-                      <FaLinkedinIn
-                        color="#ffffff"
-                        size={18}
-                        className="linkedin"
-                      />
-                    </a>
-                  </>
-                )}
-                <h3>{data.name}</h3>
-              </div>
-            ))}
+            <h1 className="team__header">EX-EXECUTIVE TEAM (2021-22)</h1>
+            <div className="team_core_container_1">
+              {execData.map((data) => (
+                <div className="singleCore" key={data.id} data-aos="fade-up">
+                  {loading ? (
+                    <Skeleton variant="circular" width={120} height={120} />
+                  ) : (
+                    <>
+                      <img src={data.image} alt="" loading="lazy" />
+                      <a
+                        href={data.linkedIn}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="core_linkedin"
+                      >
+                        <FaLinkedinIn
+                          color="#ffffff"
+                          size={18}
+                          className="linkedin"
+                        />
+                      </a>
+                    </>
+                  )}
+                  <h3>{data.name}</h3>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         </div>
         <div className="tp_teammemberdiv">
           <div>
             <h1 className="team__header">EX-TEAM MEMBERS (2021-22)</h1>
           </div>
-          <TeamMember team={team21}/>
+          <TeamMember team={team21} />
         </div>
       </div>
     </motion.div>
