@@ -48,7 +48,7 @@ function Events() {
         </p>
 
         <h3 className="events-subheading">Upcoming Events</h3>
-        {count === 0 ? (
+        {count && count === 0 ? (
           <p className="events-subheading-text">
             There are no upcoming events right now, check back later!
           </p>
