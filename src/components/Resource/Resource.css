@@ -1,5 +1,4 @@
-
-.resources{
+.resources {
   background-color: var(--bg-color);
   display: flex;
   align-items: center;
@@ -18,7 +17,6 @@
   z-index: 9;
 }
 
-
 .resources__div {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +33,7 @@
 }
 
 .resources__card {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 20px;
   display: flex;
   width: 60%;
@@ -47,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #37B9B9;  
+  background: #37b9b9;
   border-radius: 20px 0 0 20px;
 }
 
@@ -66,7 +64,7 @@
 }
 
 .resources__card__right h4 {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 1.6rem;
@@ -75,7 +73,7 @@
 }
 
 .resources__card__right p {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
   font-size: 1.05rem;
@@ -85,7 +83,7 @@
 
 .resourceCard__btn {
   margin-top: auto;
-  background: #37B9B9;
+  background: #37b9b9;
   border-radius: 50px;
   outline: none;
   border: none;
@@ -95,12 +93,12 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
   font-size: 1.05rem;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   text-decoration: none;
 }
@@ -123,7 +121,6 @@
   }
 }
 
-
 @media screen and (max-width: 992px) {
   .resources_container {
     width: 90%;
@@ -135,7 +132,7 @@
   }
   .res_ellipse_circle {
     width: 250px;
-}
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -157,7 +154,7 @@
     font-size: 1.3rem;
     line-height: 25px;
   }
-  
+
   .resources__card__right p {
     font-size: 0.8rem;
     line-height: 17px;
@@ -167,9 +164,8 @@
     height: 35px;
     font-size: 0.9rem;
     line-height: 21px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -180,15 +176,10 @@
 }
 
 @media screen and (max-width: 400px) {
-
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+}
 
 @media only screen and (device-width: 768px) {
-
 }

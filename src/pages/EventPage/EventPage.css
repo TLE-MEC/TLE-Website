@@ -1,119 +1,114 @@
 .eventsPage {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
 }
 
 .goBack {
-    position: fixed;
-    cursor: pointer;
-    top: 20px;
-    left: 20px;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    z-index: 999;
-    padding: 0.5rem;
-    box-sizing: content-box;
-    border-radius: 50%;
-    background-color: #ffffff;
-    box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.1); 
+  position: fixed;
+  cursor: pointer;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  z-index: 999;
+  padding: 0.5rem;
+  box-sizing: content-box;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .goBack:hover {
-    box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.3);     
+  box-shadow: -2px -2px 4px rgba(132, 208, 192, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-  
+
 .eventsPage__container {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 0;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
 }
 
 .eventsPageCubo {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 500px;
-    pointer-events: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  pointer-events: none;
 }
 
 .eventsPage_circle {
-    position: fixed;
-    bottom: 0;
-    right: 10%;
-    width: 200px;
-    pointer-events: none;
-    transform: translateY(50%);
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  width: 200px;
+  pointer-events: none;
+  transform: translateY(50%);
 }
 
 .eventsPage_ellipse {
+  position: fixed;
+  top: -100px;
+  right: 0;
+  transform: rotate(135deg);
+  width: 150px;
+  pointer-events: none;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .eventsPage__container {
+    width: 90%;
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .eventsPage__container {
+    width: 90%;
+    padding: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .eventsPage__container {
+    width: 100%;
+  }
+
+  .eventsPageCubo {
+    width: 250px;
+  }
+
+  .eventsPage_circle {
+    right: 5%;
+    width: 100px;
+  }
+
+  .eventsPage_ellipse {
     position: fixed;
     top: -100px;
     right: 0;
     transform: rotate(135deg);
     width: 150px;
     pointer-events: none;
-}
-
-@media (min-width: 992px) and (max-width: 1380px) {
-    .eventsPage__container {
-        width: 90%;
-        padding: 3rem 0;
-    }
-}
-
-
-@media screen and (max-width: 992px) {
-    .eventsPage__container {
-        width: 90%;
-        padding: 3rem 0;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .eventsPage__container {
-        width: 100%;
-    }
-
-    .eventsPageCubo {
-        width: 250px;
-    }
-    
-    .eventsPage_circle {
-        right: 5%;
-        width: 100px;
-    }
-    
-    .eventsPage_ellipse {
-        position: fixed;
-        top: -100px;
-        right: 0;
-        transform: rotate(135deg);
-        width: 150px;
-        pointer-events: none;
-    }
+  }
 }
 
 @media screen and (max-width: 600px) {
-
 }
 
 @media screen and (max-width: 400px) {
-
-}
-  
-@media only screen and (min-device-width: 320px) and (max-device-width: 
-  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
-
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+}
 
 @media only screen and (device-width: 768px) {
-
 }
