@@ -131,7 +131,7 @@
   object-position: 0 55%;
 }
 
-.eventCard .content {
+.eventCard_content {
   height: 50%;
   width: 100%;
   background-color: #fff;
@@ -143,28 +143,28 @@
   color: #333;
 }
 
-.eventCard .content .title {
+.eventCard_title {
   text-align: center;
   font-weight: 800;
 }
 
-.eventCard .content .title .time {
+.eventCard_time {
   font-size: 0.8rem;
   margin-bottom: 5px;
   color: var(--primary-color);
 }
 
-.eventCard .content .title .name {
+.eventCard_name {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
 
-.eventCard .content .para {
+.eventCard_para {
   height: 55%;
   overflow-y: scroll;
 }
 
-.eventCard .content .para::-webkit-scrollbar {
+.eventCard_para::-webkit-scrollbar {
   display: none;
 }
 
