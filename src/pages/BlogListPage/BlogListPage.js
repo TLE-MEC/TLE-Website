@@ -24,7 +24,9 @@ const BlogListPage = () => {
     let temp = [];
     const querySnapshot = await getDocs(collection(db, "blogs"));
     querySnapshot.forEach((doc) => {
-      temp.push(doc.data());
+      let p = doc.data();
+      p.id = doc.id;
+      temp.push(p);
     });
     setBlogs(temp);
     console.log(temp);
@@ -92,7 +94,7 @@ const BlogListPage = () => {
                     {blog.introcontent.length < 200
                       ? blog.introcontent
                       : blog.introcontent.substring(0, 200)}
-                    <Link to="/blogpage" className="readmore">
+                    <Link to={`/blog/${blog.id}`} className="readmore">
                       {" "}
                       read more....
                     </Link>
