@@ -79,6 +79,20 @@ const BlogPage = () => {
         </div>
         <div className="mainbox">
           <div className="title_content">
+            <div className="icons_small">
+              <div className="icon_name">
+                <BsClock className="icon_small" /> {blog.min} min read
+              </div>
+              <div className="icon_name">
+                <FaPenNib className="icon_small" /> {blog.words} words
+              </div>
+              {/* <div className="icon_name">
+                  <SlEye className="icon_small" /> 15 views
+                </div>
+                <div className="icon_name">
+                  <BiLike className="icon_small" /> 25 likes
+              </div> */}
+            </div>
             <div className="blog_title">
               <h1>{blog.title}</h1>
               <h2>By {blog.author}</h2>
@@ -92,20 +106,6 @@ const BlogPage = () => {
                   );
                 })}
               </h4>
-            </div>
-            <div className="icons_small">
-              <div className="icon_name">
-                <BsClock className="icon_small" /> {blog.min} min read
-              </div>
-              <div className="icon_name">
-                <FaPenNib className="icon_small" /> {blog.words} words
-              </div>
-              {/* <div className="icon_name">
-                <SlEye className="icon_small" /> 15 views
-              </div>
-              <div className="icon_name">
-                <BiLike className="icon_small" /> 25 likes
-              </div> */}
             </div>
           </div>
           <div className="content_blog">
