@@ -50,14 +50,7 @@ const BlogPage = () => {
           <div>
             <img src={blog.cover} alt="" className="smallimg" />
           </div>
-          <div
-            className="topics"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.5rem",
-            }}
-          >
+          <div className="topics">
             <div className="topic">
               <h4>
                 <a href="#topic1">
@@ -79,6 +72,20 @@ const BlogPage = () => {
         </div>
         <div className="mainbox">
           <div className="title_content">
+            <div className="icons_small">
+              <div className="icon_name">
+                <BsClock className="icon_small" /> {blog.min} min read
+              </div>
+              <div className="icon_name">
+                <FaPenNib className="icon_small" /> {blog.words} words
+              </div>
+              {/* <div className="icon_name">
+                  <SlEye className="icon_small" /> 15 views
+                </div>
+                <div className="icon_name">
+                  <BiLike className="icon_small" /> 25 likes
+              </div> */}
+            </div>
             <div className="blog_title">
               <h1>{blog.title}</h1>
               <h2>By {blog.author}</h2>
@@ -93,112 +100,28 @@ const BlogPage = () => {
                 })}
               </h4>
             </div>
-            <div className="icons_small">
-              <div className="icon_name">
-                <BsClock className="icon_small" /> {blog.min} min read
-              </div>
-              <div className="icon_name">
-                <FaPenNib className="icon_small" /> {blog.words} words
-              </div>
-              {/* <div className="icon_name">
-                <SlEye className="icon_small" /> 15 views
-              </div>
-              <div className="icon_name">
-                <BiLike className="icon_small" /> 25 likes
-              </div> */}
-            </div>
           </div>
           <div className="content_blog">
-            {/* <p className="para_content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis
-              hendrerit proin mattis fusce. Adipiscing integer ornare id nisl
-              elit, elit. Diam aliquam sit pellentesque odio venenatis nisl
-              matti
-            </p>
-            <br /> */}
-            <h4
-              id="topic1"
-              style={{
-                fontWeight: "600",
-                fontSize: "1.5rem",
-              }}
-            >
-              {blog.introtitle}
-            </h4>
+            <h4 id="topic1">{blog.introtitle}</h4>
             <br />
-            <img
-              src={blog.img1}
-              alt=""
-              className="blogimg"
-              style={{
-                width: "300px",
-                height: "auto",
-              }}
-            />
-            <p
-              className="para_content"
-              style={{
-                whiteSpace: "pre-wrap",
-              }}
-            >
+            <img src={blog.img1} alt="" className="blogimg" />
+            <p className="para_content">
               <br />
               {blog.introcontent}
             </p>
             <br />
-            <h4
-              id="topic2"
-              style={{
-                fontWeight: "600",
-                fontSize: "1.5rem",
-              }}
-            >
-              {blog.bodytitle}
-            </h4>
+            <h4 id="topic2">{blog.bodytitle}</h4>
             <br />
-            <img
-              src={blog.img2}
-              alt=""
-              className="blogimg"
-              style={{
-                width: "300px",
-                height: "auto",
-              }}
-            />
-            <p
-              className="para_content"
-              style={{
-                whiteSpace: "pre-wrap",
-              }}
-            >
+            <img src={blog.img2} alt="" className="blogimg" />
+            <p className="para_content">
               <br />
               {blog.maincontent}
             </p>
             <br />
-            <h4
-              id="topic3"
-              style={{
-                fontWeight: "600",
-                fontSize: "1.5rem",
-              }}
-            >
-              {blog.conclusiontitle}
-            </h4>
+            <h4 id="topic3">{blog.conclusiontitle}</h4>
             <br />
-            <img
-              src={blog.img3}
-              alt=""
-              className="blogimg"
-              style={{
-                width: "300px",
-                height: "auto",
-              }}
-            />
-            <p
-              className="para_content"
-              style={{
-                whiteSpace: "pre-wrap",
-              }}
-            >
+            <img src={blog.img3} alt="" className="blogimg" />
+            <p className="para_content">
               <br />
               {blog.conclusioncontent}
             </p>
