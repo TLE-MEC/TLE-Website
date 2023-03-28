@@ -1,46 +1,330 @@
-
-
-.blogPage_circle {
-    position: fixed;
-    bottom: 0;
-    right: 10%;
-    width: 200px;
-    pointer-events: none;
-    transform: translateY(50%);
+#blogpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: auto;
+  width: 76%;
+  overflow: hidden;
+  font-family: var(--primary-font);
+  border-radius: 30px;
+  
 }
-.blogPage_first_ellipse{
-    position: absolute;
-    left: 0;
-    top: 100px;
-    z-index: -1;
-    pointer-events: none;
-    width:80px;
+.bloghead {
+  color: #0b8b8b;
+  margin-top: 40px;
+  padding-top: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  z-index: 1;
+}
+.blog__contentbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #0c8b8b;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.blogPage_circle {
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  width: 200px;
+  pointer-events: none;
+  transform: translateY(50%);
+}
+.blogPage_first_ellipse {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: -1;
+  pointer-events: none;
+  width: 80px;
 }
 .blogPage_second_ellipse {
-    position: fixed;
-    top: -100px;
-    right: 0;
-    transform: rotate(135deg);
-    width: 150px;
-    pointer-events: none;
+  position: fixed;
+  top: -100px;
+  right: 0;
+  transform: rotate(135deg);
+  width: 150px;
+  pointer-events: none;
+}
+.blogPage_third_ellipse {
+  position: absolute;
+  width: 90px;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+.sidebox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.smallimg {
+  border-radius: 5%;
+  width: 130px;
+  height: 120px;
+  flex-grow: 2;
+}
+.sidebox > div {
+  padding-top: 15px;
+}
+.title_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topics::before {
+  content: "\a";
+  white-space: pre-wrap;
+}
+.blog_title{
+  display:flex;
+  flex-direction: column;
+}
+.blog_title > h1 {
+  font-weight: 600;
+}
+.blog_title > h2 {
+  font-weight: 500;
+}
+.blog_title > h4 {
+  font-weight: 400;
+}
+.blog_title > h3 {
+  align-self:flex-end;
+  font-weight: 500;
+}
+.blog_title {
+  flex-grow: 1;
+}
+.blog_title > h4::before {
+  content: "\a";
+  white-space: pre;
+}
+.icons_small {
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+  max-width: 100%;
+}
+.icon_name {
+  padding-left: 10px;
+}
+.icon_small {
+  color: #0b8b8b;
+}
+.mainbox {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.mainbox > div {
+  padding: 10px;
+  margin: 10px;
+}
+.para_content {
+  height: auto;
+  max-width: 100%;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 1px;
+  text-align:justify;
+  white-space: pre-wrap;
+}
+.topic > h4 {
+  border-right: solid 1px #0c8b8b;
+  align-items: flex-end;
+  font-weight: 300;
+  line-height: 22px;
+  padding-right: 5px;
+}
+.topic > h4 a:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.content_blog > h4 {
+  font-weight: 400;
+  line-height: 22px;
+}
+.blogimg {
+  height: auto;
+  width: 300px;
+  max-width: 100%;
+}
+.page__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+.sidebox {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; 
+  flex-wrap: wrap;
+}
+.sidebox>.topics{
+  flex-grow: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  
+}
+#topic1,#topic2,#topic3{
+  font-size: 1.5rem;  
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1300px) {
+}
+@media (min-device-width: 20px) and (max-device-width: 500px) {
+  
+}
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 992px) {
 }
 
 @media screen and (max-width: 800px) {
-
+  #blogpage {
+    width: 96%;
+    font-size: 90%;
+  }
+  .blog_title > h3 {
+    align-self: flex-start;
+  }
+}
+@media screen and (max-width: 600px) {
+  
+  #blogpage {
+    width: 95%;
+    font-size: 85%;
+  }
+  .blogPage_circle {
+    width: 100px;
+  }
+  .blogPage_first_ellipse {
+    display: none
+  }
+  .blogPage_second_ellipse {
+    position: fixed;
+    transform: rotate(135deg);
+    width: 150px;
+    pointer-events: none;
+  }
+  .smallimg {
+    height: 90px;
+    width: 90px;
+  }
+  .mainbox>div{
+    padding-right:0px;
+  }  
+  .contentbox {
+    padding: 10px;
+  }
+  .title_content {
+    margin: 0;
+    padding: 0;
+    line-height: 20px;
+  }
+  .mainbox>.content_blog{
+    padding-top: 0;
+    margin-top: 5px;
+  }
+  .icon_name {
+    padding-left: 6px;
+  }
+  .blog_title > h1 {
+    padding-top: 5px;
     
-    .blogPage_circle {
-        right: 5%;
-        width: 100px;
-    }
-    .blogPage_first_ellipse{
-        display: none;
-    }
-    .blogPage_second_ellipse {
-        position: fixed;
-        top: -100px;
-        right: 0;
-        transform: rotate(135deg);
-        width: 150px;
-        pointer-events: none;
-    }
+  }
+  .blog_title {
+    line-height: 22px;
+  }
+  .blog_title>h4{
+    line-height: 10px;
+  }
+  .sidebox>.topics{    
+    width:85%;
+  }
+}
+@media screen and (max-width: 400px) {
+  
+  #blogpage {
+    width: 95%;
+    font-size: 80%;
+  }  
+  .mainbox>div{
+    padding-right:0;    
+    padding-left: 0;
+    margin-right:0;
+    margin-left: 0;
+    max-width:100%;
+    padding-top: 2px;
+    margin-top: 0;
+  }
+  .mainbox{
+    padding-left: 0;
+    margin-left: 0;
+    flex-grow: 1;
+  }
+  .sidebox{
+    align-items:flex-start;
+    padding:0;
+    width:fit-content;
+  }
+  .blog__contentbox{
+    padding-right:10px;
+    padding-left: 10px;
+  }
+  .blog_title{
+    font-size: 90%;
+    
+  }
+  .blog_title>h4{
+    align-content: flex-start;
+    font-size: 80%;
+  }
+  #topic1,#topic2,#topic3{
+    font-size: 1rem;  
+  }
+  .topic{
+    height:auto;
+    max-width: 100%;
+  }
+  .topic>h4{
+    max-width:100%;
+    height:auto;
+    font-size: 78%;
+  }
+  .smallimg{
+    width:75px;
+    height:80px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+  
+}
+
+@media only screen and (device-width: 768px) {
 }

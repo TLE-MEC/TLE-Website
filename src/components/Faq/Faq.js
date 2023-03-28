@@ -1,35 +1,35 @@
-import React, { useState } from 'react'
-import AOS from 'aos'
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
+import React, { useState } from "react";
+import AOS from "aos";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-import faqData from '../../data/faqData'
+import faqData from "../../data/faqData";
 
-import './Faq.css'
+import "./Faq.css";
 
-import faq_image from '../../assets/svg/faq_image.svg'
+import faq_image from "../../assets/svg/faq_image.svg";
 
 function Faq() {
-
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
-
   AOS.init({
-    once: true
-  })
+    once: true,
+  });
 
   return (
-    <div className='faqPage' id="faq">
-      <div className='faqPage__container'>
-        <div className='faq__left'>
-          <h1 className='faq__header' data-aos="zoom-in">Frequently Asked Questions</h1>
-          <div className='faq_content'>
+    <div className="faqPage" id="faq">
+      <div className="faqPage__container">
+        <div className="faq__left">
+          <h1 className="faq__header" data-aos="zoom-in">
+            Frequently Asked Questions
+          </h1>
+          <div className="faq_content">
             {faqData.map((faq) => (
               <Accordion
                 key={faq.id}
@@ -38,13 +38,19 @@ function Faq() {
                 disableGutters
                 elevation={0}
                 sx={{
-                  background: 'transparent',
+                  background: "transparent",
                   padding: 0,
-                  margin: '0.5rem 0'
+                  margin: "0.5rem 0",
                 }}
               >
                 <AccordionSummary
-                  expandIcon={expanded === `${faq.id}` ? <FiMinus className='acc__icon  bg-acc' /> : <FiPlus className='acc__icon' />}
+                  expandIcon={
+                    expanded === `${faq.id}` ? (
+                      <FiMinus className="acc__icon  bg-acc" />
+                    ) : (
+                      <FiPlus className="acc__icon" />
+                    )
+                  }
                   aria-controls={`panel${faq.id}bh-content`}
                   id={`panel${faq.id}bh-header`}
                   sx={{
@@ -52,7 +58,7 @@ function Faq() {
                   }}
                 >
                   <h2
-                    className='faq_qs'
+                    className="faq_qs"
                     data-aos="fade-up"
                     data-aos-duration={`${300 * faq.id}`}
                   >
@@ -61,23 +67,26 @@ function Faq() {
                 </AccordionSummary>
                 <AccordionDetails
                   sx={{
-                    padding: '0.5rem 2rem',
+                    padding: "0.5rem 2rem",
                   }}
                 >
-                  <p className='faq_ans'>
-                    {faq.answer}
-                  </p>
+                  <p className="faq_ans">{faq.answer}</p>
                 </AccordionDetails>
               </Accordion>
             ))}
           </div>
         </div>
-        <div className='faq__right'>
-          <img src={faq_image} alt="" className='faq_image' data-aos="fade-up-left" />
+        <div className="faq__right">
+          <img
+            src={faq_image}
+            alt=""
+            className="faq_image"
+            data-aos="fade-up-left"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Faq
+export default Faq;

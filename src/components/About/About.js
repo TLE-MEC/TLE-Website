@@ -1,39 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import AOS from 'aos'
+import AOS from "aos";
 
-import './About.css';
+import "./About.css";
 
 // import grid from '../../assets/svg/grid.svg'
-import about_cubo2 from '../../assets/png/about_cubo2.png'
-import about_ellipse_circle from '../../assets/svg/about_ellipse_circle.svg'
+import about_cubo2 from "../../assets/png/about_cubo2.png";
+import about_ellipse_circle from "../../assets/svg/about_ellipse_circle.svg";
 
-const texts = ["DSA Mentorship", "Programming Bootcamps", "Coding Contests", "Learning Sessions"];
+const texts = [
+  "DSA Mentorship",
+  "Programming Bootcamps",
+  "Coding Contests",
+  "Learning Sessions",
+];
 const variants = {
-  enter: direction => {
+  enter: (direction) => {
     return {
       y: -20,
-      opacity: 0
+      opacity: 0,
     };
   },
   center: {
     zIndex: 1,
     y: 0,
-    opacity: 1
+    opacity: 1,
   },
-  exit: direction => {
+  exit: (direction) => {
     return {
       zIndex: 0,
-      opacity: 0
+      opacity: 0,
     };
-  }
+  },
 };
 
 function About() {
-
   AOS.init({
     duration: 800,
-  })
+  });
 
   const [index, setIndex] = useState(0);
 
@@ -48,24 +52,29 @@ function About() {
   }, [index, setIndex]);
 
   return (
-    <div className="about" id='about'>
-      <img src={about_ellipse_circle} className='about_ellipse_circle' alt="" />
-      <div className='about__container'>
-        <div className='about__top' data-aos="fade-right">
-          <h1 className='section__header'>ABOUT US</h1>
+    <div className="about" id="about">
+      <img src={about_ellipse_circle} className="about_ellipse_circle" alt="" />
+      <div className="about__container">
+        <div className="about__top" data-aos="fade-right">
+          <h1 className="section__header">ABOUT US</h1>
           <p>
-            TLE MEC is the Competitive Programming and Data Structures & Algorithms club of Govt. Model Engineering College, Thrikkakara, Kochi.
+            TLE MEC is the Competitive Programming and Data Structures &
+            Algorithms club of Govt. Model Engineering College, Thrikkakara,
+            Kochi.
           </p>
           <p>
-            We’re an enthusiastic community of students who seek to inculcate a culture of competitive programming and problem-solving in the campus while helping students gain exposure within a peer-learning environment.
+            We’re an enthusiastic community of students who seek to inculcate a
+            culture of competitive programming and problem-solving in the campus
+            while helping students gain exposure within a peer-learning
+            environment.
           </p>
         </div>
-        <div className='about__bottom'>
-          <div className='about_bottom_content' data-aos="flip-up">
-            <div className='abc_top'>
+        <div className="about__bottom">
+          <div className="about_bottom_content" data-aos="flip-up">
+            <div className="abc_top">
               <h3>What do we do ? </h3>
             </div>
-            <div className='abc_bottom'>
+            <div className="abc_bottom">
               <AnimatePresence>
                 <motion.p
                   style={{ position: "absolute" }}
@@ -75,7 +84,8 @@ function About() {
                   animate="center"
                   exit="exit"
                   transition={{
-                    y: { type: "spring", stiffness: 300, damping: 300 }, opacity: { duration: 0.2 }
+                    y: { type: "spring", stiffness: 300, damping: 300 },
+                    opacity: { duration: 0.2 },
                   }}
                 >
                   {texts[index]}

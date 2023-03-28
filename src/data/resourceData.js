@@ -1,16 +1,16 @@
 const resourceData = [
-    {
-      id: 1,
-      name: 'Hello World',
-      desc: 'A bite-sized, concise document that contains select resources to serve as a starter guide for learning DSA & CP.',
-      url: 'https://drive.google.com/file/d/1WAo6FN66iDTut-xaPLcdXXKcXgFyCLwI/view?usp=sharing'
-    },
-    {
-      id: 2,
-      name: 'Data Structures Handbook',
-      desc: 'A structured, digestible handbook containing the basic and essential data structures that you ought to know of as early as possible in your journey. Fifteen minute read tops!',
-      url: 'https://drive.google.com/file/d/1SftefYhdpQWmqpUur9PeyDb8BFs2cVtk/view?usp=sharing'
-    },
-]
+  {
+    id: 1,
+    name: "Hello World",
+    desc: "A bite-sized, concise document that contains select resources to serve as a starter guide for learning DSA & CP.",
+    url: "https://drive.google.com/file/d/1WAo6FN66iDTut-xaPLcdXXKcXgFyCLwI/view?usp=sharing",
+  },
+  {
+    id: 2,
+    name: "Data Structures Handbook",
+    desc: "A structured, digestible handbook containing the basic and essential data structures that you ought to know of as early as possible in your journey. Fifteen minute read tops!",
+    url: "https://drive.google.com/file/d/1SftefYhdpQWmqpUur9PeyDb8BFs2cVtk/view?usp=sharing",
+  },
+];
 
 export default resourceData;

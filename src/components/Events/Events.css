@@ -34,7 +34,6 @@
   overflow-x: hidden;
 }
 
-
 .events_cubo {
   width: 200px;
 }
@@ -65,11 +64,10 @@
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
-  background: #0B8B8B;
+  background: #0b8b8b;
   color: #ffffff;
   border: none;
   outline: none;
-
 }
 
 .events-subheading {
@@ -88,7 +86,6 @@
   margin-top: 18px;
 }
 
-
 .events-card {
   display: flex;
   flex-wrap: wrap;
@@ -99,8 +96,6 @@
   align-content: center;
 }
 
-
-
 .eventCard {
   font-family: var(--secondary-font);
   width: 300px;
@@ -110,13 +105,14 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(230, 230, 230, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(230, 230, 230, 0.1);
 }
 
 .eventCard:hover {
   transform: scale(1.05);
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2), -5px -5px 20px rgba(255, 255, 255, 0.1);
-
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2),
+    -5px -5px 20px rgba(255, 255, 255, 0.1);
 }
 
 .eventCard .eventCard_image {
@@ -131,7 +127,7 @@
   object-position: 0 55%;
 }
 
-.eventCard .content {
+.eventCard_content {
   height: 50%;
   width: 100%;
   background-color: #fff;
@@ -143,28 +139,28 @@
   color: #333;
 }
 
-.eventCard .content .title {
+.eventCard_title {
   text-align: center;
   font-weight: 800;
 }
 
-.eventCard .content .title .time {
+.eventCard_time {
   font-size: 0.8rem;
   margin-bottom: 5px;
   color: var(--primary-color);
 }
 
-.eventCard .content .title .name {
+.eventCard_name {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
 
-.eventCard .content .para {
+.eventCard_para {
   height: 55%;
   overflow-y: scroll;
 }
 
-.eventCard .content .para::-webkit-scrollbar {
+.eventCard_para::-webkit-scrollbar {
   display: none;
 }
 
@@ -196,7 +192,6 @@
   background: rgba(0, 150, 136, 0.4);
 }
 
-
 .eventDialog {
   display: flex;
   flex-direction: column;
@@ -213,7 +208,6 @@
 .css-1ty026z::-webkit-scrollbar {
   display: none !important;
 }
-
 
 .event_divider_line {
   width: 100%;
@@ -258,20 +252,20 @@
   align-items: center;
   justify-content: center;
   border-radius: 0px 40px 0px 40px;
-  background: #0BAAAA;
+  background: #0baaaa;
   padding: 2rem;
   color: #ffffff;
   gap: 1.55rem;
 }
 
 .edh__right h1 {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
   line-height: 29px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .edh__right__btns {
@@ -285,28 +279,28 @@
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  background: #FFFFFF;
-  color: #0BAAAA;
+  background: #ffffff;
+  color: #0baaaa;
   border-radius: 30px;
   padding: 0.5rem 0.85rem;
 }
 
 .edh_btn p {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   line-height: 9px;
   font-size: 0.8rem;
-  color: #0BAAAA;
+  color: #0baaaa;
 }
 
 .edh__right_p {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .eventDialog__leaderboard {
@@ -319,7 +313,7 @@
 }
 
 .eventDialog__leaderboard h1 {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -337,7 +331,7 @@
 }
 
 .ldbrd__title {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
@@ -356,13 +350,11 @@
   gap: 0.7rem;
 }
 
-
-
 .leaderboard__row img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 5px solid #0BAAAA;
+  border: 5px solid #0baaaa;
 }
 
 .second__image {
@@ -374,13 +366,13 @@
 }
 
 .leaderboard__row h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 31px;
   text-align: center;
-  color: #0BAAAA;
+  color: #0baaaa;
 }
 
 .leaderboard__row h3 span {
@@ -389,7 +381,7 @@
 }
 
 .leaderboard__row h4 {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
@@ -400,9 +392,8 @@
 
 .crown {
   font-size: 3.5rem;
-  color: #FFCC4D;
+  color: #ffcc4d;
 }
-
 
 .eventDialog__footer {
   width: 80%;
@@ -415,7 +406,7 @@
 }
 
 .eventDialog__footer h1 {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-size: 1.7rem;
@@ -436,18 +427,18 @@
   text-decoration: none;
   outline: none;
   border: none;
-  background: #0BAAAA;
+  background: #0baaaa;
   border-radius: 64.5px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 1.05rem;
   line-height: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0.75rem 1rem;
   transition: ease-in-out 0.1s;
 }
@@ -456,8 +447,8 @@
   background: #003a3a;
 }
 
-@media (min-width: 992px) and (max-width: 1380px) {}
-
+@media (min-width: 992px) and (max-width: 1380px) {
+}
 
 @media screen and (max-width: 992px) {
   .events__container {
@@ -468,7 +459,6 @@
   .section__text {
     font-size: 1.45rem;
   }
-
 }
 
 @media screen and (max-width: 800px) {
@@ -497,8 +487,6 @@
     padding-top: 35px;
   }
 
-
-
   .eventDialog__header {
     flex-direction: column;
   }
@@ -516,7 +504,7 @@
   .eventDialog__close {
     top: 20px;
     right: 20px;
-    color: #0BAAAA;
+    color: #0baaaa;
     font-size: 2rem;
   }
 
@@ -616,7 +604,7 @@
   .edf_btn {
     gap: 0.5rem;
     font-size: 0.95rem;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 0.5rem 0.85rem;
   }
 }
@@ -635,7 +623,8 @@
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+}
 
-
-@media only screen and (device-width: 768px) {}
+@media only screen and (device-width: 768px) {
+}

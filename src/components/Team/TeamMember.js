@@ -9,7 +9,7 @@ import { BsDot } from "react-icons/bs";
 import "./TeamMember.css";
 
 const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0}  {...props} />
+  <MuiAccordion disableGutters elevation={0} {...props} />
 ))(({ theme }) => ({
   "&:not(:last-child)": {
     borderBottom: 0,
@@ -17,19 +17,16 @@ const Accordion = styled((props) => (
   "&:before": {
     display: "none",
   },
-  borderRadius: 10
+  borderRadius: 10,
 }));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<FiChevronRight color="#003a3a" size={20}/>}
+    expandIcon={<FiChevronRight color="#003a3a" size={20} />}
     {...props}
   />
 ))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === "dark"
-      ? "#c2e6e6"
-      : "#c2e6e6",
+  backgroundColor: theme.palette.mode === "dark" ? "#c2e6e6" : "#c2e6e6",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -44,13 +41,12 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: "1px solid rgba(0, 0, 0, .125)",
 }));
 
-export default function CustomizedAccordions({team}) {
+export default function CustomizedAccordions({ team }) {
   const [expanded, setExpanded] = useState(false);
 
-  const handleChange =
-    (panel ) => (event , newExpanded ) => {
-      setExpanded(newExpanded ? panel : false);
-    };
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
 
   return (
     <div className="tp-memberaccordion">
@@ -68,10 +64,10 @@ export default function CustomizedAccordions({team}) {
               <h3 className="tp-teamname">{item.name}</h3>
             </AccordionSummary>
             <AccordionDetails>
-              {item.members.map((it,no) => {
+              {item.members.map((it, no) => {
                 return (
                   <p key={no} className="tp-membername">
-                    <BsDot color="#212121" size={18}/>
+                    <BsDot color="#212121" size={18} />
                     {it.name}
                   </p>
                 );

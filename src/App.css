@@ -1,7 +1,7 @@
 .primary {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
