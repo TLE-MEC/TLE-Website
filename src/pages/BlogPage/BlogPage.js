@@ -33,7 +33,7 @@ const BlogPage = () => {
   if (loading) return <Loader />;
   return (
     <div id="blogpage">
-      <CustomTitle title="Name" />
+      <CustomTitle title={blog.title}/>
       <FiArrowLeft
         onClick={() => {
           navigate("/blogs");

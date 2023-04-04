@@ -71,6 +71,7 @@
   .icon {
     display: inline-flex;
     font-size: 80%;
+
   }
 }
 
@@ -105,14 +106,15 @@
   color: #0b8b8b;
 }
 
-#container {
+#blogs__container {
   height: 100vh;
 }
 
-.card {
+.blog__card {
   display: flex;
   width: 88%;
-  height: 35%;
+  cursor: pointer;
+  height:18rem;
   padding: 1rem;
   background: #ffffff;
   border: 1px solid #0c8b8b;
@@ -148,8 +150,8 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 1.7rem;
+  line-height: 34px;
   color: #000000;
 }
 
@@ -199,6 +201,7 @@
 .icon {
   padding-right: 20px;
   color: #0c8b8b;
+  font-size: 0.8rem;
 }
 
 .blog_card-components {
@@ -212,9 +215,11 @@
 @media only screen and (max-width: 1300px) {
 }
 @media (min-device-width: 20px) and (max-device-width: 500px) {
-  .card {
-    width: 90%;
-    align-items: center;
+  .blog__card {
+    height: 25rem;
+  }
+  .blog__card >.title{
+    font-size: 1rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -230,9 +235,21 @@
 }
 
 @media screen and (max-width: 600px) {
+  .blog__card {
+    height: 22rem;
+  }
+  .blog__card >.title{
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .blog__card {
+    height: 27rem;
+  }
+  .blog__card >.title{
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {

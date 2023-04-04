@@ -95,7 +95,8 @@
   flex-direction: column;
 }
 .blog_title > h1 {
-  font-weight: 600;
+  font-weight: 500;
+  
 }
 .blog_title > h2 {
   font-weight: 500;
@@ -255,7 +256,10 @@
   }
   .blog_title > h1 {
     padding-top: 5px;
-    
+    font-size:1rem;
+  }
+  .blog_title > h2 {
+    font-size: 0.8rem;
   }
   .blog_title {
     line-height: 22px;

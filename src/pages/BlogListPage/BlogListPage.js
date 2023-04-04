@@ -15,8 +15,12 @@ import CustomTitle from "../../utils/CustomTitle";
 import { getDocs, collection } from "firebase/firestore";
 import db from "../../utils/firebase";
 import { Loader } from "../../components";
-
+import Aos from "aos";
 const BlogListPage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
+
   const navigate = useNavigate();
   const [blogs, setBlogs] = useState();
   const [loading, setLoading] = useState(true);
@@ -37,7 +41,7 @@ const BlogListPage = () => {
   }, []);
   if (loading) return <Loader />;
   return (
-    <div id="container">
+    <div id="blogs__container">
       <CustomTitle title="Blogs" />
       <FiArrowLeft
         onClick={() => {
@@ -49,10 +53,12 @@ const BlogListPage = () => {
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
       <h1 className="heading">BLOGS</h1>
-      <div className="blog_card-components">
+      <div className="blog_card-components" data-aos="zoom-in">
         {blogs.map((blog, index) => {
           return (
-            <div className="card" key={index}>
+            <div className="blog__card"  key={index} onClick={()=>{
+              navigate(`/blog/${blog.id}`)
+            }}>
               <div className="img">
                 <img className="pic" src={blog.cover} alt=""></img>
               </div>
