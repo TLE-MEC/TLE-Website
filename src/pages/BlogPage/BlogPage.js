@@ -45,7 +45,33 @@ const BlogPage = () => {
       <img src={blogPage_ellipse1} alt="" className="blogPage_first_ellipse" />
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
-      <div className="blog__contentbox">
+      <div className="parent_container">
+        <div className="mobile_view_heading">
+          <div className="samplediv">
+            <img src={blog.cover} alt="" className="smallimg" />
+          </div>
+          <div className="blog_title_mobile">
+              <h1>{blog.title}</h1>
+              <h2>By {blog.author}</h2>
+              <h3>{blog.date}</h3>
+              <h4>
+                {blog.tags.map((tag, index) => {
+                  return (
+                    <span key={index}>
+                      {tag} {index !== blog.tags.length - 1 && " | "}
+                    </span>
+                  );
+                })}
+              </h4>
+            </div>
+            <div className="sampleicon"><div className="icon_name">
+                <BsClock className="icon_small" /> {blog.min} min read
+              </div>
+              <div className="icon_name">
+                <FaPenNib className="icon_small" /> {blog.words} words
+              </div></div>
+        </div>
+        <div className="blog__contentbox">
         <div className="sidebox">
           <div>
             <img src={blog.cover} alt="" className="smallimg" />
@@ -54,7 +80,7 @@ const BlogPage = () => {
             <div className="topic">
               <h4>
                 <a href="#topic1">
-                  {blog?.introtitle} -{">"} beginning{" "}
+                  {blog?.introtitle}
                 </a>
               </h4>
             </div>
@@ -127,6 +153,7 @@ const BlogPage = () => {
             </p>
             <br />
           </div>
+        </div>
         </div>
         <img
           src={blogPage_ellipse3}
