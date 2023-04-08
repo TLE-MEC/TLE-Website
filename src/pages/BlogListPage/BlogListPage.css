@@ -6,6 +6,111 @@
   pointer-events: none;
   transform: translateY(50%);
 }
+.heading {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 82px;
+  letter-spacing: -0.02em;
+  color: #0b8b8b;
+}
+
+.img {
+  width: auto;
+}
+
+.pic {
+  width: 250px;
+  height: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.25rem;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.title {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.author_date {
+  display: flex;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+}
+
+.content_info {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.readmore {
+  color: #0c8b8b;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.author {
+  padding-right: 60px;
+}
+
+.dsa_icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  color: #0c8b8b;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.blog_card-components {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+.card {
+  display: flex;
+  width: 85vw;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #0c8b8b;
+  border-radius: 20px;
+}
 
 .blogPage_first_ellipse {
   position: absolute;
@@ -26,10 +131,10 @@
 }
 
 .blogPage_ellipse3 {
-  position: absolute;
+  position: relative;
   width: 90px;
-  right: 0;
-  bottom: 0;
+  right: -25px;
+  bottom: -25px;
 }
 
 @media screen and (max-width: 800px) {
@@ -63,14 +168,12 @@
   .pic {
     display: none;
   }
+  .card {
+    gap: 0rem;
+  }
 
   .dsa {
     display: none;
-  }
-
-  .icon {
-    display: inline-flex;
-    font-size: 80%;
   }
 }
 
@@ -81,10 +184,6 @@
 }
 
 @media (min-width: 801px) and (max-width: 970px) {
-  .icon {
-    display: inline-flex;
-    font-size: 80%;
-  }
   .details {
     font-size: smaller;
   }
@@ -93,127 +192,11 @@
   }
 }
 
-.heading {
-  text-align: center;
-  margin-top: 50px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 70px;
-  line-height: 82px;
-  letter-spacing: -0.02em;
-  color: #0b8b8b;
-}
-
-#container {
-  height: 100vh;
-}
-
-.card {
-  display: flex;
-  width: 88%;
-  height: 35%;
-  padding: 1rem;
-  background: #ffffff;
-  border: 1px solid #0c8b8b;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
-.img {
-  width: auto;
-}
-
-.pic {
-  width: 250px;
-  height: auto;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-
-.content {
-  padding-left: 2.5%;
-  width: 85%;
-  height: 25%;
-  padding-top: 25px;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
-}
-
-.title {
-  padding-top: 2%;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 38px;
-  color: #000000;
-}
-
-.author_date {
-  display: flex;
-  padding-top: 2%;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  color: #000000;
-}
-
-.content_info {
-  width: 80%;
-  height: 50px;
-  padding-top: 4%;
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #333333;
-}
-
-.readmore {
-  color: #0c8b8b;
-  font-style: italic;
-  text-decoration: none;
-}
-
-.author {
-  padding-right: 60px;
-}
-
-.dsa_icons {
-  width: 100%;
-  display: flex;
-}
-
-.icons {
-  display: flex;
-  width: auto;
-  padding-left: 20%;
-}
-
-.icon {
-  padding-right: 20px;
-  color: #0c8b8b;
-}
-
-.blog_card-components {
-  padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
 @media only screen and (max-width: 1300px) {
 }
 @media (min-device-width: 20px) and (max-device-width: 500px) {
   .card {
-    width: 90%;
+    width: 90vw;
     align-items: center;
   }
 }
