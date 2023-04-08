@@ -52,8 +52,9 @@ const BlogListPage = () => {
       <img src={blogPage_ellipse1} className="blogPage_first_ellipse" alt="" />
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
-      <h1 className="heading">BLOGS</h1>
+
       <div className="blog_card-components" data-aos="zoom-in">
+        <div className="heading">BLOGS</div>
         {blogs.map((blog, index) => {
           return (
             <div className="blog__card"  key={index} onClick={()=>{
@@ -75,10 +76,10 @@ const BlogListPage = () => {
                   </div>
                   <div className="icons">
                     <div className="icon">
-                      <BsClock /> {blog.min} min read
+                      <BsClock size={18}/> <div>{blog.min} min read</div>
                     </div>
                     <div className="icon">
-                      <FaPenNib /> {blog.words} words{" "}
+                      <FaPenNib size={18}/> {blog.words} words{" "}
                     </div>
                     {/* <div className="icon">
                       <SlEye /> 15 Views
@@ -89,14 +90,13 @@ const BlogListPage = () => {
                     </div> */}
                   </div>
                 </div>
-                <p className="title">{blog.title}</p>
+                <div className="title">{blog.title}</div>
                 <div className="author_date">
                   <div className="author">By {blog.author}</div>
                   <div>{blog.date}</div>
                 </div>
                 <div className="content_info">
-                  <p className="details">
-                    {" "}
+                  <div className="details">
                     {blog.introcontent.length < 200
                       ? blog.introcontent
                       : blog.introcontent.substring(0, 200)}
@@ -104,7 +104,7 @@ const BlogListPage = () => {
                       {" "}
                       read more....
                     </Link>
-                  </p>
+                  </div>
                 </div>
               </div>
               <img
