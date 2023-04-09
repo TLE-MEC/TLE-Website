@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .blogPage_circle {
   position: fixed;
   bottom: 0;
@@ -165,7 +167,7 @@
     flex-wrap: wrap;
   }
 
-  .pic {
+  .img {
     display: none;
   }
   .card {
@@ -192,6 +194,136 @@
   }
 }
 
+.heading {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 82px;
+  letter-spacing: -0.02em;
+  color: #0b8b8b;
+}
+
+#blogs__container {
+  height: 100vh;
+}
+
+.blog__card {
+  display: flex;
+  width: 88%;
+  cursor: pointer;
+  height:18rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #0c8b8b;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.img {
+  width: auto;
+}
+
+.pic {
+  width: 250px;
+  height: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.content {
+  padding-left: 2.5%;
+  /* width: 85%; */
+  max-height: 25%;
+  padding-top: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+}
+
+.title {
+  /* padding-top: 2%; */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94% !important;
+  font-size: 1.7rem;
+  line-height: 34px;
+  color: #000000;
+}
+
+.author_date {
+  display: flex;
+  /* padding-top: 2%; */
+  min-height: 20%;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  justify-content: flex-start;
+  align-items: center;
+  color: #000000;
+}
+
+.content_info {
+  width: 80%;
+  height: 50px;
+  padding-top: 4%;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+
+.readmore {
+  color: #0c8b8b;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.author {
+  padding-right: 60px;
+}
+
+.dsa_icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 15%;
+}
+
+.icons {
+  display: flex;
+  /* width: auto;
+  padding-left: 20%; */
+  height: auto;
+}
+
+.icon {
+  padding-right: 20px;
+  color: #0c8b8b;
+  font-size: 0.8rem;
+}
+
+.blog_card-components {
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 @media only screen and (max-width: 1300px) {
 }
 @media (min-device-width: 20px) and (max-device-width: 500px) {
@@ -213,9 +345,27 @@
 }
 
 @media screen and (max-width: 600px) {
+  .blog__card {
+    min-height: 22rem;
+  }
+  .blog__card >.title{
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .blog__card {
+    height: 27rem;
+  }
+  .blog__card >.title{
+    font-size: 0.8rem;
+  }
+  .content>.dsa_icons{
+    min-height: 10%;
+  }
+  .content>.author_date{
+    min-height: 11%;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {

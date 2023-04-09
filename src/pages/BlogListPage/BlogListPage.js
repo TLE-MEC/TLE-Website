@@ -15,8 +15,12 @@ import CustomTitle from "../../utils/CustomTitle";
 import { getDocs, collection } from "firebase/firestore";
 import db from "../../utils/firebase";
 import { Loader } from "../../components";
-
+import Aos from "aos";
 const BlogListPage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 800 });
+  }, []);
+
   const navigate = useNavigate();
   const [blogs, setBlogs] = useState();
   const [loading, setLoading] = useState(true);
@@ -37,7 +41,7 @@ const BlogListPage = () => {
   }, []);
   if (loading) return <Loader />;
   return (
-    <div id="container">
+    <div id="blogs__container">
       <CustomTitle title="Blogs" />
       <FiArrowLeft
         onClick={() => {
@@ -48,12 +52,13 @@ const BlogListPage = () => {
       <img src={blogPage_ellipse1} className="blogPage_first_ellipse" alt="" />
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
-
-      <div className="blog_card-components">
-        <div className="heading">BLOGS</div>
+      <h1 className="heading">BLOGS</h1>
+      <div className="blog_card-components" data-aos="zoom-in">
         {blogs.map((blog, index) => {
           return (
-            <div className="card" key={index}>
+            <div className="blog__card"  key={index} onClick={()=>{
+              navigate(`/blog/${blog.id}`)
+            }}>
               <div className="img">
                 <img className="pic" src={blog.cover} alt=""></img>
               </div>
@@ -70,10 +75,10 @@ const BlogListPage = () => {
                   </div>
                   <div className="icons">
                     <div className="icon">
-                      <BsClock size={18}/> <div>{blog.min} min read</div>
+                      <BsClock /> {blog.min} min read
                     </div>
                     <div className="icon">
-                      <FaPenNib size={18}/> {blog.words} words{" "}
+                      <FaPenNib /> {blog.words} words{" "}
                     </div>
                     {/* <div className="icon">
                       <SlEye /> 15 Views
@@ -84,13 +89,14 @@ const BlogListPage = () => {
                     </div> */}
                   </div>
                 </div>
-                <div className="title">{blog.title}</div>
+                <p className="title">{blog.title}</p>
                 <div className="author_date">
                   <div className="author">By {blog.author}</div>
                   <div>{blog.date}</div>
                 </div>
                 <div className="content_info">
-                  <div className="details">
+                  <p className="details">
+                    {" "}
                     {blog.introcontent.length < 200
                       ? blog.introcontent
                       : blog.introcontent.substring(0, 200)}
@@ -98,7 +104,7 @@ const BlogListPage = () => {
                       {" "}
                       read more....
                     </Link>
-                  </div>
+                  </p>
                 </div>
               </div>
               <img
