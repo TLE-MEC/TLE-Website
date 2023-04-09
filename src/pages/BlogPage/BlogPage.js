@@ -150,8 +150,15 @@ const BlogPage = () => {
             <p className="para_content">
               <br />
               {blog.conclusioncontent}
+              <br/>
             </p>
             <br />
+            <h4 id="topic4">Resources</h4>
+            <br/>
+            <ul className="para_content">
+                <li><a style={{textDecoration:'none'}} target="_blank" rel="noreferrer" href="https://www.reddit.com/r/learnprogramming/comments/l0ipjo/list_of_various_programming_resources_i_gathered/">List of programming resources</a></li>
+                <li><a style={{textDecoration:'none'}} target="_blank" rel="noreferrer" href="https://youtu.be/jjqgP9dpD1k">Computational Thinking</a></li>
+            </ul>
           </div>
         </div>
         </div>
