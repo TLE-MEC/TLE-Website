@@ -65,10 +65,10 @@ const BlogPage = () => {
               </h4>
             </div>
             <div className="sampleicon"><div className="icon_name">
-                <BsClock className="icon_small" /> {blog.min} min read
+                <BsClock className="icon_small" /><p>{blog.min} min read</p>
               </div>
               <div className="icon_name">
-                <FaPenNib className="icon_small" /> {blog.words} words
+                <FaPenNib className="icon_small" /><p>{blog.words} words</p>
               </div></div>
         </div>
         <div className="blog__contentbox">
@@ -100,10 +100,10 @@ const BlogPage = () => {
           <div className="title_content">
             <div className="icons_small">
               <div className="icon_name">
-                <BsClock className="icon_small" /> {blog.min} min read
+                <BsClock className="icon_small" /><p>{blog.min} min read</p>
               </div>
               <div className="icon_name">
-                <FaPenNib className="icon_small" /> {blog.words} words
+                <FaPenNib className="icon_small" /><p>{blog.words} words</p>
               </div>
               {/* <div className="icon_name">
                   <SlEye className="icon_small" /> 15 views
@@ -150,8 +150,15 @@ const BlogPage = () => {
             <p className="para_content">
               <br />
               {blog.conclusioncontent}
+              <br/>
             </p>
             <br />
+            <h4 id="topic4">Resources</h4>
+            <br/>
+            <ul className="para_content">
+                <li><a style={{textDecoration:'none'}} target="_blank" rel="noreferrer" href="https://www.reddit.com/r/learnprogramming/comments/l0ipjo/list_of_various_programming_resources_i_gathered/">List of programming resources</a></li>
+                <li><a style={{textDecoration:'none'}} target="_blank" rel="noreferrer" href="https://youtu.be/jjqgP9dpD1k">Computational Thinking</a></li>
+            </ul>
           </div>
         </div>
         </div>
