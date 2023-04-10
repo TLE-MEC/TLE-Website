@@ -52,7 +52,7 @@ const BlogListPage = () => {
       <img src={blogPage_ellipse1} className="blogPage_first_ellipse" alt="" />
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
       <img src={blogPage_ellipse2} alt="" className="blogPage_second_ellipse" />
-      <h1 className="heading">BLOGS</h1>
+      <h1 className="heading" style={{zIndex:'100'}}>BLOGS</h1>
       <div className="blog_card-components" data-aos="zoom-in">
         {blogs.map((blog, index) => {
           return (
@@ -92,7 +92,6 @@ const BlogListPage = () => {
                 <p className="title">{blog.title}</p>
                 <div className="author_date">
                   <div className="author">By {blog.author}</div>
-                  <div>{blog.date}</div>
                 </div>
                 <div className="content_info">
                   <p className="details">
@@ -105,6 +104,7 @@ const BlogListPage = () => {
                       read more....
                     </Link>
                   </p>
+                <div style={{paddingTop:'10px'}}>{blog.date}</div>
                 </div>
               </div>
               <img
