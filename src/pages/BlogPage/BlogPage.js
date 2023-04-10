@@ -3,7 +3,7 @@ import "./BlogPage.css";
 import blogPage_ellipse1 from "../../assets/svg/ellipse1.svg";
 import blogPage_ellipse2 from "../../assets/svg/ellipse1.svg";
 import blogPage_circle from "../../assets/svg/landing_circle.svg";
-import blogPage_ellipse3 from "../../assets/svg/ellipse_inner.svg";
+// import blogPage_ellipse3 from "../../assets/svg/ellipse_inner.svg";
 // import blogimg from "../../assets/png/blogimg.png";
 import { BsClock } from "react-icons/bs";
 import { FaPenNib } from "react-icons/fa";
@@ -40,7 +40,7 @@ const BlogPage = () => {
         }}
         className="goBack"
       />
-      <h1 className="bloghead">BLOGS</h1>
+      {/* <h1 className="bloghead">BLOGS</h1> */}
 
       <img src={blogPage_ellipse1} alt="" className="blogPage_first_ellipse" />
       <img src={blogPage_circle} alt="" className="blogPage_circle" />
@@ -76,7 +76,7 @@ const BlogPage = () => {
           <div>
             <img src={blog.cover} alt="" className="smallimg" />
           </div>
-          <div className="topics">
+          {/* <div className="topics">
             <div className="topic">
               <h4>
                 <a href="#topic1">
@@ -94,7 +94,7 @@ const BlogPage = () => {
                 <a href="#topic3">{blog?.conclusiontitle}</a>
               </h4>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="mainbox">
           <div className="title_content">
@@ -162,11 +162,11 @@ const BlogPage = () => {
           </div>
         </div>
         </div>
-        <img
+        {/* <img
           src={blogPage_ellipse3}
           alt=""
           className="blogPage_third_ellipse"
-        />
+        /> */}
       </div>
     </div>
   );
