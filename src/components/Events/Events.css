@@ -116,7 +116,7 @@
 }
 
 .eventCard .eventCard_image {
-  height: 35%;
+  height: 29%;
   width: 100%;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .eventCard_content {
-  height: 50%;
+  height: 56%;
   width: 100%;
   background-color: #fff;
   padding: 0 20px;
@@ -156,8 +156,8 @@
 }
 
 .eventCard_para {
-  height: 55%;
-  overflow-y: scroll;
+  height: 100%;
+  overflow-y: hidden;
 }
 
 .eventCard_para::-webkit-scrollbar {
