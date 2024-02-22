@@ -2,289 +2,105 @@ export const team = [
   {
     name: "Competitive Programming",
     members: [
-      {
-        name: "Snehal Sha",
-      },
-      {
-        name: "Vishnu P",
-      },
-      {
-        name: "Athul Reji",
-      },
-      {
-        name: "George Mathew",
-      },
-      {
-        name: "Vignesh S Naik",
-      },
-      {
-        name: "Adithya V",
-      },
-      {
-        name: "Niya Shiyas",
-      },
-      {
-        name: "Geethu Sebastian",
-      },
-      {
-        name: "Parthiv Anil",
-      },
-      {
-        name: "Mary Ann Jose",
-      },
-      {
-        name: "Sreehari",
-      },
-      {
-        name: "Emmanuel Sibi",
-      },
+      { name: "J Atulya" },
+      { name: "Adil Mohamed M P" },
+      { name: "Hemant Antony" },
+      { name: "Pradyumn R Pai" },
+      { name: "Gautham N Pai" },
+      { name: "Lovebin Joseph Robin" },
+      { name: "Srilakshmi R" },
+      { name: "Maria Susan Mathew" },
+      { name: "Sonia Stine" },
+      { name: "Sutosh kumar" },
+      { name: "Binitha Babu" },
+      { name: "Riya Mary Jose" },
+      { name: "Ananya P" },
+      { name: "Suhana Sulfeekar" },
     ],
   },
   {
     name: "Tech Team",
     members: [
-      {
-        name: "Achyuth Mohan",
-      },
-      {
-        name: "Sona Mathew",
-      },
-      {
-        name: "Jaison Dennis",
-      },
-      {
-        name: "Sanosh Jacob",
-      },
-      {
-        name: "Lekshmi S",
-      },
-      {
-        name: "Vignesh S Naik",
-      },
-      {
-        name: "Geo Jose",
-      },
-      {
-        name: "Subramani E",
-      },
-      {
-        name: "Abhinav MM",
-      },
-      {
-        name: "Binitha Babu",
-      },
-      {
-        name: "Medha K",
-      },
-      {
-        name: "Aleena Prince",
-      },
-      {
-        name: "Mrinalini Nair Ani",
-      },
-    ],
+      { name: "Sthuthi Sambath" },
+      { name: "Jeslia Rose" },
+      { name: "Keerthana J" },
+      { name: "Rohit Anish" },
+      { name: "Khushi Nilesh Ved" },
+      { name: "Anish Pillai" },
+      { name: "Rahul Anup Varma" },
+      { name: "Riya Mary Jose" }
+    ]
   },
   {
     name: "Content Team",
     members: [
-      {
-        name: "Neha Mariam Mathew",
-      },
-      {
-        name: "Sneha Shaji",
-      },
-      {
-        name: "Sonah S Tiju",
-      },
-      {
-        name: "Srilakshmi R",
-      },
-      {
-        name: "Binitha Babu",
-      },
-      {
-        name: "A Theertha",
-      },
-      {
-        name: "Surabhi Thiruvoth",
-      },
+      { name: "Anjana S Nair" },
+      { name: "Neehara Prajesh" },
+      { name: "Nanditha S" },
+      { name: "Alex Vargese" },
+      { name: "Surabhi Thiruvoth" },
+      { name: "Binitha Babu" }
     ],
   },
   {
     name: "Design Team",
     members: [
-      {
-        name: "Jeswin Thomas",
-      },
-      {
-        name: "Jemma Mariya George",
-      },
-      {
-        name: "Sreehari KN",
-      },
-      {
-        name: "Annu Kuruvila",
-      },
-      {
-        name: "Devadath K V",
-      },
-      {
-        name: "Geethu Sebastian",
-      },
-      {
-        name: "Medha K",
-      },
-      {
-        name: "Sethukrishna M",
-      },
-      {
-        name: "Meenakshi Suresh",
-      },
-    ],
-  },
-  {
-    name: "Inclusivity Team",
-    members: [
-      {
-        name: "Hanna Salam",
-      },
+      { name: "Jaimy Renji" },
+      { name: "Riya Mary Jose" },
+      { name: "Jeslia Rose" },
+      { name: "Anavadya N Lakshmi" },
+      { name: "Angel Mary Binu" },
+      { name: "Nanditha S" },
+      { name: "Geo Jose P" },
+      { name: "Medha K" },
+      { name: "K V Varun Krishnan" },
+      { name: "Vrishti V Shah" }
     ],
   },
   {
     name: "Outreach Team",
     members: [
-      {
-        name: "Arathy Sha",
-      },
-      {
-        name: "Lisa V Cherian",
-      },
-      {
-        name: "Emilin Seby",
-      },
-      {
-        name: "Kalyani Reji",
-      },
-      {
-        name: "Arpitha Sudhir",
-      },
-      {
-        name: "Adwin Joshy",
-      },
-      {
-        name: "Anand",
-      },
-      {
-        name: "Ann Maria Pulikkan",
-      },
-      {
-        name: "Ann Mariyam",
-      },
-      {
-        name: "Aswathy Vijayan",
-      },
-      {
-        name: "Devika",
-      },
-      {
-        name: "Aswin Shankar",
-      },
-      {
-        name: "Geethu Sebastian",
-      },
-      {
-        name: "Aswin Shankar",
-      },
-      {
-        name: "Jacob",
-      },
-      {
-        name: "Aswin Shankar",
-      },
-      {
-        name: "Lolith Thomas",
-      },
-      {
-        name: "Malavika Chandrashekhar",
-      },
-      {
-        name: "Manjima",
-      },
-      {
-        name: "Prajul",
-      },
-      {
-        name: "Sandra Sara",
-      },
-      {
-        name: "Varun Krishnan",
-      },
-      {
-        name: "Waffa",
-      },
+      { name: "JACOB M P" },
+      { name: "Jeff George Mathew" },
+      { name: "Feba Sherly George" },
+      { name: "Anna Binoy" },
+      { name: "Steve B George" },
+      { name: "Alita Sabu Paul" },
+      { name: "Nandana Biju" },
+      { name: "Pooja Rajeev" },
+      { name: "Adhish Joseph Shinu" },
+      { name: "Jesa Dileep Philip" },
+      { name: "Elsa Susan Jain" },
+      { name: "Anagha S A" },
+      { name: "Alan tom sabu" },
+      { name: "Athulya v" }
     ],
   },
   {
     name: "Events Team",
     members: [
-      {
-        name: "Sony Thomas",
-      },
-      {
-        name: "Alvin John Mathew",
-      },
-      {
-        name: "Crystal Bejoy",
-      },
-      {
-        name: "Angela",
-      },
-      {
-        name: "Anu Maria",
-      },
-      {
-        name: "Jensine Soji",
-      },
-      {
-        name: "Rose Mariya",
-      },
-      {
-        name: "Shivaram S",
-      },
-      {
-        name: "Swathy Prakash",
-      },
-      {
-        name: "Vimal Krishna V",
-      },
-      {
-        name: "Lakshmi Sajilal",
-      },
+      { name: "Yaswanth Rajeev" },
+      { name: "Waffa M" },
+      { name: "Vaidehi Nair Krishnakumar" },
+      { name: "Niju George" },
+      { name: "Pranav K Pradeep" },
+      { name: "Nora Babu Kavukattu" },
+      { name: "Rohith P S" },
+      { name: "Sandra Sara Solomon" },
+      { name: "Jensine Soji" },
+      { name: "Hridhya K P" }
     ],
   },
   {
-    name: "Operations Team",
-    members: [
-      {
-        name: "Adam Oommen Jacob",
-      },
-      {
-        name: "Khushi Sha",
-      },
-      {
-        name: "Amal Jojo",
-      },
-      {
-        name: "V Sanjith Ram",
-      },
-    ],
-  },
-  {
-    name: "Community Team",
-    members: [
-      {
-        name: "Mrinalini Nair Ani",
-      },
-    ],
-  },
+    name:"Marketing Team",
+    members:[
+      { name: "Aardra S" },
+      { name: "Jeswin Joseph" },
+      { name: "Nikhil Tomy" },
+      { name: "Akash Abraham" },
+      { name: "Alex Varghese" },
+      { name: "Martin Joseph" },
+      { name: "Anjana S Nair" }
+    ]
+  }
 ];
