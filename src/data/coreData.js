@@ -44,7 +44,7 @@ const coreData = [
     name: "Jeswin Thomas",
     title: "Vice-Chairperson",
     image: jeswin,
-    linkedIn: 'https://www.linkedin.com/in/jeswin-thomas-/',
+    linkedIn: "https://www.linkedin.com/in/jeswin-thomas-/",
   },
   {
     id: 4,
@@ -83,17 +83,17 @@ const coreData = [
   },
   {
     id: 9,
-    name: "Neha Mariam Mathew",
-    title: "Content Lead",
-    image: Neha_Mariam_Mathew,
-    linkedIn: "https://www.linkedin.com/in/neha-mariam-mathew-152a60239/",
-  },
-  {
-    id: 10,
     name: "Alaka AJ",
     title: "Design Lead",
     image: alaka,
     linkedIn: "https://www.linkedin.com/in/alaka-aj/",
+  },
+  {
+    id: 10,
+    name: "Neha Mariam Mathew",
+    title: "Content Lead",
+    image: Neha_Mariam_Mathew,
+    linkedIn: "https://www.linkedin.com/in/neha-mariam-mathew-152a60239/",
   },
   {
     id: 11,
