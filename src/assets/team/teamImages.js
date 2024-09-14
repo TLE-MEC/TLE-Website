@@ -34,6 +34,22 @@ import alex from "./2023-24/Alex Mathew Biju.png";
 import adil from "./2023-24/Adil Naz Muhammed.png";
 import neha from "./2023-24/Neha Mariam Mathew.png";
 
+import alaka24 from "./2024-25/alaka.png";
+import alaka24hex from "./2024-25/alaka_hex.png";
+import alex24 from "./2024-25/alex.png";
+import amith24 from "./2024-25/amith.png";
+import amith24hex from "./2024-25/amith_hex.png";
+import arpitha24 from "./2024-25/arpitha.png";
+import binitha24 from "./2024-25/binitha.png";
+import hemanth24 from "./2024-25/hemanth.png";
+import jaimy24 from "./2024-25/jaimy.png";
+import roshin24 from "./2024-25/roshin.png";
+import roshin24hex from "./2024-25/roshin_hex.png";
+import vasanth24 from "./2024-25/vasanth.png";
+import vignesh24 from "./2024-25/vignesh.png"; 
+import vignesh24hex from "./2024-25/vignesh_hex.png";
+
+
 export {
   Achyuth_Mohan,
   Adam,
@@ -69,4 +85,18 @@ export {
   alex,
   adil,
   neha,
+  alaka24,
+  alaka24hex,
+  alex24,
+  amith24,
+  amith24hex,
+  arpitha24,
+  binitha24,
+  hemanth24,
+  jaimy24,
+  roshin24,
+  roshin24hex,
+  vasanth24,
+  vignesh24,
+  vignesh24hex
 };

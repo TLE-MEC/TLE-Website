@@ -4,26 +4,14 @@ import AOS from "aos";
 
 import semicircle1 from "../../assets/png/semicircle1.png";
 import semicircle2 from "../../assets/png/semicircle2.png";
-// import george from "../../assets/png/george.png";
-// import nayana from "../../assets/png/nayana.png";
-// import achyuth from "../../assets/png/achyuth.png";
-// import snehal from "../../assets/png/snehal.png";
 import viewmore from "../../assets/svg/viewmore.svg";
 
-import hanna from '../../assets/team/2023-24/Hanna Salam.png';
-// import jeswin from '../../assets/team/2023-24/Jeswin Thomas.png';
-// import sony from '../../assets/team/2023-24/Sony Thomas.png';
-import jeswin from '../../assets/team/2023-24/Jeswin Thomas.png'
-import arathy from '../../assets/team/2023-24/Arathy Sha.png'
-// import arathy from '../../assets/team/2023-24/Arathy Sha.png';
-// import vignesh from '../../assets/team/2023-24/Vignesh S Naik.png';
-import subru from '../../assets/team/2023-24/Subramani E.png';
-// import arpitha from '../../assets/team/2023-24/Arpitha Sudhir.png';
-// import alaka from '../../assets/team/2023-24/Alaka AJ.png'
-// import alex from '../../assets/team/2023-24/Alex Mathew Biju.png'
-// import adil from '../../assets/team/2023-24/Adil Naz Muhammed.png'
-// import neha from '../../assets/team/2023-24/Neha Mariam Mathew.png'
-
+import {
+  vignesh24hex,
+  alaka24hex,
+  amith24hex,
+  roshin24hex,
+} from "../../assets/team/teamImages";
 
 import "./Team.css";
 
@@ -41,12 +29,17 @@ function Team() {
           <div className="Team-imgdiv">
             <img
               className="hexagon blankhexagon"
-              src={hanna}
+              src={vignesh24hex}
               alt=""
               data-aos="fade-up"
             />
             <span className="Team-chairpersonParent">
-              <img src={jeswin} className="hexagon" alt="" data-aos="fade-up" />
+              <img
+                src={alaka24hex}
+                className="hexagon"
+                alt=""
+                data-aos="fade-up"
+              />
               {/* <span className="Teampage-overlay hexagon">Chairperson</span> */}
             </span>
           </div>
@@ -54,7 +47,7 @@ function Team() {
             <span className="Team-chairpersonParent">
               <img
                 className="hexagon"
-                src={arathy}
+                src={amith24hex}
                 alt=""
                 data-aos="fade-left"
               />
@@ -63,7 +56,7 @@ function Team() {
             <span className="Team-chairpersonParent">
               <img
                 className="hexagon"
-                src={subru}
+                src={roshin24hex}
                 alt=""
                 data-aos="fade-down"
               />

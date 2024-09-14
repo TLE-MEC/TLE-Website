@@ -1,0 +1,97 @@
+import {
+  Sony_P,
+  alaka24,
+  alex24,
+  amith24,
+  arpitha24,
+  binitha24,
+  hemanth24,
+  jaimy24,
+  roshin24,
+  vasanth24,
+  vignesh24,
+} from "../assets/team/teamImages";
+
+const core24Data = [
+  {
+    id: 1,
+    name: "Dr. Sony P",
+    title: "Faculty Advisor",
+    image: Sony_P,
+    linkedIn: "",
+  },
+
+  {
+    id: 2,
+    name: "Vignesh S Naik",
+    title: "Chairperson",
+    image: vignesh24,
+    linkedIn: "https://www.linkedin.com/in/naik-ji/",
+  },
+  {
+    id: 3,
+    name: "Alaka A J",
+    title: "Vice-Chairperson",
+    image: alaka24,
+    linkedIn: "https://www.linkedin.com/in/alaka-aj/",
+  },
+  {
+    id: 4,
+    name: "Hemant Antony",
+    title: "CP Lead",
+    image: hemanth24,
+    linkedIn: "https://www.linkedin.com/in/hemant-antony/",
+  },
+  {
+    id: 5,
+    name: "Amith Krishna A",
+    title: "Events Lead",
+    image: amith24,
+    linkedIn: "https://www.linkedin.com/in/amith-krishna-6a2730227/",
+  },
+  {
+    id: 6,
+    name: "Roshin Jimmy",
+    title: "Tech Lead",
+    image: roshin24,
+    linkedIn: "https://www.linkedin.com/in/roshinjimmy/",
+  },
+
+  {
+    id: 7,
+    name: "Jaimy Renji",
+    title: "Design Lead",
+    image: jaimy24,
+    linkedIn: "https://www.linkedin.com/in/jaimy-renji/",
+  },
+  {
+    id: 8,
+    name: "Arpitha Sudhir",
+    title: "Outreach Lead",
+    image: arpitha24,
+    linkedIn: "https://www.linkedin.com/in/arpitha-sudhir-989b14221/",
+  },
+  {
+    id: 9,
+    name: "Binitha Babu",
+    title: "Content Lead",
+    image: binitha24,
+    linkedIn: "https://www.linkedin.com/in/binitha-babu12/",
+  },
+  {
+    id: 10,
+    name: "Alex Mathew Biju ",
+    title: "Marketing Lead",
+    image: alex24,
+    linkedIn: "https://www.linkedin.com/in/alex-mathew-7951a0256/",
+  },
+  {
+    id: 11,
+    name: "Vasanth R",
+    title: "Community Lead",
+    image: vasanth24,
+    linkedIn: "https://www.linkedin.com/in/vasanth1337",
+  },
+];
+
+export default core24Data;
