@@ -7,10 +7,10 @@ import semicircle2 from "../../assets/png/semicircle2.png";
 import viewmore from "../../assets/svg/viewmore.svg";
 
 import {
-  vignesh24hex,
-  alaka24hex,
-  amith24hex,
-  roshin24hex,
+  ArjunSPai,
+  DanylThomas,
+  DijithDinesh,
+  AaronSChristo,
 } from "../../assets/team/teamImages";
 
 import "./Team.css";
@@ -29,38 +29,35 @@ function Team() {
           <div className="Team-imgdiv">
             <img
               className="hexagon blankhexagon"
-              src={vignesh24hex}
+              src={ArjunSPai}
               alt=""
               data-aos="fade-up"
             />
             <span className="Team-chairpersonParent">
               <img
-                src={alaka24hex}
+                src={DanylThomas}
                 className="hexagon"
                 alt=""
                 data-aos="fade-up"
               />
-              {/* <span className="Teampage-overlay hexagon">Chairperson</span> */}
             </span>
           </div>
           <div className="Team-imgdiv">
             <span className="Team-chairpersonParent">
               <img
                 className="hexagon"
-                src={amith24hex}
+                src={DijithDinesh}
                 alt=""
                 data-aos="fade-left"
               />
-              {/* <span className="Teampage-overlay hexagon">Vice Chairperson</span> */}
             </span>
             <span className="Team-chairpersonParent">
               <img
                 className="hexagon"
-                src={roshin24hex}
+                src={AaronSChristo}
                 alt=""
                 data-aos="fade-down"
               />
-              {/* <span className="Teampage-overlay hexagon">CP Head</span> */}
             </span>
             <Link to="/team">
               <img

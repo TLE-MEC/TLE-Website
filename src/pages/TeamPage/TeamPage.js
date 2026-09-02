@@ -10,6 +10,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import coreData from "../../data/coreData";
 import core21Data from "../../data/core21Data";
 import core24Data from "../../data/core24Data.js";
+import core24ExData from "../../data/core24ExData.js";
 import { team21 } from "../../data/team21Data.js";
 import { team } from "../../data/teamData.js";
 import { team24 } from "../../data/team24Data.js";
@@ -62,7 +63,7 @@ function TeamPage() {
           <p>
             TLE MEC is made by its people. The events, contests and sessions are
             all but a product of their teamwork. And here they are for you to
-            see, the current torch bearers of the year 2022-23.
+            see, the current torch bearers of the year 2026-27.
           </p>
         </div>
       </div>
@@ -110,18 +111,20 @@ function TeamPage() {
                   ) : (
                     <>
                       <img src={data.image} alt="" loading="lazy" />
-                      <a
-                        href={data.linkedIn}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="core_linkedin"
-                      >
-                        <FaLinkedinIn
-                          color="#ffffff"
-                          size={18}
-                          className="linkedin"
-                        />
-                      </a>
+                      {data.linkedIn && (
+                        <a
+                          href={data.linkedIn}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="core_linkedin"
+                        >
+                          <FaLinkedinIn
+                            color="#ffffff"
+                            size={18}
+                            className="linkedin"
+                          />
+                        </a>
+                      )}
                     </>
                   )}
                   <h3>{data.name}</h3>
@@ -137,18 +140,20 @@ function TeamPage() {
                   ) : (
                     <>
                       <img src={data.image} alt="" loading="lazy" />
-                      <a
-                        href={data.linkedIn}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="core_linkedin"
-                      >
-                        <FaLinkedinIn
-                          color="#ffffff"
-                          size={18}
-                          className="linkedin"
-                        />
-                      </a>
+                      {data.linkedIn && (
+                        <a
+                          href={data.linkedIn}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="core_linkedin"
+                        >
+                          <FaLinkedinIn
+                            color="#ffffff"
+                            size={18}
+                            className="linkedin"
+                          />
+                        </a>
+                      )}
                     </>
                   )}
                   <h3>{data.name}</h3>
@@ -162,6 +167,111 @@ function TeamPage() {
         <div className="tp_teammemberdiv">
           <div>
             <h1 className="team__header">TEAM MEMBERS</h1>
+          </div>
+          <TeamMember team={team24} />
+        </div>
+      </div>
+      <img src={landing_circle} alt="" className="team_circle" />
+
+      <div className="teamPage__container">
+        <img className="team_ellipse4" src={ellipse4} alt="" />
+        <img className="team_ellipse1" src={ellipse4} alt="" />
+        <div className="team_core" id="core">
+          <h1 className="team__header">EX-CORE TEAM (2024-25)</h1>
+          <div className="team_core_container">
+            <div className="team_core_container_1">
+              {core24ExData.slice(0, 3).map((data) => (
+                <div className="singleCore" key={data.id} data-aos="fade-up">
+                  {loading ? (
+                    <Skeleton variant="circular" width={120} height={120} />
+                  ) : (
+                    <>
+                      <img src={data.image} alt="" loading="lazy" />
+                      {data.linkedIn && (
+                        <a
+                          href={data.linkedIn}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="core_linkedin"
+                        >
+                          <FaLinkedinIn
+                            color="#ffffff"
+                            size={18}
+                            className="linkedin"
+                          />
+                        </a>
+                      )}
+                    </>
+                  )}
+                  <h3>{data.name}</h3>
+                  <p>{data.title}</p>
+                </div>
+              ))}
+            </div>
+            <div className="team_core_container_2">
+              {core24ExData.slice(3, 7).map((data) => (
+                <div className="singleCore" key={data.id} data-aos="fade-up">
+                  {loading ? (
+                    <Skeleton variant="circular" width={120} height={120} />
+                  ) : (
+                    <>
+                      <img src={data.image} alt="" loading="lazy" />
+                      {data.linkedIn && (
+                        <a
+                          href={data.linkedIn}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="core_linkedin"
+                        >
+                          <FaLinkedinIn
+                            color="#ffffff"
+                            size={18}
+                            className="linkedin"
+                          />
+                        </a>
+                      )}
+                    </>
+                  )}
+                  <h3>{data.name}</h3>
+                  <p>{data.title}</p>
+                </div>
+              ))}
+            </div>
+            <div className="team_core_container_3">
+              {core24ExData.slice(7, 11).map((data) => (
+                <div className="singleCore" key={data.id} data-aos="fade-up">
+                  {loading ? (
+                    <Skeleton variant="circular" width={120} height={120} />
+                  ) : (
+                    <>
+                      <img src={data.image} alt="" loading="lazy" />
+                      {data.linkedIn && (
+                        <a
+                          href={data.linkedIn}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="core_linkedin"
+                        >
+                          <FaLinkedinIn
+                            color="#ffffff"
+                            size={18}
+                            className="linkedin"
+                          />
+                        </a>
+                      )}
+                    </>
+                  )}
+                  <h3>{data.name}</h3>
+                  <p>{data.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="tp_teammemberdiv">
+          <div>
+            <h1 className="team__header">EX-TEAM MEMBERS (2024-25)</h1>
           </div>
           <TeamMember team={team24} />
         </div>
