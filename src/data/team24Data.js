@@ -1,30 +1,27 @@
 export const team24 = [
   {
     name: "Competitive Programming",
-    members: [],
+    members: [{ name: "Jiya Mary Jacob" },{name:"Diya Dini"},{name:"K Adhil Ahmed"},{name:"Joel N George"},{name:"John Thomas Mathew"}],
   },
   {
-    name: "Tech Team",
-    members: [],
+    name: "Media Team",
+    members: [{name:"Neehara Anna Bince"},{name:"Hanna Fathima"},{name:"Sreeshant Raju "}],
   },
   {
     name: "Content Team",
-    members: [],
+    members: [{name:"Krishna D Nair"},{name:"Anirudh Kuttikkattil"}],
   },
   {
     name: "Design Team",
-    members: [],
+    members: [{name:"Adwaith M "},{name:"Meenakshi B J"  }],
   },
   {
-    name: "Outreach Team",
-    members: [],
+    name: "Publicity Team",
+    members: [{name:"Zana Fathima"},{name:""}],
   },
   {
     name: "Events Team",
-    members: [],
-  },
-  {
-    name: "Marketing Team",
-    members: [],
-  },
+    members: [{name:"Aniketh Prasanth"},{name:"Melath Gopika Krishna"},{name:"Karthik Chandrasekharan Iyer"},{name:"Arya K A"}],
+  }
+  
 ];

@@ -198,7 +198,7 @@ const eventData = [
   {
     id: 10,
     name: "TLE Vectors",
-    isUpcoming: true,
+    isUpcoming: false,
     desc: "Talo: Cubooo! I am such a newcomer to arrays and stuff :' Cubo: Mein hoon na!We are here for the absoluttt beginners! A session on Arrays and use cases by our Vishruth Subramanian. We will also solve a few problems and have a Q&A.See you at the Internal Auditorium on the 22nd of November 2022 from 4:30pm!",
     image: tlevectorscard,
     dialog_img: tlevectors,
@@ -206,6 +206,20 @@ const eventData = [
     youtube: "",
     link: "https://bit.ly/vectors_talk",
     github: "",
+    leaderboard: [],
+
+  },
+  {
+    id: 11,
+    name: "StackNQueue",
+    isUpcoming: true,
+    desc: "TLE MEC is back with another competiton on DSA! StackNQueue is a 2 hour long coding contest on Hackerearth with questions on Stacks and Queues. The contest will be held on 10th of February, 2024 from 6:00 PM to 8:00 PM. The winners will be awarded with exciting prizes!",
+    image: "",
+    dialog_img:"" ,
+    date: "8th September 2026",
+    youtube: "",
+    link:"",
+    github:"",
     leaderboard: [],
   },
 ];
