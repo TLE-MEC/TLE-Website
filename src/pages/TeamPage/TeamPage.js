@@ -81,7 +81,7 @@ function TeamPage() {
                     <Skeleton variant="circular" width={120} height={120} />
                   ) : (
                     <>
-                      <img src={data.image} alt="" loading="lazy" />
+                      <img src={data.image} alt="" loading="lazy" className={`core_image core_image_${data.id}`}/>
                       {data.linkedIn && (
                         <a
                           href={data.linkedIn}
@@ -110,7 +110,7 @@ function TeamPage() {
                     <Skeleton variant="circular" width={120} height={120} />
                   ) : (
                     <>
-                      <img src={data.image} alt="" loading="lazy" />
+                      <img src={data.image} alt="" loading="lazy" className={`core_image core_image_${data.id}`}/>
                       {data.linkedIn && (
                         <a
                           href={data.linkedIn}
@@ -139,7 +139,7 @@ function TeamPage() {
                     <Skeleton variant="circular" width={120} height={120} />
                   ) : (
                     <>
-                      <img src={data.image} alt="" loading="lazy" />
+                      <img src={data.image} alt="" loading="lazy" className={`core_image core_image_${data.id}`}/>
                       {data.linkedIn && (
                         <a
                           href={data.linkedIn}
