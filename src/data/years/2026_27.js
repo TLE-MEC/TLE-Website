@@ -54,21 +54,21 @@ export const core = [
   {
     id: 5,
     name: "Aaron S Christo",
-    title: "Events Head",
+    title: "Events Lead",
     image: AaronSChristo,
     linkedIn: "",
   },
   {
     id: 6,
     name: "Alna Rebecca Siby",
-    title: "Publicity Head",
+    title: "Publicity Lead",
     image: AlnaRebeccaSiby,
     linkedIn: "",
   },
   {
     id: 7,
     name: "Amrith P",
-    title: "Media Head",
+    title: "Media Lead",
     image: AmrithP,
     linkedIn: "",
   },
@@ -82,7 +82,7 @@ export const core = [
   {
     id: 9,
     name: "S Sreeshankar",
-    title: "Content Head",
+    title: "Content Lead",
     image: SSreeshankar,
     linkedIn: "",
   },
