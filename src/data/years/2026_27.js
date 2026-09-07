@@ -11,9 +11,18 @@ import {
   JoeGeorge,
   SSreeshankar,
   NiranjanaA,
-} from "../assets/team/teamImages";
+} from "../../assets/team/teamImages";
 
-const core24Data = [
+export const year = "2026-27";
+export const isCurrent = true;
+
+export const coreSlices = [
+  [0, 3],
+  [3, 7],
+  [7, 12],
+];
+
+export const core = [
   {
     id: 1,
     name: "Dr. Sony P",
@@ -38,7 +47,7 @@ const core24Data = [
   {
     id: 4,
     name: "Dijith Dinesh",
-    title: "CP Team Lead",
+    title: "CP Lead",
     image: DijithDinesh,
     linkedIn: "",
   },
@@ -100,4 +109,47 @@ const core24Data = [
   },
 ];
 
-export default core24Data;
+export const teams = [
+  {
+    name: "Competitive Programming",
+    members: [
+      { name: "Jiya Mary Jacob" },
+      { name: "Diya Dini" },
+      { name: "K Adhil Ahmed" },
+      { name: "Joel N George" },
+      { name: "John Thomas Mathew" },
+    ],
+  },
+  {
+    name: "Media Team",
+    members: [
+      { name: "Neehara Anna Bince" },
+      { name: "Hanna Fathima" },
+      { name: "Sreeshant Raju" },
+    ],
+  },
+  {
+    name: "Content Team",
+    members: [
+      { name: "Krishna D Nair" },
+      { name: "Anirudh Kuttikkattil" },
+    ],
+  },
+  {
+    name: "Design Team",
+    members: [{ name: "Adwaith M" }, { name: "Meenakshi B J" }],
+  },
+  {
+    name: "Publicity Team",
+    members: [{ name: "Zana Fathima" }],
+  },
+  {
+    name: "Events Team",
+    members: [
+      { name: "Aniketh Prasanth" },
+      { name: "Melath Gopika Krishna" },
+      { name: "Karthik Chandrasekharan Iyer" },
+      { name: "Arya K A" },
+    ],
+  },
+];

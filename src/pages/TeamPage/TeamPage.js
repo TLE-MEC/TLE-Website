@@ -7,20 +7,51 @@ import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 
-import coreData from "../../data/coreData";
-import core21Data from "../../data/core21Data";
-import core24Data from "../../data/core24Data.js";
-import core24ExData from "../../data/core24ExData.js";
-import { team21 } from "../../data/team21Data.js";
-import { team } from "../../data/teamData.js";
-import { team24 } from "../../data/team24Data.js";
-import execData from "../../data/execData";
+import * as y2026 from "../../data/years/2026_27";
+import * as y2025 from "../../data/years/2025_26";
+import * as y2024 from "../../data/years/2024_25";
+import * as y2023 from "../../data/years/2023_24";
+import * as y2022 from "../../data/years/2022_23";
+import * as y2021 from "../../data/years/2021_22";
 
 import CustomTitle from "../../utils/CustomTitle";
 import "./TeamPage.css";
 import landing_circle from "../../assets/svg/landing_circle.svg";
 import ellipse4 from "../../assets/svg/ellipse1.svg";
 import TeamMember from "../../components/Team/TeamMember";
+
+const yearsData = [y2026, y2025, y2024, y2023, y2022, y2021];
+
+function CoreMember({ data, loading, avatarClass }) {
+  return (
+    <div className="singleCore" data-aos="fade-up">
+      {loading ? (
+        <Skeleton variant="circular" width={120} height={120} />
+      ) : (
+        <>
+          <img
+            src={data.image}
+            alt=""
+            loading="lazy"
+            className={avatarClass}
+          />
+          {data.linkedIn && (
+            <a
+              href={data.linkedIn}
+              target="_blank"
+              rel="noreferrer"
+              className="core_linkedin"
+            >
+              <FaLinkedinIn color="#ffffff" size={18} className="linkedin" />
+            </a>
+          )}
+        </>
+      )}
+      <h3>{data.name}</h3>
+      <p>{data.title}</p>
+    </div>
+  );
+}
 
 function TeamPage() {
   const [loading, setLoading] = useState(true);
@@ -68,417 +99,103 @@ function TeamPage() {
         </div>
       </div>
 
-      <div className="teamPage__container">
-        <img className="team_ellipse4" src={ellipse4} alt="" />
-        <img className="team_ellipse1" src={ellipse4} alt="" />
-        <div className="team_core" id="core">
-          <h1 className="team__header">CORE TEAM</h1>
-          <div className="team_core_container">
-            <div className="team_core_container_1">
-              {core24Data.slice(0, 3).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" className={`core_image core_image_${data.id}`}/>
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="team_core_container_2">
-              {core24Data.slice(3, 7).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" className={`core_image core_image_${data.id}`}/>
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="team_core_container_3">
-              {core24Data.slice(7, 12).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" className={`core_image core_image_${data.id}`}/>
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+      {yearsData.map((year) => {
+        const hasCore = year.core && year.core.length > 0;
+        const hasTeams = year.teams && year.teams.length > 0;
+        const hasExec = year.exec && year.exec.length > 0;
 
-        <div className="tp_teammemberdiv">
-          <div>
-            <h1 className="team__header">TEAM MEMBERS</h1>
-          </div>
-          <TeamMember team={team24} />
-        </div>
-      </div>
-      <img src={landing_circle} alt="" className="team_circle" />
+        if (!hasCore && !hasTeams && !hasExec) {
+          return null;
+        }
 
-      <div className="teamPage__container">
-        <img className="team_ellipse4" src={ellipse4} alt="" />
-        <img className="team_ellipse1" src={ellipse4} alt="" />
-        <div className="team_core" id="core">
-          <h1 className="team__header">EX-CORE TEAM (2024-25)</h1>
-          <div className="team_core_container">
-            <div className="team_core_container_1">
-              {core24ExData.slice(0, 3).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="team_core_container_2">
-              {core24ExData.slice(3, 7).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="team_core_container_3">
-              {core24ExData.slice(7, 11).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        const prefix = year.isCurrent ? "" : "EX-";
+        const yearSuffix = year.isCurrent ? "" : `(${year.year})`;
 
-        <div className="tp_teammemberdiv">
-          <div>
-            <h1 className="team__header">EX-TEAM MEMBERS (2024-25)</h1>
-          </div>
-          <TeamMember team={team24} />
-        </div>
-      </div>
-      <img src={landing_circle} alt="" className="team_circle" />
-
-      <div className="teamPage__container">
-        <img className="team_ellipse4" src={ellipse4} alt="" />
-        <img className="team_ellipse1" src={ellipse4} alt="" />
-        <div className="team_core" id="core">
-          <h1 className="team__header">EX-CORE TEAM(2023-24)</h1>
-          <div className="team_core_container">
-            <div className="team_core_container_1">
-              {coreData.slice(0, 3).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
-                          />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="team_core_container_2">
-              {coreData.slice(3, 7).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      <a
-                        href={data.linkedIn}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="core_linkedin"
+        return (
+          <React.Fragment key={year.year}>
+            <div className="teamPage__container">
+              <img className="team_ellipse4" src={ellipse4} alt="" />
+              <img className="team_ellipse1" src={ellipse4} alt="" />
+              {hasCore && (
+                <div className="team_core" id="core">
+                  <h1 className="team__header">
+                    {prefix}CORE TEAM {yearSuffix}
+                  </h1>
+                  <div className="team_core_container">
+                    {(
+                      year.coreSlices && year.coreSlices.length
+                        ? year.coreSlices
+                        : [[0, year.core.length]]
+                    ).map((slice, i) => (
+                      <div
+                        className={`team_core_container_${i + 1}`}
+                        key={i}
                       >
-                        <FaLinkedinIn
-                          color="#ffffff"
-                          size={18}
-                          className="linkedin"
-                        />
-                      </a>
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-            <div className="team_core_container_3">
-              {coreData.slice(7, 12).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      <a
-                        href={data.linkedIn}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="core_linkedin"
-                      >
-                        <FaLinkedinIn
-                          color="#ffffff"
-                          size={18}
-                          className="linkedin"
-                        />
-                      </a>
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="tp_teammemberdiv">
-          <div>
-            <h1 className="team__header">EX-TEAM MEMBERS(2023-24)</h1>
-          </div>
-          <TeamMember team={team} />
-        </div>
-      </div>
-      <img src={landing_circle} alt="" className="team_circle" />
-
-      <div className="teamPage__container">
-        <img className="team_ellipse4" src={ellipse4} alt="" />
-        <img className="team_ellipse1" src={ellipse4} alt="" />
-        <div className="team_core" id="core">
-          <h1 className="team__header">EX-CORE TEAM (2021-22)</h1>
-          <div className="team_core_container">
-            <div className="team_core_container_1">
-              {core21Data.slice(0, 4).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      {data.linkedIn && (
-                        <a
-                          href={data.linkedIn}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="core_linkedin"
-                        >
-                          <FaLinkedinIn
-                            color="#ffffff"
-                            size={18}
-                            className="linkedin"
+                        {year.core.slice(slice[0], slice[1]).map((data) => (
+                          <CoreMember
+                            key={data.id}
+                            data={data}
+                            loading={loading}
+                            avatarClass={
+                              year.isCurrent
+                                ? `core_image core_image_${data.id}`
+                                : undefined
+                            }
                           />
-                        </a>
-                      )}
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-            <div className="team_core_container_2">
-              {core21Data.slice(4, 9).map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      <a
-                        href={data.linkedIn}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="core_linkedin"
-                      >
-                        <FaLinkedinIn
-                          color="#ffffff"
-                          size={18}
-                          className="linkedin"
-                        />
-                      </a>
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
-                  <p>{data.title}</p>
+              )}
+              {hasTeams && (
+                <div className="tp_teammemberdiv">
+                  <div>
+                    <h1 className="team__header">
+                      {prefix}TEAM MEMBERS {yearSuffix}
+                    </h1>
+                  </div>
+                  <TeamMember team={year.teams} />
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="team_exec">
-            <h1 className="team__header">EX-EXECUTIVE TEAM (2021-22)</h1>
-            <div className="team_core_container_1">
-              {execData.map((data) => (
-                <div className="singleCore" key={data.id} data-aos="fade-up">
-                  {loading ? (
-                    <Skeleton variant="circular" width={120} height={120} />
-                  ) : (
-                    <>
-                      <img src={data.image} alt="" loading="lazy" />
-                      <a
-                        href={data.linkedIn}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="core_linkedin"
-                      >
-                        <FaLinkedinIn
-                          color="#ffffff"
-                          size={18}
-                          className="linkedin"
-                        />
-                      </a>
-                    </>
-                  )}
-                  <h3>{data.name}</h3>
+              )}
+              {hasExec && (
+                <div className="team_core">
+                  <h1 className="team__header">EX-EXECUTIVE TEAM {yearSuffix}</h1>
+                  <div className="team_core_container">
+                    <div className="team_core_container_1">
+                      {year.exec.map((data) => (
+                        <div className="singleCore" key={data.id} data-aos="fade-up">
+                          {loading ? (
+                            <Skeleton variant="circular" width={120} height={120} />
+                          ) : (
+                            <>
+                              <img src={data.image} alt="" loading="lazy" />
+                              <a
+                                href={data.linkedIn}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="core_linkedin"
+                              >
+                                <FaLinkedinIn
+                                  color="#ffffff"
+                                  size={18}
+                                  className="linkedin"
+                                />
+                              </a>
+                            </>
+                          )}
+                          <h3>{data.name}</h3>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              ))}
+              )}
             </div>
-          </div>
-        </div>
-        <div className="tp_teammemberdiv">
-          <div>
-            <h1 className="team__header">EX-TEAM MEMBERS (2021-22)</h1>
-          </div>
-          <TeamMember team={team21} />
-        </div>
-      </div>
+            <img src={landing_circle} alt="" className="team_circle" />
+          </React.Fragment>
+        );
+      })}
     </motion.div>
   );
 }

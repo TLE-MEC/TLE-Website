@@ -10,9 +10,18 @@ import {
   roshin24,
   vasanth24,
   vignesh24,
-} from "../assets/team/teamImages";
+} from "../../assets/team/teamImages";
 
-const core24ExData = [
+export const year = "2024-25";
+export const isCurrent = false;
+
+export const coreSlices = [
+  [0, 3],
+  [3, 7],
+  [7, 11],
+];
+
+export const core = [
   {
     id: 1,
     name: "Dr. Sony P",
@@ -92,4 +101,4 @@ const core24ExData = [
   },
 ];
 
-export default core24ExData;
+export const teams = [];
