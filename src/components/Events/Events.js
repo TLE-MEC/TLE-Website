@@ -11,7 +11,6 @@ import { getEvents } from "../../utils/events";
 function eventCardProps(eve) {
   return {
     id: eve.id ?? eve._id,
-    key: eve._id || eve.id,
     name: eve.name,
     desc: eve.desc,
     image: eve.image,
@@ -71,7 +70,7 @@ function Events() {
           <div className="events-card">
             {events?.map((eve) =>
               eve.isUpcoming === true ? (
-                <EventCard {...eventCardProps(eve)} />
+                <EventCard key={eve._id || eve.id} {...eventCardProps(eve)} />
               ) : (
                 ""
               )
@@ -87,7 +86,7 @@ function Events() {
             .slice(0, 5)
             .map((eve) =>
               eve.isUpcoming === false ? (
-                <EventCard {...eventCardProps(eve)} />
+                <EventCard key={eve._id || eve.id} {...eventCardProps(eve)} />
               ) : null
             )}
         </div>

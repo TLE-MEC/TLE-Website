@@ -17,7 +17,6 @@ import { Loader } from "../../components";
 function eventCardProps(eve, defaultOpen = false) {
   return {
     id: eve.id ?? eve._id,
-    key: eve._id || eve.id,
     name: eve.name,
     desc: eve.desc,
     image: eve.image,
@@ -116,6 +115,7 @@ function EventPage() {
             <div className="events-card">
               {visibleEvents.map((eve) => (
                 <EventCard
+                  key={eve._id || eve.id}
                   {...eventCardProps(
                     eve,
                     !!activeEvent && eventSlug(eve) === activeSlug
