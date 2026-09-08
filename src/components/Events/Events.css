@@ -192,6 +192,69 @@
   background: rgba(0, 150, 136, 0.4);
 }
 
+.eventCard_activity--split {
+  gap: 0.6rem;
+  padding: 0 16px;
+}
+
+.eventCard_activity--split button {
+  flex: 1;
+}
+
+.eventCard_register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  flex: 1;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  font-family: var(--primary-font);
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  background: #0b8b8b;
+  text-decoration: none;
+}
+
+.edh__cta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.edh__register {
+  background: #ffffff;
+  color: #0baaaa;
+  border-radius: 30px;
+  padding: 0.65rem 1.4rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.edh__share {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 0.55rem 1.2rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edf_btn--share {
+  cursor: pointer;
+}
+
 .eventDialog {
   display: flex;
   flex-direction: column;

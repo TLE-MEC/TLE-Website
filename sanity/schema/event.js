@@ -17,6 +17,14 @@ export default {
       initialValue: false,
     },
     {
+      name: "slug",
+      title: "Slug (shareable link)",
+      type: "slug",
+      options: { source: "name", maxLength: 96 },
+      description:
+        "Used for the shareable frontend URL /events/<slug>. Auto-generate from the name.",
+    },
+    {
       name: "name",
       title: "Name",
       type: "string",
@@ -60,6 +68,20 @@ export default {
       name: "link",
       title: "Registration link",
       type: "url",
+      description: "If set, a Register button is shown on the event card and dialog.",
+    },
+    {
+      name: "reportUrl",
+      title: "Report / Drive link (PDF)",
+      type: "url",
+      description: "Optional Google Drive link to the event report (PDF).",
+    },
+    {
+      name: "reportFile",
+      title: "Report PDF (upload, optional)",
+      type: "file",
+      options: { accept: "application/pdf" },
+      description: "If uploaded, preferred over the Drive link above.",
     },
     {
       name: "participants",

@@ -1,0 +1,1 @@
+{"_id": "shortlink-hello-world", "_type": "shortlink", "slug": {"_type": "slug", "current": "hello-world"}, "title": "Hello World event", "event": {"_type": "reference", "_ref": "event-3"}}
