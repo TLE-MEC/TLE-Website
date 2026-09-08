@@ -106,7 +106,7 @@ function EventCard({
                 <p className="edh__right_p">{desc}</p>
               </div>
             </div>
-            {leaderboard.length > 0 && (
+            {leaderboard && leaderboard.length > 0 && (
               <>
                 <img src={divider} alt="" className="event_divider_line" />
                 <div className="eventDialog__leaderboard">
