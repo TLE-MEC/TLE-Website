@@ -11,8 +11,7 @@ import EventCard from "../../components/Events/EventCard";
 import eventsCubo from "../../assets/svg/eventsCubo.svg";
 import eventsPage_ellipse from "../../assets/svg/ellipse1.svg";
 import eventsPage_circle from "../../assets/svg/landing_circle.svg";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
-import db from "../../utils/firebase";
+import { getEvents } from "../../utils/events";
 import { Loader } from "../../components";
 
 function EventPage() {
@@ -22,21 +21,21 @@ function EventPage() {
     navigate("/");
   };
 
-  const [events, setEvents] = useState();
+  const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  async function getEvents() {
-    let temp = [];
-    const querySnapshot = await getDocs(
-      query(collection(db, "events"), orderBy("id", "asc"))
-    );
-    querySnapshot.forEach((doc) => {
-      temp.push(doc.data());
-    });
-    setEvents(temp);
-    setLoading(false);
-  }
   useEffect(() => {
-    getEvents();
+    async function fetchEvents() {
+      try {
+        const eventList = await getEvents();
+        setEvents(eventList);
+      } catch (error) {
+        console.error("Failed to load events:", error);
+        setEvents([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchEvents();
   }, []);
   if (loading) return <Loader />;
   return (

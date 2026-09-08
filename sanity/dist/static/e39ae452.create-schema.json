@@ -1,0 +1,274 @@
+[
+  {
+    "fields": [
+      {
+        "description": "Used to sort events on the website (ascending).",
+        "name": "id",
+        "type": "number",
+        "title": "Order / ID"
+      },
+      {
+        "initialValue": false,
+        "description": "Toggles the event between the Upcoming and Past sections.",
+        "name": "isUpcoming",
+        "type": "boolean",
+        "title": "Upcoming event"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "rows": 6,
+        "name": "desc",
+        "type": "text",
+        "title": "Description"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Thumbnail shown on the event card.",
+        "name": "image",
+        "type": "url",
+        "title": "Card image URL"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Large banner shown in the event modal.",
+        "name": "dialog_img",
+        "type": "url",
+        "title": "Dialog image URL"
+      },
+      {
+        "placeholder": "e.g. 8th September 2026",
+        "name": "date",
+        "type": "string",
+        "title": "Display date"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "youtube",
+        "type": "url",
+        "title": "YouTube URL"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "github",
+        "type": "url",
+        "title": "GitHub URL"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "link",
+        "type": "url",
+        "title": "Registration link"
+      },
+      {
+        "name": "participants",
+        "type": "number"
+      },
+      {
+        "of": [
+          {
+            "description": "Use the first/second/third fields for a ranked podium, or the prize array for a flat winners list.",
+            "type": "leaderboard",
+            "title": "Leaderboard entry"
+          }
+        ],
+        "name": "leaderboard",
+        "type": "array"
+      }
+    ],
+    "name": "event",
+    "type": "document"
+  },
+  {
+    "description": "Use the first/second/third fields for a ranked podium, or the prize array for a flat winners list.",
+    "fields": [
+      {
+        "name": "id",
+        "type": "number",
+        "title": "Order / ID"
+      },
+      {
+        "description": "Track name e.g. Beginner, Intermediate (optional).",
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "first",
+        "type": "winner",
+        "title": "First place"
+      },
+      {
+        "name": "second",
+        "type": "winner",
+        "title": "Second place"
+      },
+      {
+        "name": "third",
+        "type": "winner",
+        "title": "Third place"
+      },
+      {
+        "of": [
+          {
+            "type": "winner"
+          }
+        ],
+        "name": "prize",
+        "type": "array",
+        "title": "Prize winners"
+      }
+    ],
+    "name": "leaderboard",
+    "type": "object",
+    "title": "Leaderboard entry"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "image",
+        "type": "url",
+        "title": "Image URL"
+      }
+    ],
+    "name": "winner",
+    "type": "object"
+  }
+]

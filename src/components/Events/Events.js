@@ -6,37 +6,32 @@ import logo from "../../assets/svg/cubo-announcement.svg";
 import EventCard from "./EventCard";
 
 import "./Events.css";
-import db from "../../utils/firebase";
-
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { getEvents } from "../../utils/events";
 
 function Events() {
   AOS.init({
     duration: 800,
   });
-  const [events, setEvents] = useState();
+  const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  let count = 0;
-  async function getEvents() {
-    let temp = [];
-    const querySnapshot = await getDocs(
-      query(collection(db, "events"), orderBy("id", "asc"))
-    );
-    querySnapshot.forEach((doc) => {
-      let data = doc.data();
-      if (data.isUpcoming === true) {
-        count++;
-      }
-      temp.push(doc.data());
-    });
-    setEvents(temp);
-    setLoading(false);
-  }
   useEffect(() => {
-    getEvents();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    async function fetchEvents() {
+      try {
+        const eventList = await getEvents();
+        setEvents(eventList);
+      } catch (error) {
+        console.error("Failed to load events:", error);
+        setEvents([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchEvents();
   }, []);
   if (loading) return <div className="loading">Loading...</div>;
+  const upcomingCount = events.filter(
+    (event) => event.isUpcoming === true
+  ).length;
   return (
     <div className="events" id="events">
       <div className="events__container">
@@ -48,7 +43,7 @@ function Events() {
         </p>
 
         <h3 className="events-subheading">Upcoming Events</h3>
-        {count && count === 0 ? (
+        {upcomingCount === 0 ? (
           <p className="events-subheading-text">
             There are no upcoming events right now, check back later!
           </p>
