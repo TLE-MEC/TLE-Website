@@ -49,6 +49,18 @@ import vasanth24 from "./2024-25/vasanth.png";
 import vignesh24 from "./2024-25/vignesh.png"; 
 import vignesh24hex from "./2024-25/vignesh_hex.png";
 
+import AaronSChristo from "./2026-27/Aaron S Christo - Events Head.jpg";
+import AdithyanAS from "./2026-27/Adithyan A S-Executive.jpg";
+import AlnaRebeccaSiby from "./2026-27/Alna Rebecca Siby - Publicity head_.jpg";
+import AmrithP from "./2026-27/Amrith P       Media head.jpg";
+import ArjunSPai from "./2026-27/Arjun S Pai - Chairperson.png";
+import DanylThomas from "./2026-27/Danyl Thomas-ViceChairperson.jpeg";
+import DijithDinesh from "./2026-27/Dijith_Dinesh_CP_team_lead.jpeg";
+import EvanPaulGibi from "./2026-27/Evan Paul Gibi - Community Lead.jpg";
+import JoeGeorge from "./2026-27/JoeGeorge-Executive.jpg";
+import SSreeshankar from "./2026-27/S Sreeshankar - Content Head.jpg";
+import NiranjanaA from "./2026-27/Niranjana A- Design Lead.jpg.jpeg";
+
 
 export {
   Achyuth_Mohan,
@@ -98,5 +110,16 @@ export {
   roshin24hex,
   vasanth24,
   vignesh24,
-  vignesh24hex
+  vignesh24hex,
+  AaronSChristo,
+  AdithyanAS,
+  AlnaRebeccaSiby,
+  AmrithP,
+  ArjunSPai,
+  DanylThomas,
+  DijithDinesh,
+  EvanPaulGibi,
+  JoeGeorge,
+  SSreeshankar,
+  NiranjanaA
 };

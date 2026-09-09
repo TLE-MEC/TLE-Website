@@ -1,4 +1,115 @@
-export const team = [
+import {
+  Neha_Mariam_Mathew,
+  Sony_P,
+  hanna,
+  jeswin,
+  sony,
+  arathy,
+  vignesh,
+  subru,
+  arpitha,
+  alaka,
+  alex,
+  adil,
+} from "../../assets/team/teamImages";
+
+export const year = "2023-24";
+export const isCurrent = false;
+
+export const coreSlices = [
+  [0, 3],
+  [3, 7],
+  [7, 12],
+];
+
+export const core = [
+  {
+    id: 1,
+    name: "Sony P",
+    title: "Faculty Advisor",
+    image: Sony_P,
+    linkedIn: "",
+  },
+  {
+    id: 2,
+    name: "Hanna Salam",
+    title: "Chairperson",
+    image: hanna,
+    linkedIn: "https://www.linkedin.com/in/hanna-salam/",
+  },
+  {
+    id: 3,
+    name: "Jeswin Thomas",
+    title: "Vice-Chairperson",
+    image: jeswin,
+    linkedIn: "https://www.linkedin.com/in/jeswin-thomas-/",
+  },
+  {
+    id: 4,
+    name: "Vignesh S Naik ",
+    title: "CP Lead",
+    image: vignesh,
+    linkedIn: "https://www.linkedin.com/in/naik-ji/",
+  },
+  {
+    id: 5,
+    name: "Arathy Sha A",
+    title: "Events Lead",
+    image: arathy,
+    linkedIn: "https://www.linkedin.com/in/arathy-sha-a-007611203/",
+  },
+  {
+    id: 6,
+    name: "Subramani E",
+    title: "Tech Lead",
+    image: subru,
+    linkedIn: "https://www.linkedin.com/in/subramani-e/",
+  },
+  {
+    id: 7,
+    name: "Arpitha Sudhir",
+    title: "Outreach Lead",
+    image: arpitha,
+    linkedIn: "https://www.linkedin.com/in/arpitha-sudhir-989b14221/",
+  },
+  {
+    id: 8,
+    name: "Adil Naz Muhammed",
+    title: "Operations Head",
+    image: adil,
+    linkedIn: "https://www.linkedin.com/in/adilnazmo/",
+  },
+  {
+    id: 9,
+    name: "Alaka AJ",
+    title: "Design Lead",
+    image: alaka,
+    linkedIn: "https://www.linkedin.com/in/alaka-aj/",
+  },
+  {
+    id: 10,
+    name: "Neha Mariam Mathew",
+    title: "Content Lead",
+    image: Neha_Mariam_Mathew,
+    linkedIn: "https://www.linkedin.com/in/neha-mariam-mathew-152a60239/",
+  },
+  {
+    id: 11,
+    name: "Alex Mathew Biju",
+    title: "Community Lead",
+    image: alex,
+    linkedIn: "https://www.linkedin.com/in/alex-mathew-7951a0256/",
+  },
+  {
+    id: 12,
+    name: "Sony Thomas",
+    title: "Inclusivity Lead",
+    image: sony,
+    linkedIn: "https://www.linkedin.com/in/njansony/",
+  },
+];
+
+export const teams = [
   {
     name: "Competitive Programming",
     members: [
@@ -28,8 +139,8 @@ export const team = [
       { name: "Khushi Nilesh Ved" },
       { name: "Anish Pillai" },
       { name: "Rahul Anup Varma" },
-      { name: "Riya Mary Jose" }
-    ]
+      { name: "Riya Mary Jose" },
+    ],
   },
   {
     name: "Content Team",
@@ -39,7 +150,7 @@ export const team = [
       { name: "Nanditha S" },
       { name: "Alex Vargese" },
       { name: "Surabhi Thiruvoth" },
-      { name: "Binitha Babu" }
+      { name: "Binitha Babu" },
     ],
   },
   {
@@ -54,7 +165,7 @@ export const team = [
       { name: "Geo Jose P" },
       { name: "Medha K" },
       { name: "K V Varun Krishnan" },
-      { name: "Vrishti V Shah" }
+      { name: "Vrishti V Shah" },
     ],
   },
   {
@@ -73,7 +184,7 @@ export const team = [
       { name: "Elsa Susan Jain" },
       { name: "Anagha S A" },
       { name: "Alan tom sabu" },
-      { name: "Athulya v" }
+      { name: "Athulya v" },
     ],
   },
   {
@@ -88,19 +199,19 @@ export const team = [
       { name: "Rohith P S" },
       { name: "Sandra Sara Solomon" },
       { name: "Jensine Soji" },
-      { name: "Hridhya K P" }
+      { name: "Hridhya K P" },
     ],
   },
   {
-    name:"Marketing Team",
-    members:[
+    name: "Marketing Team",
+    members: [
       { name: "Aardra S" },
       { name: "Jeswin Joseph" },
       { name: "Nikhil Tomy" },
       { name: "Akash Abraham" },
       { name: "Alex Varghese" },
       { name: "Martin Joseph" },
-      { name: "Anjana S Nair" }
-    ]
-  }
+      { name: "Anjana S Nair" },
+    ],
+  },
 ];

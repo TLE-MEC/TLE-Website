@@ -6,37 +6,51 @@ import logo from "../../assets/svg/cubo-announcement.svg";
 import EventCard from "./EventCard";
 
 import "./Events.css";
-import db from "../../utils/firebase";
+import { getEvents } from "../../utils/events";
 
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
+function eventCardProps(eve) {
+  return {
+    id: eve.id ?? eve._id,
+    name: eve.name,
+    desc: eve.desc,
+    image: eve.image,
+    date: eve.date,
+    youtube: eve.youtube,
+    github: eve.github,
+    link: eve.link,
+    slug: eve.slug,
+    reportUrl: eve.reportUrl,
+    reportFileUrl: eve.reportFileUrl,
+    participants: eve.participants,
+    dialog_img: eve.dialog_img,
+    leaderboard: eve.leaderboard,
+  };
+}
 
 function Events() {
   AOS.init({
     duration: 800,
   });
-  const [events, setEvents] = useState();
+  const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  let count = 0;
-  async function getEvents() {
-    let temp = [];
-    const querySnapshot = await getDocs(
-      query(collection(db, "events"), orderBy("id", "asc"))
-    );
-    querySnapshot.forEach((doc) => {
-      let data = doc.data();
-      if (data.isUpcoming === true) {
-        count++;
-      }
-      temp.push(doc.data());
-    });
-    setEvents(temp);
-    setLoading(false);
-  }
   useEffect(() => {
-    getEvents();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    async function fetchEvents() {
+      try {
+        const eventList = await getEvents();
+        setEvents(eventList);
+      } catch (error) {
+        console.error("Failed to load events:", error);
+        setEvents([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchEvents();
   }, []);
   if (loading) return <div className="loading">Loading...</div>;
+  const upcomingCount = events.filter(
+    (event) => event.isUpcoming === true
+  ).length;
   return (
     <div className="events" id="events">
       <div className="events__container">
@@ -48,7 +62,7 @@ function Events() {
         </p>
 
         <h3 className="events-subheading">Upcoming Events</h3>
-        {count && count === 0 ? (
+        {upcomingCount === 0 ? (
           <p className="events-subheading-text">
             There are no upcoming events right now, check back later!
           </p>
@@ -56,20 +70,7 @@ function Events() {
           <div className="events-card">
             {events?.map((eve) =>
               eve.isUpcoming === true ? (
-                <EventCard
-                  id={eve.id}
-                  link={eve.link}
-                  key={eve.id}
-                  name={eve.name}
-                  desc={eve.desc}
-                  image={eve.image}
-                  date={eve.date}
-                  youtube={eve.youtube}
-                  github={eve.github}
-                  participants={eve.participants}
-                  dialog_img={eve.dialog_img}
-                  leaderboard={eve.leaderboard}
-                />
+                <EventCard key={eve._id || eve.id} {...eventCardProps(eve)} />
               ) : (
                 ""
               )
@@ -85,19 +86,7 @@ function Events() {
             .slice(0, 5)
             .map((eve) =>
               eve.isUpcoming === false ? (
-                <EventCard
-                  id={eve.id}
-                  key={eve.id}
-                  name={eve.name}
-                  desc={eve.desc}
-                  image={eve.image}
-                  date={eve.date}
-                  youtube={eve.youtube}
-                  github={eve.github}
-                  participants={eve.participants}
-                  dialog_img={eve.dialog_img}
-                  leaderboard={eve.leaderboard}
-                />
+                <EventCard key={eve._id || eve.id} {...eventCardProps(eve)} />
               ) : null
             )}
         </div>

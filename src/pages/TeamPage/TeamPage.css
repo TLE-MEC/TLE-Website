@@ -170,6 +170,24 @@
   border: 4px solid #0baaaa;
   padding: 1px;
 }
+/* Individual Core Team photo adjustments */
+
+.core_image_4 {
+  object-position: center 35%;
+}
+
+.core_image_5 {
+  object-position: center 38%;
+}
+
+.core_image_12 {
+  object-position: 55% center !important;
+  transform: scale(1.12) !important;
+}
+
+.core_image_3 {
+  object-position: 30% center !important;
+}
 
 .core_linkedin {
   position: absolute;

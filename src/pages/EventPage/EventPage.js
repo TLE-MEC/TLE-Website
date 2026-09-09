@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { HashLink } from "react-router-hash-link";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 
 import "./EventPage.css";
@@ -11,34 +11,61 @@ import EventCard from "../../components/Events/EventCard";
 import eventsCubo from "../../assets/svg/eventsCubo.svg";
 import eventsPage_ellipse from "../../assets/svg/ellipse1.svg";
 import eventsPage_circle from "../../assets/svg/landing_circle.svg";
-import { collection, getDocs, orderBy, query } from "firebase/firestore";
-import db from "../../utils/firebase";
+import { getEvents, eventSlug } from "../../utils/events";
 import { Loader } from "../../components";
+
+function eventCardProps(eve, defaultOpen = false) {
+  return {
+    id: eve.id ?? eve._id,
+    name: eve.name,
+    desc: eve.desc,
+    image: eve.image,
+    date: eve.date,
+    youtube: eve.youtube,
+    github: eve.github,
+    link: eve.link,
+    slug: eve.slug,
+    reportUrl: eve.reportUrl,
+    reportFileUrl: eve.reportFileUrl,
+    participants: eve.participants,
+    dialog_img: eve.dialog_img,
+    leaderboard: eve.leaderboard,
+    defaultOpen,
+  };
+}
 
 function EventPage() {
   const navigate = useNavigate();
+  const { eventSlug: slugParam } = useParams();
 
   const goBack = () => {
     navigate("/");
   };
 
-  const [events, setEvents] = useState();
+  const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
-  async function getEvents() {
-    let temp = [];
-    const querySnapshot = await getDocs(
-      query(collection(db, "events"), orderBy("id", "asc"))
-    );
-    querySnapshot.forEach((doc) => {
-      temp.push(doc.data());
-    });
-    setEvents(temp);
-    setLoading(false);
-  }
   useEffect(() => {
-    getEvents();
+    async function fetchEvents() {
+      try {
+        const eventList = await getEvents();
+        setEvents(eventList);
+      } catch (error) {
+        console.error("Failed to load events:", error);
+        setEvents([]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchEvents();
   }, []);
   if (loading) return <Loader />;
+
+  const activeSlug = slugParam ? decodeURIComponent(slugParam) : null;
+  const activeEvent = activeSlug
+    ? events.find((e) => eventSlug(e) === activeSlug)
+    : null;
+  const visibleEvents = activeEvent ? [activeEvent] : events.slice(0).reverse();
+
   return (
     <motion.div
       className="eventsPage"
@@ -68,30 +95,36 @@ function EventPage() {
             </p>
           </div>
         </div>
-        <h1 className="section__header" id="events">
-          EVENTS
-        </h1>
-        <div className="events-card">
-          {events
-            .slice(0)
-            .reverse()
-            .map((eve) => (
-              <EventCard
-                id={eve.id}
-                link={eve.link}
-                key={eve.id}
-                name={eve.name}
-                desc={eve.desc}
-                image={eve.image}
-                date={eve.date}
-                youtube={eve.youtube}
-                github={eve.github}
-                participants={eve.participants}
-                dialog_img={eve.dialog_img}
-                leaderboard={eve.leaderboard}
-              />
-            ))}
-        </div>
+        {activeSlug && !activeEvent ? (
+          <div className="events-card">
+            <p className="events-subheading-text">
+              Couldn&apos;t find that event.{" "}
+              <Link to="/events">View all events</Link>
+            </p>
+          </div>
+        ) : (
+          <>
+            {activeEvent && (
+              <p className="events-subheading-text">
+                <Link to="/events">← Back to all events</Link>
+              </p>
+            )}
+            <h1 className="section__header" id="events">
+              {activeEvent ? activeEvent.name.toUpperCase() : "EVENTS"}
+            </h1>
+            <div className="events-card">
+              {visibleEvents.map((eve) => (
+                <EventCard
+                  key={eve._id || eve.id}
+                  {...eventCardProps(
+                    eve,
+                    !!activeEvent && eventSlug(eve) === activeSlug
+                  )}
+                />
+              ))}
+            </div>
+          </>
+        )}
         <img src={eventsCubo} alt="" className="eventsPageCubo" />
         <img src={eventsPage_circle} alt="" className="eventsPage_circle" />
         <img src={eventsPage_ellipse} alt="" className="eventsPage_ellipse" />

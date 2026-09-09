@@ -10,9 +10,18 @@ import {
   roshin24,
   vasanth24,
   vignesh24,
-} from "../assets/team/teamImages";
+} from "../../assets/team/teamImages";
 
-const core24Data = [
+export const year = "2024-25";
+export const isCurrent = false;
+
+export const coreSlices = [
+  [0, 3],
+  [3, 7],
+  [7, 11],
+];
+
+export const core = [
   {
     id: 1,
     name: "Dr. Sony P",
@@ -20,7 +29,6 @@ const core24Data = [
     image: Sony_P,
     linkedIn: "",
   },
-
   {
     id: 2,
     name: "Vignesh S Naik",
@@ -56,7 +64,6 @@ const core24Data = [
     image: roshin24,
     linkedIn: "https://www.linkedin.com/in/roshinjimmy/",
   },
-
   {
     id: 7,
     name: "Jaimy Renji",
@@ -80,7 +87,7 @@ const core24Data = [
   },
   {
     id: 10,
-    name: "Alex Mathew Biju ",
+    name: "Alex Mathew Biju",
     title: "Marketing Lead",
     image: alex24,
     linkedIn: "https://www.linkedin.com/in/alex-mathew-7951a0256/",
@@ -94,4 +101,4 @@ const core24Data = [
   },
 ];
 
-export default core24Data;
+export const teams = [];

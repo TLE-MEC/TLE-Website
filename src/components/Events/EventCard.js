@@ -7,8 +7,8 @@ import AOS from "aos";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import Slide from "@mui/material/Slide";
-import { FaLink } from "react-icons/fa";
-import eventData from "../../data/eventData";
+import { FaLink, FaShareAlt, FaFilePdf } from "react-icons/fa";
+import { eventShareUrl, eventSlug } from "../../utils/events";
 import "./Events.css";
 
 import divider from "../../assets/svg/divider.svg";
@@ -29,8 +29,17 @@ function EventCard({
   dialog_img,
   leaderboard,
   link,
+  slug,
+  reportUrl,
+  reportFileUrl,
+  defaultOpen = false,
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
+  const [copied, setCopied] = useState(false);
+
+  React.useEffect(() => {
+    if (defaultOpen) setOpen(true);
+  }, [defaultOpen]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -42,17 +51,40 @@ function EventCard({
 
   AOS.init();
 
-  const len = eventData.length;
+  const resolvedSlug = slug || (id != null ? String(id) : "");
+  const shareUrl = eventShareUrl({ slug: resolvedSlug, id, name });
+
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: name, text: desc, url: shareUrl });
+        return;
+      }
+      throw new Error("no-native-share");
+    } catch (err) {
+      // Fall back to clipboard when native share is unavailable/cancelled.
+      if (err && err.name === "AbortError") return;
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch {
+        window.prompt("Copy this event link:", shareUrl);
+      }
+    }
+  };
+
+  const reportLink = reportFileUrl || reportUrl || "";
 
   return (
     <div
       key={id}
       className="eventCard"
       data-aos="fade-up"
-      data-aos-duration={`${400 * (len + 1 - id)}`}
+      data-aos-duration="600"
     >
       <div className="eventCard_image">
-        <img src={image} alt="" />
+        <img src={image} alt="" loading="lazy" />
       </div>
       <div className="eventCard_content">
         <div className="eventCard_title">
@@ -61,11 +93,22 @@ function EventCard({
         </div>
         <div className="eventCard_para">{desc}</div>
       </div>
-      <div className="eventCard_activity">
+      <div className="eventCard_activity eventCard_activity--split">
         <button onClick={handleClickOpen}>
           Explore
           <GoTelescope />
         </button>
+        {link ? (
+          <a
+            className="eventCard_register"
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Register
+          </a>
+        ) : null}
       </div>
       <Dialog
         style={{ padding: 0, borderRadius: 10 }}
@@ -104,9 +147,25 @@ function EventCard({
                   </div>
                 </div>
                 <p className="edh__right_p">{desc}</p>
+                <div className="edh__cta">
+                  {link && (
+                    <a
+                      className="edh__register"
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Register Now
+                    </a>
+                  )}
+                  <button className="edh__share" onClick={handleShare}>
+                    <FaShareAlt size={14} />
+                    {copied ? "Link copied!" : "Share"}
+                  </button>
+                </div>
               </div>
             </div>
-            {leaderboard.length > 0 && (
+            {leaderboard && leaderboard.length > 0 && (
               <>
                 <img src={divider} alt="" className="event_divider_line" />
                 <div className="eventDialog__leaderboard">
@@ -153,11 +212,11 @@ function EventCard({
                           </div>
                         )}
                         {ldbrd.prize &&
-                          ldbrd.prize.map((p, id) => (
+                          ldbrd.prize.map((p, pid) => (
                             <div
                               style={{ margin: "0 1rem" }}
                               className="leaderboard__row first__row"
-                              key={id}
+                              key={pid}
                             >
                               <RiVipCrown2Fill className="crown" />
                               <img
@@ -174,7 +233,7 @@ function EventCard({
                 </div>
               </>
             )}
-            {(youtube || github || link) && (
+            {(youtube || github || link || reportLink) && (
               <>
                 <img src={divider} alt="" className="event_divider_line" />
                 <div className="eventDialog__footer">
@@ -213,6 +272,21 @@ function EventCard({
                         Github
                       </a>
                     )}
+                    {reportLink && (
+                      <a
+                        className="edf_btn"
+                        href={reportLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FaFilePdf size={22} />
+                        Report
+                      </a>
+                    )}
+                    <button className="edf_btn edf_btn--share" onClick={handleShare}>
+                      <FaShareAlt size={20} />
+                      {copied ? "Copied!" : "Share"}
+                    </button>
                   </div>
                 </div>
               </>
@@ -223,4 +297,8 @@ function EventCard({
     </div>
   );
 }
+
+// Re-export helper for routes that need a slug without importing utils.
+EventCard.slugFor = (event) => eventSlug(event);
+
 export default EventCard;
