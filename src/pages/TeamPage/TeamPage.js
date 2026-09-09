@@ -7,20 +7,13 @@ import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 
-import * as y2026 from "../../data/years/2026_27";
-import * as y2025 from "../../data/years/2025_26";
-import * as y2024 from "../../data/years/2024_25";
-import * as y2023 from "../../data/years/2023_24";
-import * as y2022 from "../../data/years/2022_23";
-import * as y2021 from "../../data/years/2021_22";
-
 import CustomTitle from "../../utils/CustomTitle";
+import { getTeamYears } from "../../utils/team";
 import "./TeamPage.css";
 import landing_circle from "../../assets/svg/landing_circle.svg";
 import ellipse4 from "../../assets/svg/ellipse1.svg";
 import TeamMember from "../../components/Team/TeamMember";
-
-const yearsData = [y2026, y2025, y2024, y2023, y2022, y2021];
+import { Loader } from "../../components";
 
 function CoreMember({ data, loading, avatarClass }) {
   return (
@@ -55,12 +48,29 @@ function CoreMember({ data, loading, avatarClass }) {
 
 function TeamPage() {
   const [loading, setLoading] = useState(true);
+  const [yearsData, setYearsData] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  });
+    let cancelled = false;
+    async function fetchTeams() {
+      try {
+        const years = await getTeamYears();
+        if (!cancelled) setYearsData(years);
+      } catch (error) {
+        console.error("Failed to load teams:", error);
+      } finally {
+        if (!cancelled) {
+          setTimeout(() => {
+            if (!cancelled) setLoading(false);
+          }, 800);
+        }
+      }
+    }
+    fetchTeams();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const navigate = useNavigate();
 
@@ -71,6 +81,8 @@ function TeamPage() {
   AOS.init({
     duration: 800,
   });
+
+  if (loading && yearsData.length === 0) return <Loader />;
 
   return (
     <motion.div

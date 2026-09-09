@@ -8,6 +8,25 @@ import EventCard from "./EventCard";
 import "./Events.css";
 import { getEvents } from "../../utils/events";
 
+function eventCardProps(eve) {
+  return {
+    id: eve.id ?? eve._id,
+    name: eve.name,
+    desc: eve.desc,
+    image: eve.image,
+    date: eve.date,
+    youtube: eve.youtube,
+    github: eve.github,
+    link: eve.link,
+    slug: eve.slug,
+    reportUrl: eve.reportUrl,
+    reportFileUrl: eve.reportFileUrl,
+    participants: eve.participants,
+    dialog_img: eve.dialog_img,
+    leaderboard: eve.leaderboard,
+  };
+}
+
 function Events() {
   AOS.init({
     duration: 800,
@@ -51,20 +70,7 @@ function Events() {
           <div className="events-card">
             {events?.map((eve) =>
               eve.isUpcoming === true ? (
-                <EventCard
-                  id={eve.id}
-                  link={eve.link}
-                  key={eve.id}
-                  name={eve.name}
-                  desc={eve.desc}
-                  image={eve.image}
-                  date={eve.date}
-                  youtube={eve.youtube}
-                  github={eve.github}
-                  participants={eve.participants}
-                  dialog_img={eve.dialog_img}
-                  leaderboard={eve.leaderboard}
-                />
+                <EventCard key={eve._id || eve.id} {...eventCardProps(eve)} />
               ) : (
                 ""
               )
@@ -80,19 +86,7 @@ function Events() {
             .slice(0, 5)
             .map((eve) =>
               eve.isUpcoming === false ? (
-                <EventCard
-                  id={eve.id}
-                  key={eve.id}
-                  name={eve.name}
-                  desc={eve.desc}
-                  image={eve.image}
-                  date={eve.date}
-                  youtube={eve.youtube}
-                  github={eve.github}
-                  participants={eve.participants}
-                  dialog_img={eve.dialog_img}
-                  leaderboard={eve.leaderboard}
-                />
+                <EventCard key={eve._id || eve.id} {...eventCardProps(eve)} />
               ) : null
             )}
         </div>
